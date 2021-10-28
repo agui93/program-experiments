@@ -6,8 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author agui93
@@ -15,7 +14,7 @@ import java.util.Set;
  */
 public class PingPongClient {
 
-    private int port;
+    private final int port;
     private final int pingPongMaxLimit;
     private Selector selector;
     private SocketChannel socketChannel;
@@ -45,12 +44,10 @@ public class PingPongClient {
         this.socketChannel.connect(new InetSocketAddress(this.port));
         System.out.println("try to send: " + this.pingPongMaxLimit + " Ping, and received: " + this.pingPongMaxLimit + " Pong");
         System.out.println("try connecting...");
-        System.out.println();
     }
 
     public void processIoEvents() throws IOException {
         System.out.println("processing IoEvents");
-        System.out.println();
         boolean closed = false;
         while (!closed && !Thread.interrupted()) {
             int readyChannelCount = this.selector.select();
@@ -86,8 +83,10 @@ public class PingPongClient {
 
     //监听到OP_CONNECT后,处理链接事件; 然后监听读事件
     private void opConnect(SelectionKey selectionKey) throws IOException {
+        System.out.println();
         System.out.println("sensed IO-EVENT: OP_CONNECT");
-        while (!this.socketChannel.finishConnect()) ;
+        while (!this.socketChannel.finishConnect()) {
+        }
         System.out.println("finished connect");
         System.out.println("[client: " + this.socketChannel.getLocalAddress() + "] , [server: " + this.socketChannel.getRemoteAddress() + "]");
         //System.out.println("interest on new IO-EVENT: OP_WRITE");
@@ -162,15 +161,48 @@ public class PingPongClient {
             e.printStackTrace();
         }
         System.out.println("closed client");
+    }
+
+    public static void clientSample(String sampleName, int serverPort, int pingPongMaxLimit) throws IOException {
         System.out.println();
+        System.out.println("------------------------------------------------");
+        System.out.println("this is a ping-pong client sample: " + sampleName);
+        PingPongClient pingPongClient = new PingPongClient(serverPort, pingPongMaxLimit);
+        pingPongClient.startConnect();
+        pingPongClient.processIoEvents();
+        System.out.println("------------------------------------------------");
+    }
+
+
+    public static void multiConcurrentClients(int concurrentCount, int serverPort, int pingPongMaxLimit) {
+        List<Thread> threadList = new ArrayList<>(concurrentCount);
+        for (int i = 0; i < concurrentCount; i++) {
+            String sampleName = "ConcurrentSample" + i;
+            threadList.add(new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        //等待约1000~1200毫秒
+                        Thread.sleep(1000 + new Random().nextInt(200));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        clientSample(sampleName, serverPort, pingPongMaxLimit);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+        for (Thread thread : threadList) {
+            thread.start();
+        }
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println();
-        System.out.println("this is a ping-pong client sample");
-        System.out.println();
-        PingPongClient pingPongClient = new PingPongClient(8089, 3);
-        pingPongClient.startConnect();
-        pingPongClient.processIoEvents();
+//        clientSample("Sample1", 8089, 1);
+//        clientSample("Sample2", 8089, 3);
+        multiConcurrentClients(3, 8089, 1);
     }
 }
