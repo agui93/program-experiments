@@ -191,6 +191,8 @@ public class PingPongBasicReactorServer {
                 String decodeObj = decode();
                 //业务处理数据
                 compute(decodeObj);
+                //期待下次发送的数据,进行编码
+                encode("Pong");
                 //调整interestOps
                 this.selectionKey.interestOps(SelectionKey.OP_WRITE);
             } else if (readStatus == 0) {
@@ -244,9 +246,6 @@ public class PingPongBasicReactorServer {
             }
 
             System.out.println(this.serverName + " had read: " + data + "from " + this.clientName);
-
-            //期待下次发送的数据,进行编码
-            encode("Pong");
         }
 
         //编码

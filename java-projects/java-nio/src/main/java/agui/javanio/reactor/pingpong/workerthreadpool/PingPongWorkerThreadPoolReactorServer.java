@@ -9,6 +9,8 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author agui93
@@ -48,7 +50,7 @@ public class PingPongWorkerThreadPoolReactorServer {
 
         private void bindAcceptor() throws ClosedChannelException {
             SelectionKey selectionKey = this.serverSocketChannel.register(this.selector, 0);
-            selectionKey.attach(new Acceptor(this.serverName, selectionKey, workerThreadPoolExecutor));
+            selectionKey.attach(new Acceptor(this.serverName, selectionKey, this.workerThreadPoolExecutor));
             selectionKey.interestOps(SelectionKey.OP_ACCEPT);
             System.out.println(this.serverName + " bind acceptor and interestOps=OP_ACCEPT");
         }
@@ -139,13 +141,20 @@ public class PingPongWorkerThreadPoolReactorServer {
 
     }
 
+
     static class PingPongHandler implements Handler {
         private final String serverName;
         private final String clientName;
         private final SelectionKey selectionKey;
         private final ExecutorService workerThreadPoolExecutor;
 
-        //这里模拟buffer pool的模拟，实际在workerThreadPool情况下，应该有一个内存池
+
+        //并发情况:或者用于io线程从channel读取数据到buffer  或者用于worker-thread-pool从buffer中读取数据(当且仅当buffer已从channel里读取一组完整数据)
+        private final ByteBuffer readBuffer;
+        private final Semaphore readSemaphore;
+
+        private final AtomicInteger ping;
+        private final AtomicInteger pong;
 
 
         public PingPongHandler(String serverName, String clientName, SelectionKey selectionKey, ExecutorService workerThreadPoolExecutor) {
@@ -153,6 +162,12 @@ public class PingPongWorkerThreadPoolReactorServer {
             this.clientName = clientName;
             this.selectionKey = selectionKey;
             this.workerThreadPoolExecutor = workerThreadPoolExecutor;
+
+            this.ping = new AtomicInteger(0);
+            this.pong = new AtomicInteger(0);
+
+            this.readBuffer = ByteBuffer.allocate(4);
+            this.readSemaphore = new Semaphore(1);
         }
 
         @Override
@@ -160,54 +175,112 @@ public class PingPongWorkerThreadPoolReactorServer {
             if (!this.selectionKey.isValid()) {
                 return;
             }
-            if (this.selectionKey.isReadable()) {
-                triggerByReadIoEvent();
-            } else if (this.selectionKey.isWritable()) {
-                triggerByWriteIoEvent();
+            try {
+                if (this.selectionKey.isReadable()) {
+                    triggerByReadIoEvent();
+                } else if (this.selectionKey.isWritable()) {
+                    triggerByWriteIoEvent();
+                }
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        private void triggerByReadIoEvent() throws IOException, InterruptedException {
+            if (!this.readSemaphore.tryAcquire()) {
+                this.selectionKey.interestOps(SelectionKey.OP_READ);
+                return;
             }
 
+            //read:use-readBuffer
+            int readStatus = read();
+
+
+            if (readStatus == -1) {
+                int pingCount = this.ping.get();
+                int pongCount = this.pong.get();
+                System.out.println("\n------result=" + (pingCount == pongCount) + ", ping=" + pingCount + ", pong=" + pongCount + " after " + this.clientName + " disconnect\n");
+                this.selectionKey.cancel();
+            } else if (readStatus == 1) {
+                this.readSemaphore.release();
+                this.workerThreadPoolExecutor.submit(() -> {
+                    try {
+                        String decodeObj;
+                        this.readSemaphore.acquire();
+                        try {
+                            //阻塞等待readBuffer可以使用
+                            decodeObj = decode();
+                        } finally {
+                            this.readBuffer.clear();//保证下次可以继续读取数据
+                            this.readSemaphore.release();
+                        }
+                        //业务处理数据
+                        compute(decodeObj);
+
+                        //期待下次发送的数据,进行编码
+                        encode("Pong");
+                        //调整interestOps
+                        this.selectionKey.interestOps(SelectionKey.OP_WRITE);
+                    } catch (InterruptedException ignored) {
+                    }
+                });
+            } else if (readStatus == 0) {
+                this.selectionKey.interestOps(SelectionKey.OP_READ);
+            }
+
+            //-> decode:use-readBuffer, compute encode -> focus on write
         }
 
-        private void triggerByReadIoEvent() {
-//            SocketChannel socketChannel = this.selectionKey.cancel();
-            //读取数据
-
-
+        private int read() throws IOException {
+            SocketChannel socketChannel = (SocketChannel) this.selectionKey.channel();
+            int bytes = socketChannel.read(this.readBuffer);
+            if (bytes == -1) {
+                return -1;
+            }
+            boolean readIsComplete = !this.readBuffer.hasRemaining();
+            return readIsComplete ? 1 : 0;
         }
 
-        private int read(SocketChannel socketChannel) {
-            return 0;
-        }
-
+        //解码
         private String decode() {
-            return "";
+            //解码:字节数组->对象
+            this.readBuffer.flip();
+            StringBuilder stringBuilder = new StringBuilder();
+            while (this.readBuffer.hasRemaining()) {
+                stringBuilder.append((char) this.readBuffer.get());
+            }
+            return stringBuilder.toString();
         }
 
+        //处理数据
         private void compute(String data) {
+            if ("Ping".equals(data)) {
+                this.ping.incrementAndGet();
+            }
+            //模拟数据计算
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException ignored) {
+            }
+
+            System.out.println(this.serverName + " had read: " + data + "from " + this.clientName);
         }
 
+        //编码
         private void encode(String s) {
+
         }
 
-        private boolean send(SocketChannel socketChannel) {
-            return false;
+        private void triggerByWriteIoEvent() throws IOException {
+            //send data
+            send();
         }
 
-        private void triggerByWriteIoEvent() {
-        }
-    }
-
-    //简单模拟的内存池, 要求线程安全
-    static class BufferPool {
-        //空闲的buffers
-        //待读取的数据的buffers
-        //待发送数据的buffers
-
-        public ByteBuffer loadReadBuffer() {
-            return null;
+        private void send() {
         }
 
     }
+
 
     public static void main(String[] args) {
 
