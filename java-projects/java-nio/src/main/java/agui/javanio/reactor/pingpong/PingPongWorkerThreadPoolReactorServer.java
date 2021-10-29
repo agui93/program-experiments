@@ -1,7 +1,5 @@
 package agui.javanio.reactor.pingpong;
 
-import java.nio.channels.SelectionKey;
-
 /**
  * @author agui93
  * @since 2021/10/29
@@ -9,11 +7,24 @@ import java.nio.channels.SelectionKey;
 public class PingPongWorkerThreadPoolReactorServer {
 
     interface Handler {
-        void handle(SelectionKey selectionKey);
+        void handle();
     }
 
     static class Reactor {
 
     }
 
+    static class Acceptor {
+
+
+    }
+
+    static class PingPongHandler {
+
+    }
+
+
+    public static void main(String[] args) {
+
+    }
 }
