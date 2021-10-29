@@ -134,11 +134,12 @@ public class PingPongBasicReactorServer {
     static class PingPongHandler implements Handler {
         private final String serverName;
         private final String clientName;
-        //        private final ByteBuffer buffer;
+
+        private final SelectionKey selectionKey;
+
         private final ByteBuffer readBuffer;
         private final ByteBuffer writeBuffer;
 
-        private final SelectionKey selectionKey;
 
         private final AtomicInteger ping;
         private final AtomicInteger pong;
@@ -159,14 +160,14 @@ public class PingPongBasicReactorServer {
         //selectionKey代表着键连后的SocketChannel在selector上的注册
         @Override
         public void handle() {
-            if (!selectionKey.isValid()) {
+            if (!this.selectionKey.isValid()) {
                 return;
             }
             try {
-                if (selectionKey.isReadable()) {
-                    triggerByReadIoEvent(selectionKey);
-                } else if (selectionKey.isWritable()) {
-                    triggerByWriteIoEvent(selectionKey);
+                if (this.selectionKey.isReadable()) {
+                    this.triggerByReadIoEvent();
+                } else if (this.selectionKey.isWritable()) {
+                    this.triggerByWriteIoEvent();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -174,8 +175,8 @@ public class PingPongBasicReactorServer {
         }
 
         //读io事件触发动作
-        private void triggerByReadIoEvent(SelectionKey selectionKey) throws IOException {
-            SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
+        private void triggerByReadIoEvent() throws IOException {
+            SocketChannel socketChannel = (SocketChannel) this.selectionKey.channel();
 
             //读取数据，这步简化处理，实际处理需要定义合适的应用通信协议来处理编解码
             int readStatus = read(socketChannel);
@@ -184,27 +185,27 @@ public class PingPongBasicReactorServer {
                 int pingCount = this.ping.get();
                 int pongCount = this.pong.get();
                 System.out.println("\n------result=" + (pingCount == pongCount) + ", ping=" + pingCount + ", pong=" + pongCount + " after " + this.clientName + " disconnect\n");
-                selectionKey.cancel();
+                this.selectionKey.cancel();
             } else if (readStatus == 1) {
                 //解码
                 String decodeObj = decode();
                 //业务处理数据
                 compute(decodeObj);
                 //调整interestOps
-                selectionKey.interestOps(SelectionKey.OP_WRITE);
+                this.selectionKey.interestOps(SelectionKey.OP_WRITE);
             } else if (readStatus == 0) {
-                selectionKey.interestOps(SelectionKey.OP_READ);
+                this.selectionKey.interestOps(SelectionKey.OP_READ);
             }
         }
 
         //写io事件触发动作
-        private void triggerByWriteIoEvent(SelectionKey selectionKey) throws IOException {
-            SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
+        private void triggerByWriteIoEvent() throws IOException {
+            SocketChannel socketChannel = (SocketChannel) this.selectionKey.channel();
             boolean sendStatus = send(socketChannel);
             if (sendStatus) {
-                selectionKey.interestOps(SelectionKey.OP_READ);
+                this.selectionKey.interestOps(SelectionKey.OP_READ);
             } else {
-                selectionKey.interestOps(SelectionKey.OP_WRITE);
+                this.selectionKey.interestOps(SelectionKey.OP_WRITE);
             }
         }
 
