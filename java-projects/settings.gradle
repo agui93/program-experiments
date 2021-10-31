@@ -3,4 +3,6 @@ rootProject.name = 'java-projects'
 include 'java-nio'
 
 
-
+include 'java-middleware'
+include 'java-middleware:java-netty'
+include 'java-middleware:java-kafka'
