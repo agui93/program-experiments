@@ -33,7 +33,7 @@ public class EchoServer {
         // Configure the server.
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        final EchoServerHandler serverHandler = new EchoServerHandler();
+        final EchoServerHandler echoServerHandler = new EchoServerHandler();
         try {
             ServerBootstrap b = new ServerBootstrap();
             b.group(bossGroup, workerGroup)
@@ -47,8 +47,8 @@ public class EchoServer {
                             if (sslCtx != null) {
                                 p.addLast(sslCtx.newHandler(ch.alloc()));
                             }
-                            //p.addLast(new LoggingHandler(LogLevel.INFO));
-                            p.addLast(serverHandler);
+                            p.addLast(new LoggingHandler(LogLevel.INFO));
+                            p.addLast(echoServerHandler);
                         }
                     });
 
