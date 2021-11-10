@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips01/Tips01.c
+stdio.h
+-
+sys/time.h
+-
+locale.h
+-
+

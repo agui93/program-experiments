@@ -1,0 +1,31 @@
+C和指针(第二版)第16章:函数库
+
+整型函数
+    这组函数返回整型值,分三类:算术、随机数、字符串转换
+整型函数-算术
+<stdlib.h>
+int abs(int value);返回参数的绝对值
+long int labs(long int value);返回参数的绝对值
+div_t div(int numerator,int denominator);
+ldiv_t ldiv(long int number,long int denom);
+操作符/的除法运算结果未精确定义。
+当操作符/的任何一个操作数为负而不能整除时,到底商是最大的那个小于等于代数商的整数
+还是最小的那个大于等于代数商的整数,这取决于编译器.
+https://devdocs.io/c/numeric/math/div
+https://stackoverflow.com/questions/11720656/modulo-operation-with-negative-numbers
+https://en.wikipedia.org/wiki/Modulo_operation
+
+整型函数-伪随机数
+<stdlib.h>
+int rand(void);返回0~RAND_MAX之间的伪随机数
+void srand(unsigned int seed);用参数值对随机数发生器进行初始化
+srand的常用技巧是使用每天的时间作为随机数产生器的种子:srand((unsigned int)time(0));
+
+字符串转换
+<stdlib.h>
+int atoi(char const *string);
+long int atol(char const *string);
+long int strtol(char const *string, char **unused, int base);
+unsigned long int strtoul(char const *string, char **unused, int base);
+
+

@@ -1,0 +1,13 @@
+网络编程相关
+
+REFERENCE:
+    LINUX网络编程第2版
+    UNIX网络编程卷1
+
+
+
+todo 服务器地址结构
+    struct sockaddr_in
+
+
+

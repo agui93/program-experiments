@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="c-tips"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips01">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips01"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips01/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips01/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_epoll_single_client">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_epoll_single_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_epoll_single_client"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_epoll_single_client/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_epoll_single_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_epoll_single_client/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_epoll_single_server">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_epoll_single_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_epoll_single_server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_epoll_single_server/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_epoll_single_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_epoll_single_server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips07_check_malloc">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips07_check_malloc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips07_check_malloc"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips07_check_malloc/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips07_check_malloc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips07_check_malloc/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_single_server">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_single_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_single_server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_single_server/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_single_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_single_server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_g_stackClient">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_g_stackClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_g_stackClient"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_g_stackClient/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_g_stackClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_g_stackClient/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_demo_server">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_demo_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_demo_server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_demo_server/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_demo_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_demo_server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_demo_client">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_demo_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_demo_client"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_demo_client/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_demo_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_demo_client/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips10_tcp_simple_server">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips10_tcp_simple_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips10_tcp_simple_server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips10_tcp_simple_server/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips10_tcp_simple_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips10_tcp_simple_server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips08_check_sort">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips08_check_sort" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips08_check_sort"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips08_check_sort/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips08_check_sort" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips08_check_sort/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips08_check_alloc">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips08_check_alloc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips08_check_alloc"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips08_check_alloc/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips08_check_alloc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips08_check_alloc/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_file_monitor">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_file_monitor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_file_monitor"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_file_monitor/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_file_monitor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_file_monitor/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips07_check_dict">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips07_check_dict" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips07_check_dict"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips07_check_dict/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips07_check_dict" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips07_check_dict/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips06_01">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips06_01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips06_01"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips06_01/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips06_01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips06_01/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips05_check_bstWithChained">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips05_check_bstWithChained" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips05_check_bstWithChained"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips05_check_bstWithChained/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips05_check_bstWithChained" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips05_check_bstWithChained/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips10_tcp_simple_client">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips10_tcp_simple_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips10_tcp_simple_client"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips10_tcp_simple_client/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips10_tcp_simple_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips10_tcp_simple_client/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips04_checkQueueWithStackArray">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips04_checkQueueWithStackArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips04_checkQueueWithStackArray"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips04_checkQueueWithStackArray/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips04_checkQueueWithStackArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips04_checkQueueWithStackArray/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_single_client">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_single_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_single_client"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips09_kqueue_single_client/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips09_kqueue_single_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips09_kqueue_single_client/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips05_check_bstWithStaticArray">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips05_check_bstWithStaticArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips05_check_bstWithStaticArray"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips05_check_bstWithStaticArray/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips05_check_bstWithStaticArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips05_check_bstWithStaticArray/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_checkStackWithChained">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_checkStackWithChained" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_checkStackWithChained"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_checkStackWithChained/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_checkStackWithChained" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_checkStackWithChained/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_checkStackWithDynamicArray">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_checkStackWithDynamicArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_checkStackWithDynamicArray"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_checkStackWithDynamicArray/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_checkStackWithDynamicArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_checkStackWithDynamicArray/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_checkStackWithStaticArray">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_checkStackWithStaticArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_checkStackWithStaticArray"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tips03_checkStackWithStaticArray/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Tips03_checkStackWithStaticArray" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tips03_checkStackWithStaticArray/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Demo">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Demo"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Demo/fast">
+				<Option output="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 Demo/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/demo.c">
+			<Option target="Demo"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips01/Tips01.c">
+			<Option target="Tips01"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips03/stack/impl1/check_stackWithStaticArray.c">
+			<Option target="Tips03_checkStackWithStaticArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips03/stack/impl1/stackWithStaticArray.c">
+			<Option target="Tips03_checkStackWithStaticArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips03/stack/impl2/check_stackWithDynamicArray.c">
+			<Option target="Tips03_checkStackWithDynamicArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips03/stack/impl2/stackWithDynamicArray.c">
+			<Option target="Tips03_checkStackWithDynamicArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips03/stack/impl3/check_stackWithChained.c">
+			<Option target="Tips03_checkStackWithChained"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips03/stack/impl3/stackWithChained.c">
+			<Option target="Tips03_checkStackWithChained"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips03/stack/impl4/g_stackClient.c">
+			<Option target="Tips03_g_stackClient"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips04/queue/impl1/check_queueWithStaticArray.c">
+			<Option target="Tips04_checkQueueWithStackArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips04/queue/impl1/queueWithStaticArray.c">
+			<Option target="Tips04_checkQueueWithStackArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips05/bstree/impl1/bstreeWithStaticArray.c">
+			<Option target="Tips05_check_bstWithStaticArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips05/bstree/impl1/check_bstreeWithStaticArray.c">
+			<Option target="Tips05_check_bstWithStaticArray"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips05/bstree/impl2/bstreeWithChained.c">
+			<Option target="Tips05_check_bstWithChained"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips05/bstree/impl2/check_bstreeWithChained.c">
+			<Option target="Tips05_check_bstWithChained"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips06/tips06_01.c">
+			<Option target="Tips06_01"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips07/dict/check_dict.c">
+			<Option target="Tips07_check_dict"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips07/dict/dict.c">
+			<Option target="Tips07_check_dict"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips07/dict/dict.h">
+			<Option target="Tips07_check_dict"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips07/malloc/check_malloc.c">
+			<Option target="Tips07_check_malloc"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips07/malloc/zmalloc.c">
+			<Option target="Tips07_check_malloc"/>
+			<Option target="Tips07_check_dict"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips07/malloc/zmalloc.h">
+			<Option target="Tips07_check_malloc"/>
+			<Option target="Tips07_check_dict"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips08/mem/alloc.c">
+			<Option target="Tips08_check_alloc"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips08/mem/alloc.h">
+			<Option target="Tips08_check_alloc"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips08/mem/check_alloc.c">
+			<Option target="Tips08_check_alloc"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips08/sort/checksort.c">
+			<Option target="Tips08_check_sort"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips09/epoll/single/epoll_single_client.c">
+			<Option target="Tips09_epoll_single_client"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips09/epoll/single/epoll_single_server.c">
+			<Option target="Tips09_epoll_single_server"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips09/kevent/file/kqueue_file_monitor.c">
+			<Option target="Tips09_kqueue_file_monitor"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips09/kevent/multi/kevent_demo_client.c">
+			<Option target="Tips09_kqueue_demo_client"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips09/kevent/multi/kevent_demo_server.c">
+			<Option target="Tips09_kqueue_demo_server"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips09/kevent/single/kevent_single_client.c">
+			<Option target="Tips09_kqueue_single_client"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips09/kevent/single/kevent_single_server.c">
+			<Option target="Tips09_kqueue_single_server"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips10/tcp/simple/tcp_simple_client.c">
+			<Option target="Tips10_tcp_simple_client"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/tips10/tcp/simple/tcp_simple_server.c">
+			<Option target="Tips10_tcp_simple_server"/>
+		</Unit>
+		<Unit filename="/Users/agui93/Workspace/aguiSpaces/agui93-moonlight/c-tips/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

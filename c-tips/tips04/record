@@ -1,0 +1,7 @@
+ADT:参考《C和指针》第2版第17章
+
+
+
+队列:FIFO
+    基本操作:create_queue destroy_queue insert delete first is_empty is_full
+

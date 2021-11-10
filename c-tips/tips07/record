@@ -1,0 +1,23 @@
+redis源码摘要review:dict和zmalloc
+
+1.内存的使用
+    REFERENCE:
+        https://halelu.github.io/2017/09/Redis-Source-Code-1/
+        https://zhuanlan.zhihu.com/p/38276637
+        https://blog.csdn.net/libaineu2004/article/details/79400357
+        https://zhuanlan.zhihu.com/p/24202287
+        https://arjunsreedharan.org/post/148675821737/memory-allocators-101-write-a-simple-memory
+        apple system: https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/malloc.3.html#//apple_ref/doc/man/3/malloc
+        apple system: https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/malloc_size.3.html
+
+    Todo:调用内存分配库函数时要求的内存大小 实际分配的内存大小 字节对齐;
+        这些关系是什么?在不同系统下的统一抽象是什么样的?
+    Todo:调研下面的几个内存分配器
+        ptmalloc2 – glibc
+        jemalloc – FreeBSD and Firefox
+        tcmalloc – Google
+        dlmalloc – General purpose allocator
+        libumem – Solaris
+    Todo:http://jemalloc.net/jemalloc.3.html
+
+2.字典表的一种设计与实现方案

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Tips08_check_alloc.dir/tips08/mem/alloc.c.o CMakeFiles/Tips08_check_alloc.dir/tips08/mem/check_alloc.c.o  -o Tips08_check_alloc 

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Tips03_checkStackWithChained.dir/tips03/stack/impl3/stackWithChained.c.o CMakeFiles/Tips03_checkStackWithChained.dir/tips03/stack/impl3/check_stackWithChained.c.o  -o Tips03_checkStackWithChained 
