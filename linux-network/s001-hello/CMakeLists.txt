@@ -1,0 +1,1 @@
+add_executable(s001-hello hello.c)
