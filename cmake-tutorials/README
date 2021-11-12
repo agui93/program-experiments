@@ -1,9 +1,10 @@
-cmake-tutorials 记录 cmake的常见构建方式
+cmake-tutorials 记录了 cmake的常见构建方式
 
 参考
     https://cmake.org/cmake/help/git-stage/guide/tutorial/index.html
     https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial
-
+    https://www.cnblogs.com/52php/p/5681745.html
+    https://github.com/chaneyzorn/CMake-tutorial
 
 
 在cmake项目目录时，常用命令:
