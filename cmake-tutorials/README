@@ -6,6 +6,8 @@ cmake-tutorials 记录了 cmake的常见构建方式
     https://www.cnblogs.com/52php/p/5681745.html
     https://github.com/chaneyzorn/CMake-tutorial
 
+建议:外部编译方式构建工程
+
 
 在cmake项目目录时，常用命令:
     mkdir build
@@ -21,9 +23,14 @@ cmake-tutorials 记录了 cmake的常见构建方式
     ctest -C Debug -VV
     ctest -C Release -VV
 
+
+
+
+
 Step1: without cmake
 Step2: basic
 Step3: add a library
+    静态库:MathFunctions/libMathFunctions.a
 Step4: add a library
 Step5: install and test
     测试命令:
@@ -61,3 +68,21 @@ Step12: Adding Export Configuration
     cmake --build .
     cpack --config MultiCPackConfig.cmake
 
+
+建立一个静态库和动态库
+
+#SHARED，动态库(扩展名为.so)
+#STATIC，静态库(扩展名为.a)
+#MODULE，在使用dyld的系统有效，如果不支持dyld，则被当作SHARED对待。
+add_library(MathFunctionsSHARED SHARED mysqrt.cxx)
+add_library(MathFunctionsSTATIC STATIC mysqrt.cxx)
+add_library(MathFunctionsMODULE MODULE mysqrt.cxx)
+
+
+add_library(hello_static STATIC mysqrt.cxx)
+SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello")
+GET_TARGET_PROPERTY(OUTPUT_VALUE hello_static OUTPUT_NAME)
+MESSAGE(STATUS  "This is the hello_static OUTPUT_NAME:" ${OUTPUT_VALUE})
+
+
+SET_TARGET_PROPERTIES(hello_static PROPERTIES VERSION 1.2 SOVERSION 1)
