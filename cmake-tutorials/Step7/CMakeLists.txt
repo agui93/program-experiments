@@ -15,10 +15,10 @@ option(USE_MYMATH "Use tutorial provided math implementation" ON)
 configure_file(TutorialConfig.h.in TutorialConfig.h)
 
 # add the MathFunctions library
-if(USE_MYMATH)
-  add_subdirectory(MathFunctions)
-  list(APPEND EXTRA_LIBS MathFunctions)
-endif()
+if (USE_MYMATH)
+    add_subdirectory(MathFunctions)
+    list(APPEND EXTRA_LIBS MathFunctions)
+endif ()
 
 # add the executable
 add_executable(Tutorial tutorial.cxx)
@@ -27,14 +27,14 @@ target_link_libraries(Tutorial PUBLIC ${EXTRA_LIBS})
 # add the binary tree to the search path for include files
 # so that we will find TutorialConfig.h
 target_include_directories(Tutorial PUBLIC
-                           "${PROJECT_BINARY_DIR}"
-                           )
+        "${PROJECT_BINARY_DIR}"
+        )
 
 # add the install targets
 install(TARGETS Tutorial DESTINATION bin)
 install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
-  DESTINATION include
-  )
+        DESTINATION include
+        )
 
 # enable testing
 enable_testing()
@@ -45,15 +45,15 @@ add_test(NAME Runs COMMAND Tutorial 25)
 # does the usage message work?
 add_test(NAME Usage COMMAND Tutorial)
 set_tests_properties(Usage
-  PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number"
-  )
+        PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number"
+        )
 
 # define a function to simplify adding tests
 function(do_test target arg result)
-  add_test(NAME Comp${arg} COMMAND ${target} ${arg})
-  set_tests_properties(Comp${arg}
-    PROPERTIES PASS_REGULAR_EXPRESSION ${result}
-    )
+    add_test(NAME Comp${arg} COMMAND ${target} ${arg})
+    set_tests_properties(Comp${arg}
+            PROPERTIES PASS_REGULAR_EXPRESSION ${result}
+            )
 endfunction()
 
 # do a bunch of result based tests

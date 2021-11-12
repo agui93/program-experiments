@@ -1,13 +1,62 @@
-cmake的常见构建方式
-
-
-命令:当前在cmake项目目录时
-    mkdir build
-    cd build
-    cmake ../
-    cmake --build .
-
+cmake-tutorials 记录 cmake的常见构建方式
 
 参考
     https://cmake.org/cmake/help/git-stage/guide/tutorial/index.html
     https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial
+
+
+
+在cmake项目目录时，常用命令:
+    mkdir build
+    cd build
+    cmake ../
+    cmake --build .
+安装命令:
+    cmake --install .
+    cmake --install . --prefix "/home/myuser/installdir"
+测试命令:
+    ctest -N
+    ctest -VV
+    ctest -C Debug -VV
+    ctest -C Release -VV
+
+Step1: without cmake
+Step2: basic
+Step3: add a library
+Step4: add a library
+Step5: install and test
+    测试命令:
+        cd Step5
+        mkdir build
+        cmake ..
+        cmake --build .
+        ctest
+        ctest -N
+        ctest -VV
+    验证安装命令:
+        cmake --install . --prefix "/home/myuser/installdir"
+Step6: add System Introspection
+Step7: a Custom Command and Generated File
+Step8: Packaging an Installer
+    命令: cd Step8
+         mkdir build
+         cd build
+         cmake ..
+         cpack
+         cpack -G ZIP -C Debug
+         cpack --config CPackSourceConfig.cmake
+Step9:  Packaging an Installer
+Step10: Selecting Static or Shared Libraries
+Step11: Adding Generator Expressions
+Step12: Adding Export Configuration
+    cd Step12
+    mkdir debug
+    mkdir release
+    cd debug
+    cmake -DCMAKE_BUILD_TYPE=Debug ..
+    cmake --build .
+    cd ../release
+    cmake -DCMAKE_BUILD_TYPE=Release ..
+    cmake --build .
+    cpack --config MultiCPackConfig.cmake
+
