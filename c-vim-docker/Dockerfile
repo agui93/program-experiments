@@ -1,13 +1,10 @@
 ############################################################
 ##  构建镜像的命令:
-##      docker build -t c-env/c_remote_env:0.1 -f Dockerfile  .
+##      docker build -t c-vim-env/c_vim_env:0.1 -f Dockerfile  .
 ##  启动容器的命令:
-##      docker run -it -d --cap-add sys_ptrace -p127.0.0.1:2222:22 --name clion_remote_env --hostname clion-remote-machine c-env/c_remote_env:0.1
-##  ssh登录容器:
-##    用户名:clion  密码:clion  端口:2222 => ssh clion@127.0.0.1 -p 2222
-##    用户名:root  密码:root  端口:2222   => ssh root@127.0.0.1 -p 2222
+##      docker run -it -d --cap-add sys_ptrace -p127.0.0.1:2223:22 --name c-vim --hostname c-vim-machine c-vim-env/c_vim_env:0.1
 ##  本地进入容器:
-##      docker exec -it clion_remote_env /bin/bash
+##      docker exec -it c-vim /bin/bash
 ############################################################
 
 
@@ -35,15 +32,22 @@ RUN apt-get install -y  tar
 RUN apt-get install -y  python
 RUN apt-get install -y  vim
 RUN apt-get install -y  sudo
+RUN apt-get install -y  ctags 
+RUN apt-get install -y  git 
+RUN apt-get install -y  python3-dev 
 
 RUN apt-get clean autoclean
 
-
-
 RUN yes root | passwd root
-RUN useradd -m clion
-RUN yes clion | passwd clion
 RUN mkdir /run/sshd
+
+RUN mkdir -p /root/.vim/bundle/Vundle.vim
+ADD ./Vundle.vim /root/.vim/bundle/Vundle.vim
+ADD ./vim.rc /root/.vimrc
+ADD ./vim_plugins_install.sh /root/vim_plugins_install.sh
+RUN ["chmod", "+x", "/root/vim_plugins_install.sh"]
+RUN /root/vim_plugins_install.sh
+ADD ./ycm_extra_conf.py /root/ycm_extra_conf.py
 
 RUN ( \
     echo 'PermitRootLogin yes'; \
