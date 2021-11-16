@@ -46,7 +46,6 @@ ADD ./Vundle.vim /root/.vim/bundle/Vundle.vim
 ADD ./vim.rc /root/.vimrc
 ADD ./vim_plugins_install.sh /root/vim_plugins_install.sh
 RUN ["chmod", "+x", "/root/vim_plugins_install.sh"]
-RUN /root/vim_plugins_install.sh
 ADD ./ycm_extra_conf.py /root/ycm_extra_conf.py
 
 RUN ( \
@@ -55,5 +54,6 @@ RUN ( \
     echo 'Subsystem sftp /usr/lib/openssh/sftp-server'; \
   ) > /etc/ssh/sshd_config_test_clion
 
+RUN /root/vim_plugins_install.sh
 CMD ["/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_config_test_clion"]
 
