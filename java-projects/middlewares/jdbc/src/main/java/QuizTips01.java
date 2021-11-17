@@ -5,12 +5,14 @@ import java.util.Enumeration;
 import java.util.Random;
 
 //http://www.herongyang.com/JDBC/MySQL-JDBC-Driver.html
-public class QuizTips01 {
 
-    private final static String databaseName = "jdbc";
+/**
+ * CREATE DATABASE IF NOT EXISTS jdbc_test;
+ */
+public class QuizTips01 {
+    private final static String databaseName = "jdbc_test";
     private final static String user = "root";
     private final static String passwd = "123456";
-
 
     private static void printDrivers() throws ClassNotFoundException {
         System.out.println("Before loading SQLServerDriver:");
@@ -106,9 +108,8 @@ public class QuizTips01 {
     }
 
     private static void createTableWithAutoIncrement() {
-        Connection con = null;
+        Connection con;
         try {
-
             // Setting up the DataSource object
             com.mysql.jdbc.jdbc2.optional.MysqlDataSource ds
                     = new com.mysql.jdbc.jdbc2.optional.MysqlDataSource();
@@ -141,8 +142,8 @@ public class QuizTips01 {
     }
 
     //前提数据库和表已创建
-    private static void checkInsertStatement() {
-        Connection con = null;
+    private static void insertStatement() {
+        Connection con;
         try {
             // Setting up the DataSource object
             com.mysql.jdbc.jdbc2.optional.MysqlDataSource ds = new com.mysql.jdbc.jdbc2.optional.MysqlDataSource();
@@ -159,12 +160,10 @@ public class QuizTips01 {
             int count = 0;
 
             // insert a single row using default values
-            count += sta.executeUpdate("INSERT INTO Profile" + " (FirstName)" + " VALUES ('Herong')");
+            count += sta.executeUpdate("INSERT INTO Profile (FirstName) VALUES ('Herong')");
 
             // insert a single row using provided values
-            count += sta.executeUpdate(
-                    "INSERT INTO Profile" + " (FirstName, LastName, Point, BirthDate)"
-                            + " VALUES ('Janet', 'Gates', 999.99, '1984-10-13')");
+            count += sta.executeUpdate("INSERT INTO Profile (FirstName, LastName, Point, BirthDate) VALUES ('Janet', 'Gates', 999.99, '1984-10-13')");
 
 
             // insert rows with loop with random values
@@ -202,7 +201,7 @@ public class QuizTips01 {
 
 
     private static void dropTable() {
-        Connection con = null;
+        Connection con;
         try {
             // Setting up the DataSource object
             com.mysql.jdbc.jdbc2.optional.MysqlDataSource ds = new com.mysql.jdbc.jdbc2.optional.MysqlDataSource();
@@ -229,15 +228,29 @@ public class QuizTips01 {
 
 
     public static void main(String[] args) throws Exception {
+        System.out.println("-----------------");
+
         printDrivers();
+        System.out.println("-----------------");
+
         connectionByDriverManager();
+        System.out.println("-----------------");
+
         connectionByDataSource();
+        System.out.println("-----------------");
+
         checkDriverServerInfo();
+        System.out.println("-----------------");
+
 
         dropTable();
-        createTableWithAutoIncrement();
-        checkInsertStatement();
+        System.out.println("-----------------");
 
+        createTableWithAutoIncrement();
+        System.out.println("-----------------");
+
+        insertStatement();
+        System.out.println("-----------------");
     }
 
 
