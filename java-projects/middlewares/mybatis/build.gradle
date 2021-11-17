@@ -1,0 +1,8 @@
+def version_mybatis = "3.3.0"
+def version_mysql_connector = "5.1.6"
+
+dependencies {
+    compile "mysql:mysql-connector-java:${version_mysql_connector}"
+    compile "org.mybatis:mybatis:${version_mybatis}"
+
+}

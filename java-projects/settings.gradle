@@ -1,8 +1,20 @@
 rootProject.name = 'java-projects'
 
-include 'java-nio'
+include 'basics'
+include 'basics:nio'
+include 'basics:algs'
+include 'basics:algs:algs4'
+include 'basics:algs:algs-sword'
 
 
-include 'java-middleware'
-include 'java-middleware:java-netty'
-include 'java-middleware:java-kafka'
+include 'tools'
+include 'tools:jol-tool'
+
+
+include 'middlewares'
+include 'middlewares:netty'
+include 'middlewares:kafka'
+include 'middlewares:jdbc'
+include 'middlewares:hikaricp'
+include 'middlewares:spring-jdbc'
+include 'middlewares:mybatis'

@@ -1,0 +1,5 @@
+def version_mysql_connector = "5.1.38"
+
+dependencies {
+    compile "mysql:mysql-connector-java:${version_mysql_connector}"
+}

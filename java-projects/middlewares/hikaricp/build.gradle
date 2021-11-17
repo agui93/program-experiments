@@ -1,0 +1,5 @@
+dependencies {
+    compile 'com.zaxxer:HikariCP:4.0.3'
+    compile 'mysql:mysql-connector-java:5.1.39'
+    compile 'org.slf4j:slf4j-simple:1.7.25'
+}

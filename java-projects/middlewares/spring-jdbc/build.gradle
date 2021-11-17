@@ -1,0 +1,11 @@
+def version_spring = "4.3.3.RELEASE"
+def version_mysql_connector = "5.1.38"
+
+dependencies {
+    compile "mysql:mysql-connector-java:${version_mysql_connector}"
+    compile "org.springframework:spring-core:${version_spring}"
+    compile "org.springframework:spring-beans:${version_spring}"
+    compile "org.springframework:spring-aop:${version_spring}"
+    compile "org.springframework:spring-context:${version_spring}"
+    compile "org.springframework:spring-jdbc:${version_spring}"
+}
