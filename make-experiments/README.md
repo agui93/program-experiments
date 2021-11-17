@@ -8,8 +8,28 @@ step3 : 简单规则
 step4 : 自定义变量 预定义变量 模式匹配
 step5 : 搜索路径
 step6 : 自动推导规则
-step6 : 递归 
+step7 : 递归 
 
-make实验
+make cases:
+case1 : test
+case2 : beginner example 
+case3 : variables
+case4 : variables
+case5 : the all target 
+case6 : multiple targets 
+case7 : Wildcard * 
+case8 : Wildcard %
+case9 : Automatic Variables 
+case10: Static Pattern Rules 
+case11: Static Pattern Rules and Filter 
+case12: Implicit Rules 
+case13: Pattern Rules 
+case14: Double-Colon Rules 
+case15:  
+case16:  
+case17:  
+
+
+
 
 

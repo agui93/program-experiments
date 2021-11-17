@@ -10,9 +10,6 @@ OBJSDIR = objs
 $(TARGET):$(OBJS)
 	${CC} -o $(TARGET) $(OBJS) $(CFLAGS)
                   
-
-
-
 clean:
 	-$(RM) $(TARGET) 
 	-$(RM) $(OBJS) 
