@@ -1,0 +1,156 @@
+Hession:
+http://hessian.caucho.com/
+
+
+
+
+maven
+https://www.cnblogs.com/davenkin/p/advanced-maven-multi-module-vs-inheritance.html
+
+
+
+Mysql tutorials
+http://www.herongyang.com/MySQL/
+
+
+CDN
+https://www.zhihu.com/question/36514327?rf=37353035 https://help.aliyun.com/product/27099.html
+
+
+Generics
+https://www.oracle.com/technetwork/articles/java/juneau-generics-2255374.html
+https://docs.oracle.com/javase/tutorial/java/generics/index.html
+
+
+reflection
+https://docs.oracle.com/javase/tutorial/reflect/index.html
+
+Input and Output;				File Handling;		Useful and/or Advanced Features
+https://www.geeksforgeeks.org/java/
+
+
+
+
+——————————————————————————————————————————————————————————
+Spring security
+Sprint OhAuth
+Spring MVC https://docs.spring.io/spring/docs/5.1.9.RELEASE/spring-framework-reference/web.html#mvc
+Spring  quartz scheudler
+
+Spring boot
+Spring cloud
+
+Spring-jdbc的源码实现
+Spring jdbc:connection exception
+Spring + mybatis
+Spring 事务
+
+Spring jdbc实现
+mybatis实现
+——————————————————————————————————————————————————————————
+
+
+
+——————————————————————————————————————————————————————————
+Diagnostic Tools
+https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/toc.html
+Java HotSpot VM Command-Line Options
+https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts001.html
+Java Gc tutorials
+http://www.herongyang.com/Java-GC/
+JVM tutorials
+http://www.herongyang.com/JVM/
+
+Java tutorial
+https://docs.oracle.com/javase/tutorial/index.html
+
+JDK tutorials
+http://www.herongyang.com/JDK/
+
+
+
+https://docs.oracle.com/javase/tutorial/essential/environment/index.html
+https://docs.oracle.com/javase/tutorial/essential/environment/paths.html
+——————————————————————————————————————————————————————————
+
+
+
+SSL/TLS
+-Djdk.tls.allowUnsafeServerCertChange=true -Dsun.security.ssl.allowUnsafeRenegotiation=true
+https://stackoverflow.com/questions/27105004/what-means-javax-net-ssl-sslhandshakeexception-server-certificate-change-is-re
+https://docs.bmc.com/docs/rsso1808/troubleshooting-authentication-issues-820495115.html
+https://www.ibm.com/support/knowledgecenter/en/SSYKE2_7.0.0/com.ibm.java.security.component.70.doc/security-component/jsse2Docs/tlsrenegotiation.html
+
+
+
+——————————————————————————————————————————————————————————
+常用工具
+org.apache.commons.lang3
+
+java.util.ServiceLoader
+https://www.oracle.com/technetwork/articles/javase/extensible-137159.html
+https://www.logicbig.com/tutorials/core-java-tutorial/java-se-api/service-loader.html
+https://cxis.me/2017/04/17/Java%E4%B8%ADSPI%E6%9C%BA%E5%88%B6%E6%B7%B1%E5%85%A5%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/
+https://github.com/google/auto/tree/master/service
+
+
+
+Java网络编程(第3版)的目录结构
+
+Packaging Programs in JAR Files
+https://docs.oracle.com/javase/tutorial/deployment/jar/index.html
+
+
+Trail: Custom Networking
+https://docs.oracle.com/javase/tutorial/networking/index.html
+
+Java反编译工具（如JD_GUI）
+
+
+System.getProperties()
+
+设计模式
+
+ Java Naming and Directory Interface (J.N.D.I.) API
+Jini network technology and the Service Location Protocol (SLP)
+
+
+线程池 executor框架
+jdk中常用的线程工具(ConcurrentHashMap ConcurrentLinkedQueue 阻塞队列 原子操作类 CountDownLatch CyclicBarrier Semaphore Exchanger)
+
+
+——————————————————————————————————————————————————————————
+
+
+
+——————————————————————————————————————————————————————————
+ElasticSearch. Kibana grafana
+
+https://sspai.com/post/32979
+
+Hession2  CDN  Mysql Maven
+Generics  reflection
+设计模式
+
+搭建gitlab服务
+搭建svn服务
+autobuild
+
+
+
+Travel Prepare
+命令:netstat iostat ps  nfsstat
+Mongo mysql redis zookeeper kafka客户端
+——————————————————————————————————————————————————————————
+
+CCIE
+https://www.zhihu.com/question/21366239?sort=created
+——————————————————————————————————————————————————————————
+Integer 位操作
+http://www.voidcn.com/article/p-dsruacct-bda.html
+https://juejin.im/entry/580a3074128fe1005fc88b30
+BigDecimal   Double Integer实现
+
+HashMap与IdentityHashMap区别,判断key是否相等
+HashMap vs LinkedHashMap vs IdentityHashMap
+

@@ -1,0 +1,399 @@
+Daily待整理细化
+-------------------------------------------------------------------------------------------------------------------
+SSO  Session  Cookie
+Java security
+LMAX Disruptor
+JSR-133
+clone方法
+Linux From Scratch
+待整理的资料集
+
+
+-------------------------------------------------------------------------------------------------------------------
+SSO  Session  Cookie
+https://cdn2.auth0.com/blog/definitive-guide-to-single-sign-on.pdf
+
+https://user-gold-cdn.xitu.io/2018/3/2/161e2761ff41b501?imageView2/0/w/1280/h/960/format/webp/ignore-error/1
+https://yq.aliyun.com/articles/636281
+https://www.cnblogs.com/EzrealLiu/p/5559255.html
+https://blog.csdn.net/qq_31183297/article/details/79419222
+https://juejin.im/post/5a982eb8f265da239f06cba3
+https://img-blog.csdn.net/20180302091422572?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzExODMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
+https://juejin.im/post/5aa400d36fb9a028d566ba2e
+https://zhuanlan.zhihu.com/p/58666986
+https://www.infoq.cn/article/cookie-security/
+https://stackoverflow.com/questions/35663357/how-does-sso-single-sign-on-work
+
+https://mihin.org/wp-content/uploads/2016/09/MiHIN-UCIG-Single-Sign-On-PUBLISHED-v13-11-05-15.pdf
+https://www.cse.wustl.edu/~jain/cse571-07/ftp/websso.pdf
+https://www.owasp.org/images/a/ac/OWASP-Single-Sign-On-Vijay.pdf
+
+
+https://www.jianshu.com/p/704dc0c8e094
+https://www.rowkey.me/blog/2016/08/27/server-basic-tech-stack/
+https://yq.aliyun.com/articles/42566?spm=a2c4e.11154873.tagmain.115.62977c60ctRyQZ
+
+https://www.cnblogs.com/shanyou/archive/2009/08/30/1556659.html
+https://www.jianshu.com/p/704dc0c8e094
+https://yq.aliyun.com/articles/637297?spm=a2c4e.11154873.tagmain.30.62977c60ctRyQZ
+
+
+https://searchsecurity.techtarget.com/definition/single-sign-on
+
+
+Cookie
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+https://flaviocopes.com/cookies/
+https://www.owasp.org/images/a/a0/OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson.pdf
+http://www.massey.ac.nz/~nhreyes/MASSEY/159339/Lectures/Lecture%2011%20-%20PHP%20-%20Part%205%20-%20CookiesSessions.pdf
+https://www.blackhat.com/docs/us-16/materials/us-16-Sivakorn-HTTP-Cookie-Hijacking-In-The-Wild-Security-And-Privacy-Implications.pdf
+https://thoughtbot.com/blog/lucky-cookies
+https://en.wikipedia.org/wiki/HTTP_cookie 
+
+
+-------------------------------------------------------------------------------------------------------------------
+java.security
+https://yq.aliyun.com/articles/57223?&utm_source=qq
+https://www.cnblogs.com/yiwangzhibujian/p/6207212.html
+https://zhuanlan.zhihu.com/p/52032614
+https://www.ibm.com/developerworks/cn/java/j-lo-javasecurity/
+
+
+
+java.security
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-specTOC.fm.html
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/PolicyFiles.html
+
+
+https://docs.oracle.com/javase/tutorial/security/index.html
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/index.html
+https://www.geeksforgeeks.org/java/
+
+
+System.getSecurityManager()
+https://docs.oracle.com/javase/tutorial/essential/environment/security.html
+https://stackoverflow.com/questions/5192965/java-security-manager-what-does-it-check
+
+policy
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/PolicyFiles.html
+
+permissions
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html
+
+AccessController.doPrivileged
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/doprivileged.html
+https://docs.oracle.com/javase/8/docs/api/java/security/AccessController.html
+https://stackoverflow.com/questions/852453/accesscontroller-doprivileged
+https://stackoverflow.com/questions/2233761/when-should-accesscontroller-doprivileged-be-used
+https://www.programcreek.com/java-api-examples/?class=java.security.AccessController&method=doPrivileged
+https://www.programcreek.com/java-api-examples/java.security.PrivilegedExceptionAction
+
+选项
+-Djava.security.manager
+-Djava.security.policy= policy-name
+-------------------------------------------------------------------------------------------------------------------
+ LMAX Disruptor论文和源码实现, 应用案例, perfTest
+总结:论文		原理		应用		测试指标，测试方法，测试样例
+https://lmax-exchange.github.io/disruptor/
+file:///Users/aguicfg/Desktop/Disruptor-1.0.pdf
+
+https://github.com/LMAX-Exchange/disruptor/wiki/Introduction    概念图
+https://github.com/LMAX-Exchange/disruptor/wiki/Performance-Results 性能测试设计  测试结果分析
+https://github.com/LMAX-Exchange/disruptor/wiki/Blogs-And-Articles   参考资料
+https://github.com/LMAX-Exchange/disruptor/wiki/Frequently-Asked-Questions    Frequently asked questions on the Disruptor
+
+-------------------------------------------------------------------------------------------------------------------
+The JSR-133 Cookbook for Compiler Writers
+http://gee.cs.oswego.edu/dl/jmm/cookbook.html
+-------------------------------------------------------------------------------------------------------------------
+
+clone方法
+https://www.geeksforgeeks.org/clone-method-in-java-2/ Deep Copy vs Shallow Copy
+* Shallow copy is method of copying an object and is followed by default in cloning. In this method the fields of an old object X are copied to the new object Y. While copying the object type field the reference is copied to Y i.e object Y will point to same location as pointed out by X. If the field value is a primitive type it copies the value of the primitive type.
+* Therefore, any changes made in referenced objects in object X or Y will be reflected in other object.
+
+Usage of clone() method – Deep Copy
+* If we want to create a deep copy of object X and place it in a new object Y then new copy of any referenced objects fields are created and these references are placed in object Y. This means any changes made in referenced object fields in object X or Y will be reflected only in that object and not in the other. In below example, we create a deep copy of object.
+* A deep copy copies all fields, and makes copies of dynamically allocated memory pointed to by the fields. A deep copy occurs when an object is copied along with the objects to which it refers.
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Linux From Scratch
+
+https://linux.cn/lfs/LFS-BOOK-7.7-systemd/
+http://www.linuxfromscratch.org/lfs/view/stable-systemd/
+http://www.ha97.com/book/lfs-book-6.6/
+https://baike.baidu.com/item/Linux%20From%20Scratch/2594688
+http://www.linuxfromscratch.org/lfs/downloads/8.4/LFS-BOOK-8.4.pdf
+http://www.linuxfromscratch.org/lfs/downloads/8.4/LFS-BOOK-8.4-NOCHUNKS.html
+http://www.linuxfromscratch.org/lfs/downloads/8.4-systemd/LFS-BOOK-8.4-systemd-NOCHUNKS.html
+http://www.jinbuguo.com/lfs/lfs62/index.html
+https://www.cnblogs.com/spaceship9/p/6526887.html
+
+7.7中文翻译版
+https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html
+
+8.4中文翻译版
+https://lctt.github.io/LFS-BOOK/lfs-systemd/index.html
+
+8.3 中文翻译版
+https://bf.mengyan1223.wang/lfs/zh_CN/8.3/
+
+6.2的中文翻译版
+https://wizardforcel.gitbooks.io/lfs/content/
+
+Bruce Dubbs宣布推出Linux From Scratch（LFS）和Beyond Linux From Scratch（BLFS）8.4版的最新稳定版本。 LFS是一本书，提供了有关如何从头构建基本Linux系统（使用标准Linux实时系统）的逐步说明。 BLFS通过提供有关如何编译X Window System，窗口管理器和桌面环境以及各种流行的桌面和服务器包及其依赖项的进一步课程，对LFS书籍进行了扩展。
+
+
+构建LFS7.7过程的总结
+https://andyyoung01.github.io/2016/12/06/%E6%9E%84%E5%BB%BALFS7-7%E8%BF%87%E7%A8%8B%E7%9A%84%E6%80%BB%E7%BB%93/
+http://www.dohooe.com/2016/01/29/326.html
+
+http://blog.digfarmer.com/?tag=lfs
+
+https://yq.aliyun.com/articles/84583?spm=a2c4e.11153940.0.0.71f3c6acSHiDMU
+https://yq.aliyun.com/articles/430235?spm=a2c4e.11153940.0.0.71f3c6acSHiDMU
+https://yq.aliyun.com/articles/87110?spm=a2c4e.11153940.0.0.71f3c6acSHiDMU
+
+https://www.xuejiayuan.net/blog/931bc7c07c0145ce8fb2672c99237735
+http://www.adintr.com/myarticle/aslinux_p001.html
+https://blog.yangmame.org/lFS%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html
+https://www.cnblogs.com/Xjng/p/3664489.html
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Mac OS制作Ubuntu安装U盘
+https://segmentfault.com/a/1190000006835642
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+待整理的资料
+
+c++ https://www.geeksforgeeks.org/c-plus-plus/
+
+Java https://www.geeksforgeeks.org/java/
+
+设计模式   https://www.geeksforgeeks.org/software-design-patterns/
+
+algorithms
+https://www.zhihu.com/question/20368410
+https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
+https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/
+
+Geeksforgeeks
+https://www.geeksforgeeks.org/
+https://zhuanlan.zhihu.com/p/37881907
+
+
+
+
+
+成为专业程序员路上用到的各种优秀资料、神器及框架
+https://www.cntofu.com/book/117/README.md#%E8%B5%84%E6%96%99%E7%AF%87
+
+
+https://www.cntofu.com/book/5/index.html
+https://www.cntofu.com/book/46/index.html
+https://www.cntofu.com/book/189/index.html
+https://www.cntofu.com/book/105/index.html
+https://www.cntofu.com/book/184/index.html
+
+
+
+Linux from scratch
+http://www.linuxfromscratch.org/lfs/
+
+
+机器学习原理
+https://www.cntofu.com/book/85/index.html
+https://www.cntofu.com/book/62/index.html https://www.cntofu.com/book/157/index.html
+https://www.cntofu.com/book/129/index.html
+https://www.cntofu.com/book/94/index.html
+https://www.cntofu.com/book/168/index.html
+https://www.cntofu.com/book/56/index.html
+
+
+c语言透视 https://www.cntofu.com/book/43/index.html
+https://www.cntofu.com/book/102/index.html
+https://www.cntofu.com/book/25/index.html
+https://www.cntofu.com/book/25/index.html
+ 
+Git
+https://www.cntofu.com/book/39/index.html 
+
+Leetcode
+https://www.cntofu.com/book/186/index.html
+
+Elasticsearch
+https://www.cntofu.com/book/40/index.html
+
+linux
+https://www.cntofu.com/book/28/index.html https://www.cntofu.com/book/191/index.html
+https://www.cntofu.com/book/49/index.html
+https://www.cntofu.com/book/114/index.html
+https://www.cntofu.com/book/31/index.html
+
+
+
+安全
+https://www.cntofu.com/book/36/index.html
+https://www.cntofu.com/book/29/index.html
+
+
+数据结构
+https://www.cntofu.com/book/23/index.html
+
+ 
+Spring boot
+https://www.cntofu.com/book/81/index.html
+https://www.cntofu.com/book/79/index.html
+https://www.cntofu.com/book/87/index.html
+
+Docker
+https://www.cntofu.com/book/139/index.html
+https://www.cntofu.com/book/42/index.html
+
+hbase https://www.cntofu.com/book/173/index.html
+
+Nginx
+https://github.com/taobao/nginx-book
+
+
+Awesome
+https://github.com/sindresorhus/awesome
+https://www.cntofu.com/book/141/index.html
+
+
+
+cgdb
+https://www.cntofu.com/book/121/index.html
+
+
+https://www.cntofu.com/book/119/index.html
+https://www.cntofu.com/book/185/index.html
+
+
+gdb linux等
+https://www.cntofu.com/book/46/index.html
+
+
+
+
+思考Java后端技术栈涉及方面有:
+Base: concurrence nio/io  socket  algorithm data-structure jvm
+Web:tomcat,spring,springmvc,spring boot,spring cloud, servermesh http nginx
+Db: mongod redis mysql hbase hive
+Docker k8s  es
+区块链 机器学习 ,大数据 微服务周边的一系列
+Linux shell,性能监控,基础运维
+后端技术栈:
+c c++ 网络 unix编程
+
+
+https://readfree.me/tags/7308776/
+
+Zabbix监控 https://www.zhihu.com/question/19973178
+Grafana监控
+JMX—memory cpu io
+Application Performance Management
+
+Kubernetes
+
+监控(memory cpu thread  network  io)
+Os:memory
+Jvm:heap and non-heap memory
+	https://stackify.com/jvm-metrics/
+		provide information regarding JVM memory status
+		show you how many times the GC runs per minute and how long each run lasts on average
+观察维度:内存变化(堆与非堆) cpu负载变化  gc变化
+不同场景下根据数据历史，对比是否正常
+
+
+监控1台机器的系统资源，判断是否健康，判断资源是否到达警戒线
+监控1批机器的系统资源，判断是否健康，判断资源是否到达警戒线
+
+压测1台机器的系统资源，判断是否健康，判断资源是否到达警戒线
+压测1批机器的系统资源，判断是否健康，判断资源是否到达警戒线
+
+监控1台机器上的特定应用的资源瓶颈
+监控1批机器上的特定应用的资源瓶颈
+
+监控1台机器上的1批特定应用的资源瓶颈
+监控1批机器上的1批特定应用的资源瓶颈
+
+http://karunsubramanian.com/java/4-things-you-need-to-know-about-cpu-utilization-of-your-java-application/
+
+
+
+UML画图进行设计 和 梳理已有程序的结构
+https://www.zhihu.com/question/22253854
+动态图：用例图，活动图，状态机图，序列图，通信图
+静态图：类图，包图，部署图，构件图
+
+
+
+
+
+------
+多线程体系 及底层实现 3
+Disruptor Netty  及底层实现 网络编程相关2
+Spring 及源码实现 2
+Redis 及源码实现 1
+Alps框架 及源码实现  2
+Kafka 及 producer 和consumer实现 2
+------
+Mongo 2
+Zookeeper 2
+分布式架构整体理解
+Mysql Couchbase
+------
+新手入门
+-------------------------------------------------------------------------------------------------------------------
+搜索引擎   +  调试
+Java基础
+	开发环境搭建(git idea)   执行环境理解   语法(代码执行流程分析)   OO设计
+算法
+	jdk的集合实现  算法实现
+
+
+数据库:mysql mongo redis
+
+中间件SSM:  spring ,springMVC,  Mybatis
+
+web开发: tomcat/jetty   http基础
+
+os 网络 内存 磁盘—》线程主题/linux基础   tcp/ip/网络编程主题   buffer和jvm垃圾回收   文件io读写
+
+项目开发:gradle  maven
+-------------------------------------------------------------------------------------------------------------------
+计算机的构造(http://cn.linux.vbird.org/linux_basic/0105computers.php)
+计算机执行程序的解释
+开发环境的搭建(JAVA_HOME  idea/命令行)
+demo程序的运行和调试(idea调试程序)
+搜索引擎的使用(碰到问题时进行查询)
+基础
+	思路1：数据类型(基础数据类型  字符串  数组 对象  类对象)   顺序/选择/循环语句  对象和类  继承和多态    递归
+	思路2：使用JDK集合类说明如何编写
+使用基础编写算法实现
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+进度:
+	1.解释计算机构造 执行程序 进制
+	2.语法基础
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

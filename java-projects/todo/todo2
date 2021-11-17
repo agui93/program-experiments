@@ -1,0 +1,150 @@
+Linux
+-------------------------------------------------------------------------------------------------------------------
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
+pip install --upgrade pip
+pip install shadowsocks
+
+1.单纯的命令行启动
+/usr/bin/python /bin/ssserver -p 端口 -k 密码 -m aes-256-cfb --user nobody -d start
+2.配置文件启动    通过json文件
+3.开机时自动重启 根据rc.local进行设置
+
+https://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html
+-------------------------------------------------------------------------------------------------------------------
+
+LINUX网络编程第2版.pdf
+file:///Users/agui93/Documents/developBooks/计算机基础/Linux网络编程(第二版)PDF+源代码/LINUX网络编程第2版.pdf
+
+
+Linux高性能服务器编程.pdf
+file:///Users/agui93/Documents/developBooks/计算机基础/linux/Linux高性能服务器编程.pdf
+Linux多线程服务器编程精要
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+UNIX环境高级编程第三版_扫描版.pdf
+file:///Users/agui93/Documents/developBooks/计算机基础/unix环境/UNIX环境高级编程第三版_扫描版.pdf
+
+
+UNIX网络编程卷1第3版.pdf
+file:///Users/agui93/Documents/developBooks/计算机基础/unix环境/UNIX网络编程卷1第3版.pdf
+
+ UNIX_网络编程_卷2_-_W._Richard_Stevens.pdf
+file:///Users/agui93/Documents/developBooks/计算机基础/unix环境/UNIX_网络编程_卷2_-_W._Richard_Stevens.pdf
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+redis设计与实现(第二版).pdf
+file:///Users/agui93/Documents/developBooks/redis/redis设计与实现(第二版).pdf 
+Nginx
+file:///Users/agui93/Documents/developBooks/nginx/实战Nginx取代Apache的高性能Web服务器.pdf
+https://www.w3cschool.cn/nginx/
+http://www.nginx.cn/doc/
+https://nginx.org/en/
+http://tutorials.jenkov.com/nginx/index.html
+https://www.nginx.com/resources/wiki/start/
+http://nginx.org/en/docs/beginners_guide.html
+
+  libuv实现中的网络部分 https://luohaha.github.io/Chinese-uvbook/ ------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------
+
+file:///Users/agui93/Documents/developBooks/c语言/C和指针(第二版)高清全版469页.pdf
+https://devdocs.io/c/
+http://man7.org/linux/man-pages/dir_all_alphabetic.html
+http://man7.org/linux/man-pages/dir_all_by_section.html -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+kqueue document
+http://man7.org/linux/man-pages/man3/getaddrinfo.3.html
+https://www.ibm.com/developerworks/cn/aix/library/1105_huangrg_kqueue/
+
+
+
+Epoll
+https://linux.die.net/man/4/epoll
+http://man7.org/linux/man-pages/man7/epoll.7.html
+-------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------- 探究
+
+事件通常有三种类型，网络事件、信号、定时器。
+Nginx选择的进程模型与事件模型
+https://www.w3cschool.cn/nginx/sd361pdz.html
+
+
+Connection
+Nginx 是如何处理一个连接的(一个 tcp 连接的生命周期)
+Nginx 作为客户端是的连接
+Nginx连接数的最大上限处理
+多进程间连接的平衡
+Nginx 中一个 http 请求的生命周期
+Nginx中keepalive pipe lingering_close策略
+
+-------------------------------------------------------------------------------------------------------------------
+Redis
+
+内存中的布局是？
+s-(sizeof(struct sdshdr))
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+http://www.herongyang.com/site_map.html
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+20190902
+Mac OS 手机抓包
+https://www.jianshu.com/p/8034b451585b
+http://blog.devtang.com/2015/11/14/charles-introduction/
+
+
+-------------------------------------------------------------------------------------------------------------------
+2019-08-23
+
+
+
+Svn
+https://www.w3cschool.cn/svn/
+https://www.runoob.com/svn/svn-tutorial.html
+https://www.tutorialspoint.com/svn/index.htm
+
+
+测验环境
+docker run -it -d --name svnserver -p 3690:3690  --cap-add=SYS_PTRACE --security-opt seccomp=unconfined centos /bin/bash
+docker exec -it svnserver /bin/bash
+#安装svn
+yum install  subversion
+
+
+Shell if判断选项
+-e 判断对象是否存在
+-d 判断对象是否存在，并且为目录
+-f 判断对象是否存在，并且为常规文件
+-L 判断对象是否存在，并且为符号链接
+-h 判断对象是否存在，并且为软链接
+-s 判断对象是否存在，并且长度不为0
+-r 判断对象是否存在，并且可读
+-w 判断对象是否存在，并且可写
+-x 判断对象是否存在，并且可执行
+-O 判断对象是否存在，并且属于当前用户
+-G 判断对象是否存在，并且属于当前用户组
+-nt 判断file1是否比file2新  [ "/data/file1" -nt "/data/file2" ]
+-ot 判断file1是否比file2旧  [ "/data/file1" -ot "/data/file2" ]
+
+-eq//等于
+-ne//不等于
+-gt//大于
+-lt //小于
+-ge //大于等于
+-le //小于等于
+
+
+Redis Review
+------------------------------------------------------------------------------------------------------------------- setproctitle.c
+https://blog.csdn.net/taurance/article/details/20054917
+https://blog.csdn.net/hengshan/article/details/7835981
+
+
+
