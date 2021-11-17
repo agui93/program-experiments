@@ -25,9 +25,21 @@ case11: Static Pattern Rules and Filter
 case12: Implicit Rules 
 case13: Pattern Rules 
 case14: Double-Colon Rules 
-case15:  
-case16:  
-case17:  
+case15: Command Echoing/Silencing
+case16: Command Execution 
+case17: Default Shell 
+case18: Error handling with -k, -i, and -
+case19: Interrupting or killing make 
+case20: Recursive use of make
+case21: Use export for recursive make
+case22: Use export for recursive make
+case23: Use export for recursive make
+case24: Arguments to make
+case25:
+case26:
+case27:
+case28:
+case29:
 
 
 

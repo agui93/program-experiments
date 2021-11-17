@@ -1,3 +1,4 @@
+# beginner example
 blah: blah.o
 	cc blah.o -o blah # Runs third
 
