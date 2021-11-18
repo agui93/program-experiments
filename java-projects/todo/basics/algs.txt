@@ -17,3 +17,10 @@ algorithms
     https://www.zhihu.com/question/20368410
     https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
     https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/
+
+## 2019-07-15
+算法ceilingNextPowerOfTwo的java实现
+public static int ceilingNextPowerOfTwo(final int x){
+    return 1 << (32 - Integer.numberOfLeadingZeros(x - 1));
+}
+

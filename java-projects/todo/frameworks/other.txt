@@ -10,6 +10,24 @@ Hession:
 Mongo mysql redis zookeeper kafka客户端
 
 -------------------------------------------------------------------------------------------------------------------
+## 2019-07-24
+
+
+
+分类slf4j  logback  log4j2 jdk  jcl   log4j
+	spring中的log用的是org.apache.commons.logging
+slf4j-api，logback结合使用
+http://www.logback.cn/
+https://segmentfault.com/a/1190000008315137#articleHeader9
+https://segmentfault.com/a/1190000008315137
+https://blog.csdn.net/johnson_moon/article/details/77532583
+https://cloud.tencent.com/developer/article/1329362
+
+
+
+配置:logback.xml   alps-logger.xml	RootLogger	RuntimeLoggerConfigure	LoggerFactory
+-------------------------------------------------------------------------------------------------------------------
+
 SSO  Session  Cookie
 https://cdn2.auth0.com/blog/definitive-guide-to-single-sign-on.pdf
 

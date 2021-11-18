@@ -5,6 +5,17 @@ SSL/TLS
     https://docs.bmc.com/docs/rsso1808/troubleshooting-authentication-issues-820495115.html
     https://www.ibm.com/support/knowledgecenter/en/SSYKE2_7.0.0/com.ibm.java.security.component.70.doc/security-component/jsse2Docs/tlsrenegotiation.html
 
+
+UML **工具**
+    https://plantuml.com/zh/
+
+
+
+**技术思考**
+    https://v2ex.com/t/811237
+
+
+
 Git
     https://www.cntofu.com/book/39/index.html
 

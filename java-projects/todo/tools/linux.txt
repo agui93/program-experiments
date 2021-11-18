@@ -136,6 +136,40 @@ Shell if判断选项
 
 
 
-------------------------------------------------------------------------------------------------------------------- setproctitle.c
+-------------------------------------------------------------------------------------------------------------------
+setproctitle.c
 https://blog.csdn.net/taurance/article/details/20054917
 https://blog.csdn.net/hengshan/article/details/7835981
+
+-------------------------------------------------------------------------------------------------------------------
+
+## 2019-08-02
+
+阅读::Linux网络编程(第二版)
+
+编程环境:编辑器vim   gcc makefile  gdb  cmake
+
+Gcc
+编译:		生成目标文件;		多文件编译;		-E预处理;		-S生成汇编语言;		gcc常用选项<br/>
+头文件和库文件的默认搜索路径<br/>
+静态链接库<br/>
+动态链接库<br/>
+
+
+Makefile<br/>
+	http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+	https://www.tutorialspoint.com/makefile/
+	https://makefiletutorial.com/
+	https://opensource.com/article/18/8/what-how-makefile
+	https://www.gnu.org/software/make/manual/html_node/index.html#toc-An-Introduction-to-Makefiles
+	https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html
+
+GDB<br/>
+	https://www.kancloud.cn/wizardforcel/gdb-tips-100/146708 <br/>
+	**gdbinit**<br/>
+	https://github.com/cyrus-and/gdb-dashboard	https://www.helplib.com/GitHub/article_129194
+	https://www.cntofu.com/book/46/gdb/gdb_dashboard_debug_info_at_a_glance.md        	https://www.helplib.com/GitHub/article_129194 <br/>
+	https://github.com/gdbinit/Gdbinit <br/>
+	https://github.com/longld/peda <br/>
+	https://github.com/hugsy/gef <br/>
+	堆栈查看;	汇编含义的解读;	寄存器查看;	memeory查看
