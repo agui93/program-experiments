@@ -1,10 +1,11 @@
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+package tips;
 
 import java.sql.*;
 import java.util.Enumeration;
 import java.util.Random;
 
-//http://www.herongyang.com/JDBC/MySQL-JDBC-Driver.html
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
 
 /**
  * CREATE DATABASE IF NOT EXISTS jdbc_test;

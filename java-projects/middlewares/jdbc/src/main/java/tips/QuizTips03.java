@@ -1,3 +1,5 @@
+package tips;
+
 import javax.sql.DataSource;
 import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetFactory;

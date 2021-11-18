@@ -1,3 +1,5 @@
+package tips;
+
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.Arrays;
