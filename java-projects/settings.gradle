@@ -8,6 +8,7 @@ include 'basics:algs:algs-sword'
 
 
 include 'tools'
+include 'tools:jmh'
 include 'tools:jol-tool'
 
 

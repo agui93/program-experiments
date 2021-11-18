@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+
+    //https://github.com/melix/jmh-gradle-plugin
+    //https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples
+    //https://dev.to/o_a_e/jmh-with-gradle--from-easy-to-simple-52ec
+
+    //Version 0.6+ requires Gradle 6.8+
+    id("me.champeau.jmh") version "0.6.6"
+
+    //Versions of the plugin prior to 0.6.0 used the me.champeau.gradle.jmh plugin id
+    //id("me.champeau.gradle.jmh") version "0.5.0"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jmh {
+    warmupIterations.set(2)
+    iterations.set(2)
+    fork.set(2)
+}
