@@ -1,12 +1,8 @@
-源码分析
-
-
-
 技术栈
 	Algs(BST  RedBlack   B  B+  跳跃表   hash)
 	JavaBase(DataStructure   Thread    NIO    JVM     反射    动态代理    泛型)
 	设计模式
-	负载均衡(Nginx)
+	负载均衡(Nginx)
 	分布式服务方面(Zookeeper   Dubbo  SpringBoot SpringCloud Alps ))
 	Spring方面(MVC、Spring boot 、 Spring Cloud): IOC  AOP 反射 动态代理
 	web容器(tomcat jetty)
@@ -20,27 +16,25 @@
 	性能监控(常用指标   grafana    zabbix  )
 	性能测试()
 	代码版本管理(git  svn)
-        项目管理(gradle  maven)
+    项目管理(gradle  maven)
 	Linux系统(shell   unix环境高级编程和网络编程)
 	重构
 	运维+微服务(docker kubernetes)
 	大型网站的整体技术概貌贯通
 
 
-
 源码分析 + 应用
-	JDK  -> Data Structure;   Thread;      Nio Socket
+	JDK  -> Data Structure;   Thread;      Nio Socket
 	Disruptor
 	Spring  SpringMVC
 	Netty
 	Kafka
 	Zookeeper
-        Dubbo
+    Dubbo
 	Redis
 	Nginx
 	Unix编程
-	Todo(Mybatis  Memcached Tomcat  MongoDriver   Lettuce   Spring-Jdbc)
-
+	(Mybatis  Memcached Tomcat  MongoDriver   Lettuce   Spring-Jdbc)
 
 
 
@@ -59,13 +53,6 @@ C语言
 
 
 
-
-
-
-
-
-
-
 思考Java后端技术栈涉及方面有:
     Base: concurrence nio/io  socket  algorithm data-structure jvm
     Web:tomcat,spring,springmvc,spring boot,spring cloud, servermesh http nginx
@@ -75,10 +62,6 @@ C语言
     Linux shell,性能监控,基础运维
     后端技术栈:
     c c++ 网络 unix编程
-
-
-
-
 
 -------------------------------------------------------------------------------------------------------------------
 计算机的构造(http://cn.linux.vbird.org/linux_basic/0105computers.php)
@@ -91,14 +74,12 @@ demo程序的运行和调试(idea调试程序)
 	思路2：使用JDK集合类说明如何编写
 使用基础编写算法实现
 
-
 -------------------------------------------------------------------------------------------------------------------
 搜索引擎   +  调试
 Java基础
 	开发环境搭建(git idea)   执行环境理解   语法(代码执行流程分析)   OO设计
 算法
 	jdk的集合实现  算法实现
-
 
 数据库:mysql mongo redis
 
@@ -111,7 +92,6 @@ os 网络 内存 磁盘—》线程主题/linux基础   tcp/ip/网络编程主�
 
 -------------------------------------------------------------------------------------------------------------------
 
-------
 多线程体系 及底层实现 3
 Disruptor Netty  及底层实现 网络编程相关2
 Spring 及源码实现 2
@@ -123,7 +103,6 @@ Mongo 2
 Zookeeper 2
 分布式架构整体理解
 Mysql Couchbase
-------
 -------------------------------------------------------------------------------------------------------------------
 SSO  Session  Cookie
 Java security
