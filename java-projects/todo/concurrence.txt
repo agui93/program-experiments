@@ -1,0 +1,88 @@
+并发篇纲要
+
+
+——————————————————————————————————————————————————————
+
+原理机制: CAS  VOLATILE  JMM   UNSAFE
+
+Executors整理
+
+Lock框架整理 AQS
+
+常用工具整理()
+
+
+
+
+——————————————————————————————————————————————————————
+线程池的作用
+	降低资源消耗
+	提高响应速度
+	便于管理
+线程池实现原理抽象
+ThreadPoolExecutor执行流程和源码梳理
+	尽可能地避免获取全局锁（那将会是一个严重的可伸缩瓶颈）
+	基本的阻塞队列
+		ArrayBlockingQueue
+		LinkedBlockingQueue
+		SynchronousQueue
+		PriorityBlockingQueue
+线程池的使用
+	如何合理地配置线程池
+	创建的api和参数
+	提交任务execute submit的区别
+	关闭线程池;shutdown和shutdownNow的区别;当任务是不可中断
+	线程池的监控 及 cpu负载监控
+Executor框架的主要成员：ThreadPoolExecutor、ScheduledThreadPoolExecutor、 Future接口、Runnable接口、Callable接口和Executors
+	Executor框架的使用示意图
+	业务：Runnable接口或Callable接口封装的
+	异步计算的结果：包括接口Future和实现Future接口的FutureTask类；get() cancel()方法
+	任务的执行：ExecutorService接口的实现ThreadPoolExecutor和ScheduledThreadPoolExecutor
+	Executors可以创建3种类型的 ThreadPoolExecutor：
+		SingleThreadExecutors:适用于需要保证顺序地执行各个任务；并且在任意时间点，不会有多 个线程是活动的应用场景
+		FixedThreadPool:适用于为了满足资源管理的需求，而需要限制当前线程数量的应用场 景，它适用于负载比较重的服务器
+		CachedThreadPool:是大小无界的线程池，适用于执行很多的短期异步任务的小程序，或者 是负载较轻的服务器
+	Executors可以创建2种ScheduledThreadPoolExecutor
+		ScheduledThreadPoolExecutor适用于需要多个后台线程执行周期任务，同时为了满足资源 管理的需求而需要限制后台线程的数量的应用场景。
+		SingleThreadScheduledExecutor适用于需要单个后台线程执行周期任务，同时需要保证顺 序地执行各个任务的应用场景。
+
+
+
+常见的阻塞队列	ArrayBlockingQueue,LinkedBlockingQueue,SynchronousQueue,PriorityBlockingQueue,DelayQueue
+ScheduledThreadPoolExecutor与Timer区别
+
+基于AQS实现的同步器包括：ReentrantLock、Semaphore、ReentrantReadWriteLock、 CountDownLatch和FutureTask
+
+
+CountDownLatch、CyclicBarrier和 Semaphore工具类提供了一种并发流程控制的手段，Exchanger工具类则提供了在线程间交换数 据的一种手段
+
+
+Atomic包里的类基本都是使用Unsafe实现的包装类
+
+——————————————————————————————————————————————————————
+
+
+多线程:JMM   hb规则梳理   AQS   Unsafe:CAS   LockSupport  线程中断
+	Disruptor的多线程  Netty中的多线程
+	开发技巧: JDK工具的内存填充   Disruptor中的内存填充
+
+
+待总结:JMM和hb规则   队列同步器AQS(LockSupport  Unsafe.CAS )    Executor框架
+	Unsafe:cas   Disruptor的多线程  Netty中的多线程
+	JMM和hb规则
+			https://agui93.github.io/documents/notes/agui_self_analyze/java_jmm
+			https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4.5
+			http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
+
+	Disruptor: https://agui93.github.io/documents/notes/agui_self_analyze/java_lmax_disruptor
+ 	AQS https://agui93.github.io/documents/notes/agui_self_analyze/java_analyze_AbstractQueuedSynchronizer
+	UNSAFE	https://agui93.github.io/documents/notes/agui_self_analyze/java_unsafe
+
+——————————————————————————————————————————————————————
+待总结:Disruptor
+	图	https://agui93.github.io/documents/everyday_tech_record#2019-07-17
+	Unsafe	https://agui93.github.io/documents/notes/agui_self_analyze/java_unsafe
+
+
+
+——————————————————————————————————————————————————————

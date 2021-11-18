@@ -1,0 +1,50 @@
+信息收集
+
+ ———————————————————————————————————————————————————————
+https://testerhome.com/topics/21573  用一些实践来解决一些业务中的实际问题，将他们串联起来，并且形成以管道式的发布流水线
+
+https://time.geekbang.org/column/article/10175?utm_source=related_read&utm_medium=article&utm_term=related_read
+
+案例1:知乎的部署系统
+	https://zhuanlan.zhihu.com/p/45694823
+	https://zhuanlan.zhihu.com/p/60627311 
+案例2: 美团
+	https://tech.meituan.com/2019/09/12/hulk-technology-evolution.html
+	https://cloud.tencent.com/developer/article/1058174
+	https://tech.meituan.com/2019/08/22/kubernetes-cluster-management-practice.html
+
+
+案例3:网易
+	https://www.infoq.cn/theme/85
+	https://www.infoq.cn/article/eOIeJ7yaXDE0W3XuSSQe
+
+案例4：
+	https://www.infoq.cn/article/tencent-cloud-devops?utm_source=related_read_bottom&utm_medium=article
+	把我们的流程梳理清楚，这些流程包括代码提交、发布测试，静态扫描等等。另外我们也需要把团队的关系梳理清楚，软件开发过程中有开发，有测试，有运维，还有一些管理者，需要哪些步骤，需要哪些人审核，在哪些步骤需要通知哪些人，都要梳理清楚。
+	通过工具化把上面所梳理的流程实现自动化的过程。如何去选择合适的 DevOps 工具体系，把流程规范给自动化起来。
+
+
+案例5：
+	https://www.infoq.cn/article/lhJ2mFDKPpSFCNiPhU1c?utm_source=related_read_bottom&utm_medium=article
+
+
+案例6：
+	https://www.redhat.com/en/blog/integrating-ansible-jenkins-cicd-process
+
+
+其他
+ 	CI/CD的概念
+		https://www.redhat.com/zh/topics/devops/what-is-ci-cd
+		https://www.redhat.com/zh/topics/automation/what-is-deployment-automation
+		https://www.redhat.com/zh/topics/devops#?
+
+
+	DevOps持续部署- 蓝绿部署、灰度发布、暗发布 蓝绿部署、滚动部署、灰度发布、金丝雀发布
+		https://cloud.tencent.com/developer/article/1449209
+		https://www.jianshu.com/p/022685baba7d
+
+	https://cloud.google.com/solutions/devops/technical?hl=zh-cn
+ ———————————————————————————————————————————————————————
+
+
+

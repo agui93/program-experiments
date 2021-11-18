@@ -1,0 +1,25 @@
+性能测试体系  && 压测工具  &&  微基准测试
+
+
+
+### 性能测试体系
+http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/pdf/pts-performance-system-cn-zh-2016-06-08.pdf
+
+
+### 压测工具: Gatling Jmeter工具;  监控的配套工具;;;;https://zhuanlan.zhihu.com/p/30511486
+
+
+
+
+### 微基准测试
+
+JMH
+http://openjdk.java.net/projects/code-tools/jmh/
+Java   Micro  Benchmarking
+https://www.slideshare.net/ConstantineNosovsky/nosovsky-java-microbenchmarking
+应用案例 HikariCP-benchmark
+https://github.com/brettwooldridge/HikariCP-benchmark
+
+
+
+

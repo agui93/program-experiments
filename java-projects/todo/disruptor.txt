@@ -1,0 +1,22 @@
+Disruptor--解耦
+
+
+论文
+file:///Users/agui93/Documents/developBooks/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Disruptor-1.0.pdf
+
+
+美团使用状况
+https://tech.meituan.com/2016/11/18/disruptor.html
+
+
+
+ http://mechanitis.blogspot.com/2011/08/dissecting-disruptor-why-its-so-fast.html
+ https://mechanical-sympathy.blogspot.com/2011/07/memory-barriersfences.html
+
+
+https://github.com/LMAX-Exchange/disruptor/wiki/Performance-Results
+
+
+性能测试   https://tech.meituan.com/2016/11/18/disruptor.html
+
+

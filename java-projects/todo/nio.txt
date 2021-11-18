@@ -1,0 +1,9 @@
+待总结:网络
+	IO模型   NIO  Reactor
+	Poll-based vs  epoll-based
+	Epoll:	https://docs.oracle.com/javase/8/docs/technotes/guides/io/enhancements.html
+			https://zhuanlan.zhihu.com/p/27419141
+			https://zhuanlan.zhihu.com/p/27434028
+			https://zhuanlan.zhihu.com/p/27441342?group_id=859562548406677504
+	Zero Copy
+

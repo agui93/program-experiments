@@ -1,0 +1,71 @@
+源码分析
+
+
+
+技术栈
+	Algs(BST  RedBlack   B  B+  跳跃表   hash)
+	JavaBase(DataStructure   Thread    NIO    JVM     反射    动态代理    泛型)
+	设计模式
+	负载均衡(Nginx)
+	分布式服务方面(Zookeeper   Dubbo  SpringBoot SpringCloud Alps ))
+	Spring方面(MVC、Spring boot 、 Spring Cloud): IOC  AOP 反射 动态代理
+	web容器(tomcat jetty)
+	框架对象管理(spring spring mvc)
+	中间件消息(kafka  )
+	中间件缓存(redis   couchbase  Java端的框架Lettuce)
+	中间件数据库(mongo  mysql   Java端的框架Mongo-async  Mybatis Spring-Jdbc)
+	中间件网络(Netty hession序列化)
+	搜索(ES)
+	数据流计算(flink)
+	性能监控(常用指标   grafana    zabbix  )
+	性能测试()
+	代码版本管理(git  svn)
+        项目管理(gradle  maven)
+	Linux系统(shell   unix环境高级编程和网络编程)
+	重构
+	运维+微服务(docker kubernetes)
+	大型网站的整体技术概貌贯通
+
+
+
+源码分析 + 应用
+	JDK  -> Data Structure;   Thread;      Nio Socket
+	Disruptor
+	Spring  SpringMVC
+	Netty
+	Kafka
+	Zookeeper
+        Dubbo
+	Redis
+	Nginx
+	Unix编程
+	Todo(Mybatis  Memcached Tomcat  MongoDriver   Lettuce   Spring-Jdbc)
+
+
+
+
+
+其他:
+Hotspot ;  工具wireshark + 网络运维 + 流量监控
+c++;  linux内核;  汇编 编译原理 自动机  ;深度学习    区块链    Go
+邮箱搭建和维护      单点登录
+加密和解密   账号等敏感数据加密   session cookie
+Js html css  vue   react  angular
+
+微积分 概率论  线性代数    机器学习  深度学习  视频识别
+Hive hbase storm spark hadoop
+Tcp/ip
+C语言
+
+
+
+
+
+
+
+
+
+
+
+
+

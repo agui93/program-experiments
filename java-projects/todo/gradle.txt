@@ -1,0 +1,15 @@
+Gradle—工程代码管理工具
+
+
+https://www.cnblogs.com/davenkin/p/gradle-learning-1.html
+
+https://docs.gradle.org/current/dsl/org.gradle.api.Project.html#N14FE1
+
+https://docs.gradle.org/current/userguide/getting_started.html
+
+——————————————————————————————————————————————————————
+gradle构建
+	https://www.cnblogs.com/davenkin/p/gradle-learning-1.html
+	http://www.cnblogs.com/davenkin/p/gradle-learning-1.html
+	https://dongchuan.gitbooks.io/gradle-user-guide-/content/build_script_basics/projects_and_tasks.html
+——————————————————————————————————————————————————————

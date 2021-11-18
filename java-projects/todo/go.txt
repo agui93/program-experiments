@@ -1,0 +1,246 @@
+Go
+————————————————————
+
+Go语言环境的统一安装
+	version
+	$GOPATH : bin pkg src
+	$GOROOT
+	源文件的管理: 已编译的二进制文件和缓存对象
+
+
+
+Go的依赖库的管理
+	go的加速镜像, GOPROXY
+	import的管理
+	GoModules的迁移
+
+	go clean --modcache
+
+
+Go help 命令
+
+
+
+
+Go Module
+	go help mod
+	go help modules 查看
+
+
+
+
+Go  Unit Test
+	单元测试
+
+
+
+Go 网络编程
+	http
+	tcp  编解码
+
+
+Go logger
+
+
+
+
+
+
+
+GO优秀项目
+        https://www.zhihu.com/question/20801814
+        https://shockerli.net/post/go-awesome/
+        https://v2ex.com/t/749073
+        https://github.com/gowk?language=go&tab=stars
+        https://github.com/halfrost/LeetCode-Go
+        http://book.open-falcon.com/zh/intro/
+
+
+
+Go 语言特性
+
+————————————————————————————————————
+
+线程池
+https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa
+
+
+
+
+————————————————————————————————————
+
+	execute init function  after global variables have been initialized
+
+	Types;   Type conversions ; Type inference ;
+	Numeric Constants ;  An untyped constant. ;
+
+	for is Go’s “while”, forever
+	if with a short statement
+	switch [default break] ,   Switch evaluation order ,   Switch with no condition,
+
+
+	defer
+		https://blog.golang.org/defer-panic-and-recover
+		execute until the surrounding function returns
+		executed in last-in-first-out order
+
+	Pointers
+		The * operator denotes the pointer's underlying value.
+		The & operator generates a pointer to its operand.
+		zero value: nil
+		no pointer arithmetic
+
+	struct
+		struct literals
+		Pointers to structs
+
+	Arrays
+		arrays cannot be resized
+
+	Slices
+		type []T
+		a[low : high]  —>   [include exclude]
+		are like references to arrays;
+		slice literals
+		slice length and capacity
+		Nil slices
+		Creating a slice with make
+		slices of slices
+		Appending to a slice
+		Range
+			When ranging over a slice, two values are returned for each iteration. The first is the index, and the second is a copy of the element at that index.
+
+	Maps
+		The zero value of a map is nil.
+		make function
+		literals
+		m[key] = elem   ,    elem = m[key]   ,    delete(m, key)  ,    elem, ok = m[key]
+
+	Function
+		multi return
+		Named return values
+		pointer argument
+		Function Values
+			Functions are values too. They can be passed around just like other values.
+			Function values may be used as function arguments and return values.
+		Function closures
+			A closure is a function value that references variables from outside its body. 
+			The function may access and assign to the referenced variables; in this sense the function is "bound" to the variables.
+
+	Method
+		A method is a function with a special receiver argument.
+		can only declare a method with a receiver whose type is defined in the same package as the method.
+		Pointer receivers
+		Choosing a value or pointer receiver
+
+	Interfaces
+		An interface type is defined as a set of method signatures.
+		A value of interface type can hold any value that implements those methods.
+		Calling a method on an interface value executes the method of the same name on its underlying type.
+		Interfaces are implemented implicitly:   decouple
+		Interface values with nil underlying values
+			If the concrete value inside the interface itself is nil, the method will be called with a nil receiver.
+			an interface value that holds a nil concrete value is itself non-nil.
+		Nil interface values
+			A nil interface value holds neither value nor concrete type.
+			Calling a method on a nil interface is a run-time error.
+		The empty interface
+			interface{}
+			An empty interface may hold values of any type. (Every type implements at least zero methods.)
+			Empty interfaces are used by code that handles values of unknown type.
+		Type assertions
+			t := i.(T)      This statement asserts that the interface value i holds the concrete type T and assigns the underlying T value to the variable t.
+			t, ok := i.(T)
+		Type switches
+		Stringers
+			type Stringer interface {
+				    String() string
+			}
+		Errors
+			type error interface {
+				    Error() string
+			}
+		Readers
+			func (T) Read(b []byte) (n int, err error)
+
+	Concurrency
+		Goroutines
+			A goroutine is a lightweight thread managed by the Go runtime.
+			go f(x, y, z)
+				starts a new goroutine running  f(x, y, z).
+				The evaluation of f, x, y, and z happens in the current goroutine and the execution of f happens in the new goroutine.
+			Goroutines run in the same address space, so access to shared memory must be synchronized. 
+		Channels
+			Sends and receives block until the other side is ready.  This allows goroutines to synchronize without explicit locks or condition variables.
+			Buffered Channels
+				ch := make(chan int, 100)
+				Sends to a buffered channel block only when the buffer is full.
+				Receives block when the buffer is empty.
+			Range and Close
+				A sender can close a channel to indicate that no more values will be sent. 
+				Receivers can test whether a channel has been closed.     v, ok := <-ch
+				The loop for i := range c receives values from the channel repeatedly until it is closed.
+				Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a range loop.
+			Select
+				The select statement lets a goroutine wait on multiple communication operations.
+				A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready.
+				Default Selection
+					The default case in a select is run if no other case is ready.
+			sync.Mutex
+				Lock  Unlock methods
+
+
+————————————————————————————————————
+Go Module
+	go help mod
+	go help modules 查看
+		GO111MODULE && go.mod:    module-aware , GOPATH mode
+		go.mod file :  [The module is the set of all Go packages in the module root and its  subdirectories, but excluding subtrees with their own go.mod files.]
+				go mod init
+				module root
+				module path
+				require, replace, and exclude statements
+				go help go.mod
+		main module
+			go list -m
+			go list -m -f={{.Dir}}
+			go list -m all
+		Maintaining module requirements
+			automatic maintenance
+			go mod tidy
+			direct  indirect
+			go help mod
+			go mod vendor
+			-mod=readonly  ,   -mod=vendor ,   -mod=mod  , without -mod  build  flag
+		Pseudo-versions
+			vX.0.0-yyyymmddhhmmss-abcdefabcdef
+			vX.Y.Z-pre.0.yyyymmddhhmmss-abcdefabcdef
+			vX.Y.(Z+1)-0.yyyymmddhhmmss-abcdefabcdef
+			Pseudo-versions never need to be typed by hand
+		Module queries
+			v1.2.3
+			v1 or v1.2
+			< v1.2.3   or   >=v1.5.6
+			latest
+			upgrade
+			patch
+
+		Module compatibility and semantic versioning
+			import compatibility rule
+
+		Module downloading and verification
+			when vendoring is used, 'go mod vendor' should be run after go.mod is updated.
+
+
+————————————————————————————————————
+
+
+
+
+
+
+
+
+
+
+

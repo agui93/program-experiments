@@ -1,0 +1,51 @@
+数据库连接池MYSQL - HikariCp && Druid
+
+
+
+
+数据库连接池对比:
+HikariCP   Druid    boneCP、dbcp、c3p0
+HikariCP   Druid 两款产品的对比试验 集成
+
+
+JDBC的设计核心
+mysql  jdbc driver
+
+spring-jdbc:
+对JDBC的封装
+https://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/jdbc.html
+
+
+SPRING + JDBC + HikariCP 集成
+SPRING + JDBC + Druid 集成
+
+
+HikariCP源码分析
+https://www.fsby.fun/2020/07/30/HikariCP-source-code-0/
+https://www.fsby.fun/tags/Hikari/
+https://www.fsby.fun/2020/07/30/HikariCP-source-code-0/
+http://www.iocoder.cn/HikariCP/good-collection/?vip
+https://zhuanlan.zhihu.com/p/107748071
+http://www.iocoder.cn/HikariCP/good-collection/?vip
+https://zhuanlan.zhihu.com/p/107748071
+https://www.fsby.fun/tags/Hikari/
+https://github.com/brettwooldridge/HikariCP/wiki/Bad-Behavior:-Handling-Database-Down
+
+
+
+对比HikariCP 与 Druid
+https://cnhkblog.top/2018/06/02/HikariCp%E4%B8%8EDruid%E7%9A%84%E4%BA%A4%E9%94%8B/
+
+
+Druid
+https://github.com/alibaba/druid
+
+
+
+
+7类数据库的对比
+file:///Users/agui93/Downloads/Seven%20Databases%20in%20Seven%20Weeks,%202nd%20Edition@www.java1234.com.pdf
+
+
+
+
