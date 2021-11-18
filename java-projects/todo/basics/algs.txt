@@ -1,0 +1,19 @@
+
+剑指第2版
+https://github.com/zhedahht/CodingInterviewChinese2
+
+
+
+试炼平台:力扣
+https://leetcode-cn.com/problemset/lcof/
+
+Leetcode
+https://www.cntofu.com/book/186/index.html
+
+数据结构
+https://www.cntofu.com/book/23/index.html
+
+algorithms
+    https://www.zhihu.com/question/20368410
+    https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
+    https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/

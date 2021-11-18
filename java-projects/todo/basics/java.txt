@@ -1,0 +1,191 @@
+—————————————————————————————————————————————
+Generics
+https://www.oracle.com/technetwork/articles/java/juneau-generics-2255374.html
+https://docs.oracle.com/javase/tutorial/java/generics/index.html
+
+
+reflection
+https://docs.oracle.com/javase/tutorial/reflect/index.html
+
+Input and Output;				File Handling;		Useful and/or Advanced Features
+https://www.geeksforgeeks.org/java/
+
+
+JAVA  (JVM JMM NIO THREAD )
+————————————————————————————————————————————————————————————
+
+java.util.ServiceLoader
+https://www.oracle.com/technetwork/articles/javase/extensible-137159.html
+https://www.logicbig.com/tutorials/core-java-tutorial/java-se-api/service-loader.html
+https://cxis.me/2017/04/17/Java%E4%B8%ADSPI%E6%9C%BA%E5%88%B6%E6%B7%B1%E5%85%A5%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/
+https://github.com/google/auto/tree/master/service
+————————————————————————————————————————————————————————————
+Packaging Programs in JAR Files
+https://docs.oracle.com/javase/tutorial/deployment/jar/index.html
+————————————————————————————————————————————————————————————
+Trail: Custom Networking
+https://docs.oracle.com/javase/tutorial/networking/index.html
+
+Java反编译工具（如JD_GUI）
+
+
+System.getProperties()
+————————————————————————————————————————————————————————————
+Java Naming and Directory Interface (J.N.D.I.) API
+Jini network technology and the Service Location Protocol (SLP)
+————————————————————————————————————————————————————————————
+### BASE
+反射 动态代理  泛型
+
+
+
+
+### JDK中的数据结构
+
+
+### JDK中的其他工具
+
+
+
+
+### JVM
+https://www.tutorialspoint.com/java_virtual_machine/java_virtual_machine_architecture.htm
+
+
+
+### 并发:JMM  线程
+### JMM    && JSR-133   && Java-Concurrency-in-Practice
+https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4
+JSR-133
+file:///Users/agui93/Documents/developBooks/java/jls_jvm/JSR-133.pdf
+Java concurrency in practice
+file:///Users/agui93/Documents/developBooks/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Java.Concurrency.in.Practice.pdf
+
+
+
+
+
+
+
+
+
+### NIO && Reactor  && c10k
+
+
+NIO By DougLea
+file:///Users/agui93/Documents/developBooks/java/netty/nio.pdf
+
+
+Reactor 论文
+file:///Users/agui93/Documents/developBooks/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/reactor-siemens.pdf
+
+
+Reactor
+https://www.cnblogs.com/doit8791/p/7461479.html
+http://www.blogjava.net/DLevin/archive/2015/09/02/427045.html
+
+
+c10K
+http://www.kegel.com/c10k.html#benchmarking
+
+file:///Users/agui93/Documents/developBooks/java/netty/j-nio-pdf.pdf
+
+
+
+
+
+
+
+### Java-Unsafe  —> 多线程原语   内存操作
+
+
+典型论文总结
+file:///Users/agui93/Desktop/%E6%96%87%E6%A1%A3/2814270.2814313.pdf
+
+
+file:///Users/agui93/Desktop/%E6%96%87%E6%A1%A3/2814270.2814313.pdf
+
+
+
+https://www.cnblogs.com/mickole/articles/3757278.html
+
+http://www.docjar.com/docs/api/sun/misc/Unsafe.html#getUnsafe
+
+http://www.docjar.com/html/api/sun/misc/Unsafe.java.html
+
+
+
+http://hg.openjdk.java.net/jdk7u/jdk7u/jdk/file/tip/src/share/classes/sun/misc/Unsafe.java
+
+
+
+
+
+### JOL工具 && 其他分析工具
+
+JOL工具    Java对象在内存的结构
+
+http://openjdk.java.net/projects/code-tools/jol/
+
+https://juejin.im/post/6844903832833490957
+
+核心分析工具
+http://openjdk.java.net/projects/code-tools/
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+java.security
+https://yq.aliyun.com/articles/57223?&utm_source=qq
+https://www.cnblogs.com/yiwangzhibujian/p/6207212.html
+https://zhuanlan.zhihu.com/p/52032614
+https://www.ibm.com/developerworks/cn/java/j-lo-javasecurity/
+
+
+
+java.security
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-specTOC.fm.html
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/PolicyFiles.html
+
+
+https://docs.oracle.com/javase/tutorial/security/index.html
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/index.html
+https://www.geeksforgeeks.org/java/
+
+
+System.getSecurityManager()
+https://docs.oracle.com/javase/tutorial/essential/environment/security.html
+https://stackoverflow.com/questions/5192965/java-security-manager-what-does-it-check
+
+policy
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/PolicyFiles.html
+
+permissions
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html
+
+AccessController.doPrivileged
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/doprivileged.html
+https://docs.oracle.com/javase/8/docs/api/java/security/AccessController.html
+https://stackoverflow.com/questions/852453/accesscontroller-doprivileged
+https://stackoverflow.com/questions/2233761/when-should-accesscontroller-doprivileged-be-used
+https://www.programcreek.com/java-api-examples/?class=java.security.AccessController&method=doPrivileged
+https://www.programcreek.com/java-api-examples/java.security.PrivilegedExceptionAction
+
+选项
+-Djava.security.manager
+-Djava.security.policy=policy-name
+-------------------------------------------------------------------------------------------------------------------
+clone方法
+https://www.geeksforgeeks.org/clone-method-in-java-2/ Deep Copy vs Shallow Copy
+* Shallow copy is method of copying an object and is followed by default in cloning. In this method the fields of an old object X are copied to the new object Y. While copying the object type field the reference is copied to Y i.e object Y will point to same location as pointed out by X. If the field value is a primitive type it copies the value of the primitive type.
+* Therefore, any changes made in referenced objects in object X or Y will be reflected in other object.
+
+Usage of clone() method – Deep Copy
+* If we want to create a deep copy of object X and place it in a new object Y then new copy of any referenced objects fields are created and these references are placed in object Y. This means any changes made in referenced object fields in object X or Y will be reflected only in that object and not in the other. In below example, we create a deep copy of object.
+* A deep copy copies all fields, and makes copies of dynamically allocated memory pointed to by the fields. A deep copy occurs when an object is copied along with the objects to which it refers.
+-------------------------------------------------------------------------------------------------------------------
+
+Java https://www.geeksforgeeks.org/java/
+-------------------------------------------------------------------------------------------------------------------

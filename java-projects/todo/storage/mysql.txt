@@ -49,3 +49,6 @@ file:///Users/agui93/Downloads/Seven%20Databases%20in%20Seven%20Weeks,%202nd%20E
 
 
 
+
+Mysql tutorials
+http://www.herongyang.com/MySQL/

@@ -1,0 +1,50 @@
+####Redis
+java端框架Lettuce
+https://github.com/lettuce-io/lettuce-core
+https://lettuce.io/
+https://lettuce.io/core/release/reference/#new-features.5-2-0
+
+
+——————————————————————————————————————————————————————
+Redis图:事件图 类型和编码图  跳表图   复制图    (哨兵图    集群图)
+
+
+待总结:redis编码对象  redis事件  排行榜使用的_跳表   redis复制  哨兵(集群)  持久化
+——————————————————————————————————————————————————————
+-------------------------------------------------------------------------------------------------------------------
+redis设计与实现(第二版).pdf
+file:///Users/agui93/Documents/developBooks/redis/redis设计与实现(第二版).pdf 
+Nginx
+file:///Users/agui93/Documents/developBooks/nginx/实战Nginx取代Apache的高性能Web服务器.pdf
+https://www.w3cschool.cn/nginx/
+http://www.nginx.cn/doc/
+https://nginx.org/en/
+http://tutorials.jenkov.com/nginx/index.html
+https://www.nginx.com/resources/wiki/start/
+http://nginx.org/en/docs/beginners_guide.html
+
+libuv实现中的网络部分 https://luohaha.github.io/Chinese-uvbook/
+------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+Redis
+
+内存中的布局是？
+s-(sizeof(struct sdshdr))
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+kqueue document
+http://man7.org/linux/man-pages/man3/getaddrinfo.3.html
+https://www.ibm.com/developerworks/cn/aix/library/1105_huangrg_kqueue/
+
+
+
+Epoll
+https://linux.die.net/man/4/epoll
+http://man7.org/linux/man-pages/man7/epoll.7.html
+-------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------- setproctitle.c
+https://blog.csdn.net/taurance/article/details/20054917
+https://blog.csdn.net/hengshan/article/details/7835981

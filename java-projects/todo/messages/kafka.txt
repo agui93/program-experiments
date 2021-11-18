@@ -79,3 +79,67 @@ Answer:  在高性能的框架中，为了将定时任务的存取操作以及�
 
 
 ####  副本机制
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+Protocol
+https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol
+
+Source:  源码梳理;    原理图;    设计的核心思路;     设计与实现的打通;
+
+Application: 不同语言平台下的客户端(生成者 消费者)     server端的运维;   各类参数的配置;
+
+Book:Apache_Kafka_源码剖析.pdf
+file:///Users/agui93/Documents/developBooks/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Apache_Kafka_%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.pdf 
+Book:Kafka技术内幕：图文详解Kafka源码设计与实现.pdf
+file:///Users/agui93/Documents/developBooks/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Kafka%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95/Kafka%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%EF%BC%9A%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3Kafka%E6%BA%90%E7%A0%81%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0.pdf
+
+Book:Kafka_The_Definitive_Guide_Real-Time_Data_and_Stream_Processing_at_Scale.pdf
+file:///Users/agui93/Documents/developBooks/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Kafka_The_Definitive_Guide_Real-Time_Data_and_Stream_Processing_at_Scale.pdf
+
+Book:kafka权威指南.epub
+-------------------------------------------------------------------------------------------------------------------
+关于producer:
+3: 生成端java版的实现组件与原理
+2: 生成端被应用时提供的核心api
+1 : 生成端和服务端的交互的协议
+
+Producer:
+	对应线程资源  内存资源  网络资源是如何使用的
+	ProducerConfig中定义的生产者配置;   初始化时如何使用配置初始各个组件的
+	支持序列化方案的自定义
+
+
+-------------------------------------------------------------------------------------------------------------------
+ProducerInterceptors设计作用
+Metadata/Cluster在端的一方中封装集群的信息   集群信息的刷新
+	Node、TopicPartition、PartitionInfo
+
+NetworkClient 初始化
+
+Sender对象
+	在ioThread中的处理思路
+	如何close
+
+
+
+RecordAccumulator
+
+
+-------------------------------------------------------------------------------------------------------------------
+Jdk中的网络编程
+SelectorProviderSelector  SelectionKey
+SelectableChannel   ServerSocketChannel   SocketChannel DatagramChannel Pipe
+
+-------------------------------------------------------------------------------------------------------------------
+KSelector使用NIO异 步非阻塞模式实现网络I/O操作，KSelector使用一个单独的线程可以管理多条网络连接上的连接、读、写等 操作。
+	策略模式:TransportLayer根据网络协议的 不同，提供不同的子类，而对KafkaChannel提供统一的接口
+
+
+ConsumerNetworkClient下的RequestFutureCompletionHandler作用
+	RequestFuture下的适配器模式  责任链模式
+
+
+
+

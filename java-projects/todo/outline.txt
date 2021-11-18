@@ -66,6 +66,73 @@ C语言
 
 
 
+思考Java后端技术栈涉及方面有:
+    Base: concurrence nio/io  socket  algorithm data-structure jvm
+    Web:tomcat,spring,springmvc,spring boot,spring cloud, servermesh http nginx
+    Db: mongod redis mysql hbase hive
+    Docker k8s  es
+    区块链 机器学习 ,大数据 微服务周边的一系列
+    Linux shell,性能监控,基础运维
+    后端技术栈:
+    c c++ 网络 unix编程
 
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+计算机的构造(http://cn.linux.vbird.org/linux_basic/0105computers.php)
+计算机执行程序的解释
+开发环境的搭建(JAVA_HOME  idea/命令行)
+demo程序的运行和调试(idea调试程序)
+搜索引擎的使用(碰到问题时进行查询)
+基础
+	思路1：数据类型(基础数据类型  字符串  数组 对象  类对象)   顺序/选择/循环语句  对象和类  继承和多态    递归
+	思路2：使用JDK集合类说明如何编写
+使用基础编写算法实现
+
+
+-------------------------------------------------------------------------------------------------------------------
+搜索引擎   +  调试
+Java基础
+	开发环境搭建(git idea)   执行环境理解   语法(代码执行流程分析)   OO设计
+算法
+	jdk的集合实现  算法实现
+
+
+数据库:mysql mongo redis
+
+中间件SSM:  spring ,springMVC,  Mybatis
+
+web开发: tomcat/jetty   http基础
+
+os 网络 内存 磁盘—》线程主题/linux基础   tcp/ip/网络编程主题   buffer和jvm垃圾回收   文件io读写
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+------
+多线程体系 及底层实现 3
+Disruptor Netty  及底层实现 网络编程相关2
+Spring 及源码实现 2
+Redis 及源码实现 1
+Alps框架 及源码实现  2
+Kafka 及 producer 和consumer实现 2
+------
+Mongo 2
+Zookeeper 2
+分布式架构整体理解
+Mysql Couchbase
+------
+-------------------------------------------------------------------------------------------------------------------
+SSO  Session  Cookie
+Java security
+LMAX Disruptor
+JSR-133
+clone方法
+Linux From Scratch
+-------------------------------------------------------------------------------------------------------------------
+http://www.herongyang.com/site_map.html
+-------------------------------------------------------------------------------------------------------------------
 
 
