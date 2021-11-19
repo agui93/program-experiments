@@ -17,25 +17,27 @@ public class JdbcCase3 {
     //CREATE DATABASE IF NOT EXISTS jdbc_test;
     private static final String dataBaseName = "jdbc_test";
 
+    private static final String url = "jdbc:mysql://" + host + ":" + port + "/" + dataBaseName + "?" + "user=" + user + "&password=" + passwd + "&useSSL=false";
+
     private static final String tableName = "Profile";
 
     private static final String dropOldTableSql = "DROP TABLE IF EXISTS Profile;";
 
     private static final String createSql = "CREATE TABLE Profile ("
             + " ID INTEGER PRIMARY KEY AUTO_INCREMENT,"
-            + " Name VARCHAR(20) NOT NULL,"
+            + " UserName VARCHAR(20) NOT NULL,"
             + " BirthDate DATE DEFAULT '2021-11-19')";
 
     private static final String insertSql01 = "INSERT INTO Profile"
-            + " (Name, BirthDate)"
+            + " (UserName, BirthDate)"
             + " VALUES ('a', '2001-01-01')";
 
     private static final String insertSql02 = "INSERT INTO Profile"
-            + " (Name, BirthDate)"
+            + " (UserName, BirthDate)"
             + " VALUES ('b', '2001-02-01')";
 
     private static final String insertSql03 = "INSERT INTO Profile"
-            + " (Name, BirthDate)"
+            + " (UserName, BirthDate)"
             + " VALUES ('c', '2001-03-01')";
 
     private static final String selectSql = "SELECT * FROM Profile";
@@ -44,25 +46,25 @@ public class JdbcCase3 {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + dataBaseName + "?" + "user=" + user + "&password=" + passwd);
+            connection = DriverManager.getConnection(url);
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Exception: " + e.getMessage());
         }
         return connection;
     }
 
-    private static void createTable() {
+    private static void dropOldTable() {
         Connection connection = buildConnection();
         if (connection == null) {
-            System.out.println("createTable failed because of null-connection");
+            System.out.println("dropOldTable failed because of null-connection");
             return;
         }
 
         Statement statement = null;
         try {
             statement = connection.createStatement();
-            statement.executeUpdate(createSql);
-            System.out.println("createTable executed.");
+            statement.executeUpdate(dropOldTableSql);
+            System.out.println("dropOldTable executed.");
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
@@ -81,19 +83,18 @@ public class JdbcCase3 {
         }
     }
 
-
-    private static void dropOldTable() {
+    private static void createTable() {
         Connection connection = buildConnection();
         if (connection == null) {
-            System.out.println("dropOldTable failed because of null-connection");
+            System.out.println("createTable failed because of null-connection");
             return;
         }
 
         Statement statement = null;
         try {
             statement = connection.createStatement();
-            statement.executeUpdate(dropOldTableSql);
-            System.out.println("dropOldTable executed.");
+            statement.executeUpdate(createSql);
+            System.out.println("createTable executed.");
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
@@ -201,7 +202,7 @@ public class JdbcCase3 {
             while (resultSet.next()) {
                 System.out.println("  "
                         + resultSet.getInt("ID")
-                        + ", " + resultSet.getString("Name")
+                        + ", " + resultSet.getString("UserName")
                         + ", " + resultSet.getDate("BirthDate")
                 );
             }

@@ -8,12 +8,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-//http://www.herongyang.com/JDBC/MySQL-JdbcRowSet-Implementation.html
-public class QuizTips03 {
 
-    private static String databaseName = "jdbc";
-    private static String user = "root";
-    private static String passwd = "123456";
+/**
+ * MySQL JdbcRowSet
+ */
+public class QuizTip {
+
+    private static final String databaseName = "jdbc_test";
+    private static final String user = "root";
+    private static final String passwd = "123456";
 
 
     private static void checkApiImpl() {
