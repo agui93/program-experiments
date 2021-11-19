@@ -1,12 +1,12 @@
-JDBC experiments
+JDBC Experiments
 
 
-REFERENCE:http://www.herongyang.com/JDBC/
 
-http://www.herongyang.com/JDBC/MySQL-JDBC-Driver.html
-http://www.herongyang.com/JDBC/MySQL-PreparedStatement.html
-http://www.herongyang.com/JDBC/MySQL-JdbcRowSet-Implementation.html
 
-http://www.herongyang.com/JDBC/MySQL-CallableStatement.html
-http://www.herongyang.com/JDBC/MySQL-CLOB-Large-Object.html
-http://www.herongyang.com/JDBC/MySQL-BLOB-Large-Object.html
+
+| 类        | 功能                                                         |
+| --------- | ------------------------------------------------------------ |
+| JdbcCase1 | list jdbc dirvers                                            |
+| JdbcCase2 | build connection by DriverManager <br/>build connection by DataSource |
+| JdbcCase3 | java.sql.Statement api usage                                 |
+

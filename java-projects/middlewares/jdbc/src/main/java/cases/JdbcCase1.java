@@ -5,11 +5,12 @@ import java.sql.DriverManager;
 import java.util.Enumeration;
 
 /**
+ * list jdbc drivers
+ *
  * @author agui93
  * @since 2021/11/18
  */
 public class JdbcCase1 {
-
 
     private static void listJdbcDrivers() {
         Enumeration<?> driverList = DriverManager.getDrivers();
@@ -20,10 +21,10 @@ public class JdbcCase1 {
     }
 
     public static void main(String[] args) {
-        System.out.println("------------------------------");
-        System.out.println("listJdbcDrivers");
+        System.out.println("----------------------------------------------------");
+        System.out.println("listJdbcDrivers:");
         listJdbcDrivers();
-        System.out.println("------------------------------");
+        System.out.println("----------------------------------------------------");
     }
 
 }

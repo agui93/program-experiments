@@ -2,11 +2,12 @@ package cases;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
-import javax.sql.DataSource;
 import java.sql.*;
-import java.util.Enumeration;
 
 /**
+ * build connection by DriverManager
+ * build connection by DataSource
+ *
  * @author agui93
  * @since 2021/11/18
  */
@@ -26,6 +27,10 @@ public class JdbcCase2 {
             DatabaseMetaData dbMeta = connection.getMetaData();
             System.out.println("Server name: " + dbMeta.getDatabaseProductName());
             System.out.println("Server version: " + dbMeta.getDatabaseProductVersion());
+            System.out.println("Driver name: " + dbMeta.getDriverName());
+            System.out.println("Driver version: " + dbMeta.getDriverVersion());
+            System.out.println("JDBC major version: " + dbMeta.getJDBCMajorVersion());
+            System.out.println("JDBC minor version: " + dbMeta.getJDBCMinorVersion());
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Exception: " + e.getMessage());
         } finally {
@@ -40,39 +45,46 @@ public class JdbcCase2 {
     }
 
     private static void buildConnectionByDataSource() {
-
-        //引入mysql jdbc driver的MysqlDataSource
-        MysqlDataSource mysqlDataSource = new MysqlDataSource();
+        Connection connection = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
             MysqlDataSource dataSource = new MysqlDataSource();
-            dataSource.setServerName("localhost");
+            dataSource.setServerName(host);
             dataSource.setPort(port);
-            dataSource.setDatabaseName("test");
             dataSource.setUser(user);
             dataSource.setPassword(passwd);
 
-            //一般直接用DataSource接口
-            Connection connection = mysqlDataSource.getConnection();
+            connection = dataSource.getConnection();
             DatabaseMetaData dbMeta = connection.getMetaData();
+
             System.out.println("Server name: " + dbMeta.getDatabaseProductName());
             System.out.println("Server version: " + dbMeta.getDatabaseProductVersion());
-        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println("Driver name: " + dbMeta.getDriverName());
+            System.out.println("Driver version: " + dbMeta.getDriverVersion());
+            System.out.println("JDBC major version: " + dbMeta.getJDBCMajorVersion());
+            System.out.println("JDBC minor version: " + dbMeta.getJDBCMinorVersion());
+        } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception: " + e.getMessage());
+                }
+            }
         }
     }
 
 
     public static void main(String[] args) {
-        System.out.println("--------------------------------");
+        System.out.println("----------------------------------------------------");
         System.out.println("buildConnectionByDriverManager:");
         buildConnectionByDriverManager();
-        System.out.println();
 
-        System.out.println("--------------------------------");
+        System.out.println("----------------------------------------------------");
         System.out.println("buildConnectionByDataSource:");
         buildConnectionByDataSource();
-
+        System.out.println("----------------------------------------------------");
     }
 
 }

@@ -8,7 +8,7 @@ import java.util.Random;
 
 //http://www.herongyang.com/JDBC/MySQL-PreparedStatement.html
 public class QuizTips02 {
-    private static String databaseName = "jdbc";
+    private static String databaseName = "jdbc_test";
     private static String user = "root";
     private static String passwd = "123456";
 
