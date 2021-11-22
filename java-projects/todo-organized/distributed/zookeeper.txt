@@ -1,0 +1,128 @@
+## 2019-07-26
+
+https://zookeeper.apache.org/doc/r3.5.5/recipes.html#sc_leaderElection
+<br/>分析zookeeper源码中的选举方案LeaderElectionSupportTest
+
+查询到资料: 关于分布式的Shared Reentrant Read Write Lock<br/>
+https://github.com/Netflix/curator/wiki/Shared-Reentrant-Read-Write-Lock
+Apache-curator
+
+https://github.com/fpj/zookeeper-book-example
+-----------------------------------------------------------------
+
+## 2019-07-25
+
+
+**ZooKeeper Recipes and Solutions**
+https://zookeeper.apache.org/doc/r3.5.5/recipes.html#sc_leaderElection
+
+
+**Zookeeper Atomic Broadcast (ZAB)**
+https://zookeeper.apache.org/doc/r3.2.2/zookeeperInternals.html
+https://distributedalgorithm.wordpress.com/tag/zookeeper/
+
+**I0Itec-zkClient**
+http://jm.taobao.org/2011/07/15/1047/
+https://shift-alt-ctrl.iteye.com/blog/1955740
+https://www.cnblogs.com/rilley/p/5451052.html
+
+-----------------------------------------------------------------
+
+## 2019-07-24
+
+**Zookeeper Leader Election**<br/>
+https://zookeeper.apache.org/doc/r3.5.5/recipes.html#sc_leaderElection
+https://www.tutorialspoint.com/zookeeper/zookeeper_leader_election
+https://github.com/ruiposse/zookeeper-leader-election/blob/master/src/client/ZooKeeperClientThree.java
+https://www.allprogrammingtutorials.com/tutorials/leader-election-using-apache-zookeeper.php
+https://www.outbrain.com/techblog/2011/07/leader-election-with-zookeeper/
+
+--------------------------------------------------------------------------------------------
+
+## 2019-07-23
+
+how ZooKeeper works as well how to work with it?
+
+ZooKeeper concept
+
+- The ZooKeeper Data Model
+- ZooKeeper Sessions
+- ZooKeeper Watches
+- ZooKeeper access control using ACLs
+- Consistency Guarantees
+
+practical programming
+
+* Building Blocks: A Guide to ZooKeeper Operations
+* Bindings
+* Program Structure, with Simple Example
+* Gotchas: Common Problems and Troubleshooting
+
+**The ZooKeeper Data Model**<br/>
+a hierarchal name space, each node in the namespace can have data associated with it as well as children.
+
+**zNodes**<br/>
+Every node in a ZooKeeper tree is referred to as a znode.
+
+**ZooKeeper Stat Structure**<br/>
+
+- czxid:The zxid of the change that caused this znode to be created.
+- mzxid:The zxid of the change that last modified this znode.
+- pzxid:The zxid of the change that last modified children of this znode.
+- ctime:The time in milliseconds from epoch when this znode was created.
+- mtime:The time in milliseconds from epoch when this znode was last modified.
+- version:The number of changes to the data of this znode.
+- cversion:The number of changes to the children of this znode.
+- aversion:The number of changes to the ACL of this znode.
+- ephemeralOwner:The session id of the owner of this znode if the znode is an ephemeral node. If it is not an ephemeral node, it will be zero.
+- dataLength:The length of the data field of this znode.
+- numChildrenThe number of children of this znode.
+
+
+
+
+**Watches**<br/>
+Clients can set watches on znodes. Changes to that znode trigger the watch and then clear the watch. When a watch triggers, ZooKeeper sends the client a notification.
+
+
+
+**Data Access**<br/>
+The data stored at each znode in a namespace is read and written atomically. Reads get all the data bytes associated with a znode and a write replaces all the data. <br/>
+Each node has an Access Control List (ACL) that restricts who can do what.
+
+
+
+**Ephemeral Nodes**<br/>
+exists as long as the session that created the znode is active. When the session ends the znode is deleted. Because of this behavior ephemeral znodes are not allowed to have children.
+
+
+**Sequence Nodes -- Unique Naming**<br/>
+When creating a znode you can also request that ZooKeeper append a monotonically increasing counter to the end of path.<br/>
+Queue Recipe example uses this feature.<br/>
+
+
+**Container Nodes**<br/>
+When the last child of a container is deleted, the container becomes a candidate to be deleted by the server at some point in the future.<br/>
+Given this property, you should be prepared to get KeeperException.NoNodeException when creating children inside of container znodes.
+
+**TTL Nodes**<br/>
+If the znode is not modified within the TTL and has no children it will become a candidate to be deleted by the server at some point in the future.
+
+
+
+**Time in ZooKeeper**
+<br/>**Zxid**<br/>
+1.Every change to the ZooKeeper state receives a stamp in the form of azxid(ZooKeeper Transaction Id). <br/>
+2.This exposes the total ordering of all changes to ZooKeeper. Each change will have a unique zxid and if zxid1 is smaller than zxid2 then zxid1 happened before zxid2.
+<br/>**Version numbers**<br/>
+1.Every change to a node will cause an increase to one of the version numbers of that node. <br/>
+2.The three version numbers are version (number of changes to the data of a znode), cversion (number of changes to the children of a znode), and aversion (number of changes to the ACL of a znode).
+<br/>**Ticks**<br/>
+1.When using multi-server ZooKeeper, servers use ticks to define timing of events such as status uploads, session timeouts, connection timeouts between peers, etc. <br/>
+2.The tick time is only indirectly exposed through the minimum session timeout (2 times the tick time); <br/>
+3.if a client requests a session timeout less than the minimum session timeout, the server will tell the client that the session timeout is actually the minimum session timeout.
+<br/>**Real time**<br/>
+ZooKeeper doesn't use real time, or clock time, at all except to put timestamps into the stat structure on znode creation and znode modification
+
+
+--------------------------------------------------------------------------------------------

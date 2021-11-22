@@ -1,0 +1,31 @@
+语言java端框架:Lettuce
+    https://github.com/lettuce-io/lettuce-core
+    https://lettuce.io/
+    https://lettuce.io/core/release/reference/#new-features.5-2-0
+-------------------------------------------------------------------------------------------------------------------
+开发和运维资料
+    redis设计与实现(第二版).pdf
+    redis开发和运维.pdf
+    特性:
+        基本数据结构 api
+        持久化 复制 哨兵 集群
+        运维 监控
+-------------------------------------------------------------------------------------------------------------------
+网络事件抽象
+    kqueue document
+    http://man7.org/linux/man-pages/man3/getaddrinfo.3.html
+    https://www.ibm.com/developerworks/cn/aix/library/1105_huangrg_kqueue/
+
+    Epoll
+    https://linux.die.net/man/4/epoll
+    http://man7.org/linux/man-pages/man7/epoll.7.html
+-------------------------------------------------------------------------------------------------------------------
+源码
+    setproctitle.c实现 修改进程名称
+    https://blog.csdn.net/taurance/article/details/20054917
+    Linux修改进程名称(setproctitle())
+    https://blog.csdn.net/hengshan/article/details/7835981
+
+    内存中的布局是？
+    s-(sizeof(struct sdshdr))
+-------------------------------------------------------------------------------------------------------------------

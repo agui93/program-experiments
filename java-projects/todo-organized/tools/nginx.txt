@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------------------------------------------
+Nginx
+    https://github.com/taobao/nginx-book
+-------------------------------------------------------------------------------------------------------------------
+
+
+事件通常有三种类型，网络事件、信号、定时器。
+Nginx选择的进程模型与事件模型
+https://www.w3cschool.cn/nginx/sd361pdz.html
+
+
+Connection
+Nginx 是如何处理一个连接的(一个 tcp 连接的生命周期)
+Nginx 作为客户端是的连接
+Nginx连接数的最大上限处理
+多进程间连接的平衡
+Nginx 中一个 http 请求的生命周期
+Nginx中keepalive pipe lingering_close策略
+
+-------------------------------------------------------------------------------------------------------------------
+Nginx
+实战Nginx取代Apache的高性能Web服务器.pdf
+https://www.w3cschool.cn/nginx/
+http://www.nginx.cn/doc/
+https://nginx.org/en/
+http://tutorials.jenkov.com/nginx/index.html
+https://www.nginx.com/resources/wiki/start/
+http://nginx.org/en/docs/beginners_guide.html
+
+libuv实现中的网络部分
+https://luohaha.github.io/Chinese-uvbook/
+-------------------------------------------------------------------------------------------------------------------

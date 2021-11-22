@@ -1,0 +1,22 @@
+Bochs+Linux
+—————————————————————————————————————
+	https://github.com/ultraji/linux-0.12
+	https://mikecoder.cn/post/116/
+	https://www.twblogs.net/a/5b84bcdf2b71775d1cd1a2fe/
+	https://zhuanlan.zhihu.com/p/57015430
+	https://blog.csdn.net/pingjiang2003/article/details/7251693
+
+
+使用NoVNC访问
+docker run -t -i -p 6080:6080 -v /dev/shm:/dev/shm  ultraji/ubuntu-xfce-novnc:os_learn
+http://127.0.0.1:6080/vnc.html      不能用localhost
+
+—————————————————————————————————————
+	VNC
+	https://github.com/fcwu/docker-ubuntu-vnc-desktop
+	http://cn.linux.vbird.org/linux_server/0310telnetssh.php#vnc
+	待查:Docker +VNC 一起构造应用
+
+—————————————————————————————————————
+ISO
+http://mirrors.163.com/ubuntu-releases/16.04.6/

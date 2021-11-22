@@ -1,0 +1,119 @@
+Disruptor--解耦
+
+论文:Disruptor-1.0.pdf
+
+
+美团使用状况
+https://tech.meituan.com/2016/11/18/disruptor.html
+
+
+http://mechanitis.blogspot.com/2011/08/dissecting-disruptor-why-its-so-fast.html
+https://mechanical-sympathy.blogspot.com/2011/07/memory-barriersfences.html
+
+
+https://github.com/LMAX-Exchange/disruptor/wiki/Performance-Results
+
+
+性能测试   https://tech.meituan.com/2016/11/18/disruptor.html
+
+-------------------------------------------------------------------------------------------------------------------
+LMAX Disruptor论文和源码实现, 应用案例, perfTest
+总结:论文		原理		应用		测试指标，测试方法，测试样例
+https://lmax-exchange.github.io/disruptor/
+
+论文:Disruptor-1.0.pdf
+
+https://github.com/LMAX-Exchange/disruptor/wiki/Introduction    概念图
+https://github.com/LMAX-Exchange/disruptor/wiki/Performance-Results 性能测试设计  测试结果分析
+https://github.com/LMAX-Exchange/disruptor/wiki/Blogs-And-Articles   参考资料
+https://github.com/LMAX-Exchange/disruptor/wiki/Frequently-Asked-Questions    Frequently asked questions on the Disruptor
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+## 2019-07-18
+
+Disruptor源码中的test阅读
+
+-------------------------------------------------------------------------------------------------------------------
+## 2019-07-17
+
+读Disruptor源码, 结合下图已梳理流程清晰
+
+![Disruptor Concepts]({{ site.baseurl }}/imgs/everyday_tech_record/disruptor_concepts.png)
+
+```
+/**
+ *
+ * Disruptor:
+ * ==========
+ *                        track to prevent wrap
+ *             +---------------------------------------------------+
+ *             |                                                   |
+ *             |              get                                  |
+ *             |  +----------------------------+                   |
+ *             |  |                            |                   v
+ *             |  v                            |             +-----EP2
+ * +----+    +====+    +====+   +-----+     +====+  waitFor  |
+ * | P1 |--->| RB |<---| SB1|   | EP1 |<----|SB2 |<----------+
+ * +----+    +====+    +====+   +-----+     +====+           |
+ *      claim  |   get    ^        |                         |
+ *             |          |        |                         +-----EP3
+ *             |          +--------+                               ^
+ *             |            waitFor                                |
+ *             |                                                   |
+ *             +---------------------------------------------------+
+ *                  track to prevent wrap
+ *
+ * P1   - Publisher 1    ;publish时会发完signal,唤醒waitFor
+ * RB   - RingBuffer
+ * SB1  - SequenceBarrier 1 ;使用的dependentSequence是ringBuffer的cursor
+ * EP1  - EventProcessor 1  ;
+ * SB2  - SequenceBarrier 2 ;使用的dependentSequence是EP1的消费执行位置sequence,确保EP2和EP3消费时不超过EP1
+ * EP2  - EventProcessor 2  ;
+ * EP3  - EventProcessor 3  ;
+ *
+ */
+```
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+## 2019-07-19
+
+Disruptor源码中的perfTest
+
+**Latency Performance Testing**	<br/>
+PingPongQueueLatencyTest VS PingPongSequencedLatencyTest
+
+
+
+**Throughput Performance Test** <br/>
+
+Unicast:1P-1C	 <br/>
+OneToOneQueueThroughputTest   OneToOneQueueBatchedThroughputTest  <br/>
+VS    <br/>
+OneToOneSequencedThroughputTest  OneToOneSequencedBatchThroughputTest   OneToOneSequencedPollerThroughputTest   OneToOneSequencedLongArrayThroughputTest
+
+
+Pipeline: 1P – 3C <br/>
+OneToThreePipelineQueueThroughputTest
+VS
+OneToThreePipelineSequencedThroughputTest
+
+
+Sequencer: 3P – 1C <br/>
+ThreeToOneQueueThroughputTest    VS    ThreeToOneSequencedThroughputTest   ThreeToOneSequencedBatchThroughputTest
+
+
+Multicast: 1P – 3C <br/>
+OneToThreeQueueThroughputTest   VS   OneToThreeSequencedThroughputTest
+
+
+Diamond: 1P – 3C	<br/>
+OneToThreeDiamondQueueThroughputTest   VS   OneToThreeDiamondSequencedThroughputTest
+
+-------------------------------------------------------------------------------------------------------------------
+

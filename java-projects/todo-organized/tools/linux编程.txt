@@ -1,0 +1,78 @@
+
+-------------------------------------------------------------------------------------------------------------------
+UNIX环境高级编程第三版.pdf
+UNIX网络编程卷1第3版.pdf
+UNIX_网络编程卷2.pdf
+
+LINUX网络编程第2版.pdf
+Linux高性能服务器编程.pdf
+Linux多线程服务器编程精要
+-------------------------------------------------------------------------------------------------------------------
+kqueue document
+http://man7.org/linux/man-pages/man3/getaddrinfo.3.html
+https://www.ibm.com/developerworks/cn/aix/library/1105_huangrg_kqueue/
+
+
+
+Epoll
+https://linux.die.net/man/4/epoll
+http://man7.org/linux/man-pages/man7/epoll.7.html
+
+-------------------------------------------------------------------------------------------------------------------
+Shell if判断选项
+    -e 判断对象是否存在
+    -d 判断对象是否存在，并且为目录
+    -f 判断对象是否存在，并且为常规文件
+    -L 判断对象是否存在，并且为符号链接
+    -h 判断对象是否存在，并且为软链接
+    -s 判断对象是否存在，并且长度不为0
+    -r 判断对象是否存在，并且可读
+    -w 判断对象是否存在，并且可写
+    -x 判断对象是否存在，并且可执行
+    -O 判断对象是否存在，并且属于当前用户
+    -G 判断对象是否存在，并且属于当前用户组
+    -nt 判断file1是否比file2新  [ "/data/file1" -nt "/data/file2" ]
+    -ot 判断file1是否比file2旧  [ "/data/file1" -ot "/data/file2" ]
+
+    -eq//等于
+    -ne//不等于
+    -gt//大于
+    -lt //小于
+    -ge //大于等于
+    -le //小于等于
+-------------------------------------------------------------------------------------------------------------------
+setproctitle.c
+https://blog.csdn.net/taurance/article/details/20054917
+https://blog.csdn.net/hengshan/article/details/7835981
+-------------------------------------------------------------------------------------------------------------------
+## 2019-08-02
+
+阅读::Linux网络编程(第二版)
+
+编程环境:编辑器vim   gcc makefile  gdb  cmake
+
+Gcc
+编译:		生成目标文件;		多文件编译;		-E预处理;		-S生成汇编语言;		gcc常用选项<br/>
+头文件和库文件的默认搜索路径<br/>
+静态链接库<br/>
+动态链接库<br/>
+
+
+Makefile<br/>
+	http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+	https://www.tutorialspoint.com/makefile/
+	https://makefiletutorial.com/
+	https://opensource.com/article/18/8/what-how-makefile
+	https://www.gnu.org/software/make/manual/html_node/index.html#toc-An-Introduction-to-Makefiles
+	https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html
+
+GDB<br/>
+	https://www.kancloud.cn/wizardforcel/gdb-tips-100/146708 <br/>
+	**gdbinit**<br/>
+	https://github.com/cyrus-and/gdb-dashboard	https://www.helplib.com/GitHub/article_129194
+	https://www.cntofu.com/book/46/gdb/gdb_dashboard_debug_info_at_a_glance.md        	https://www.helplib.com/GitHub/article_129194 <br/>
+	https://github.com/gdbinit/Gdbinit <br/>
+	https://github.com/longld/peda <br/>
+	https://github.com/hugsy/gef <br/>
+	堆栈查看;	汇编含义的解读;	寄存器查看;	memeory查看
+-------------------------------------------------------------------------------------------------------------------

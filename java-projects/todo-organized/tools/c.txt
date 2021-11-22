@@ -1,0 +1,32 @@
+--------------------------------------------------------------------------------------------------------------
+C和指针(第二版).pdf
+https://devdocs.io/c/
+http://man7.org/linux/man-pages/dir_all_alphabetic.html
+http://man7.org/linux/man-pages/dir_all_by_section.html
+--------------------------------------------------------------------------------------------------------------
+
+
+
+## C
+**环境**
+编译和链接和执行
+
+
+**预处理**
+预处理阶段(preprocessing)，预处理器preprocessor在编译之前对源代码进行一些文本性质的操作。
+
+主要包括:....
+预定义的符号： FILE LINE DATE TIME STDC
+
+#define   作用
+	语法格式:  #define name stuff
+	#define和函数的优劣
+	#define 宏(macro)
+	#define 替换
+
+条件编译    #if     #elif  #else  #endif
+#ifdef #ifndef
+#include
+#error
+#line
+--------------------------------------------------------------------------------------------------------------

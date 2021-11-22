@@ -1,0 +1,105 @@
+
+Kafka  && spring-kafka
+
+
+Book
+    Apache_Kafka_源码剖析.pdf
+    Kafka技术内幕：图文详解Kafka源码设计与实现.pdf
+    kafka权威指南
+    Kafka_The_Definitive_Guide_Real
+    Kafka_The_Definitive_Guide_Real-Time_Data_and_Stream_Processing_at_Scale.pdf
+
+------------------------------------------------------------------
+Spring-kafka
+    https://spring.io/projects/spring-kafka#overview
+    https://docs.spring.io/spring-kafka/docs/1.1.2.RELEASE/reference/html/
+    https://kafka.apache.org/0102/javadoc/index.html
+    https://kafka.apache.org/0102/javadoc/org/apache/kafka/clients/consumer/package-summary.html
+    https://kafka.apache.org/0102/javadoc/org/apache/kafka/clients/consumer/package-summary.html
+------------------------------------------------------------------
+kafka源码调试验证   https://www.jianshu.com/p/a89f07616071；
+kafka的raw编程;
+kafka常用开发框架以及对比;
+kafka性能测量；
+kafka监控工具;
+kafka设计和实现;
+集群的部署和日常维护;
+常见的经典场景和问题；
+不同版本kafka特性；
+其他类型的消息中间件的对比
+------------------------------------------------------------------
+spring-kafka的再封装调研:::CreateMessageSubscriberListener;;;
+消费者:KafkaMessageSubscriber/AbstractKafkaMessageListener;;;;
+生产者-MessagePublisherInjector  -KafkaMessagePublisher
+------------------------------------------------------------------
+Kafka原理
+
+kafka服务端-网络层
+    Reactor模式 — 网络读写与事件处理分离 —  MultiSelector
+-----------------------------------------------------------
+
+Kafka日志存储方面的设计和实现
+  1. Kafka日志存储相关的基本概念，日志子系统的工作原理。
+  2.存储消息的日志文件格式以及索引文件格式， FileMessageSet和OffsetIndex对日志文件和索引文件的管理，服务端的ByteBufferMessageSet和客户端 的MemoryRecords如何灵活地处理压缩消息。
+  3.LogSegment如何管理日志和索引，以及Log如何管理和操纵LogSegment对象集合
+  4.LogManager的功能，例如，log-flusher定时任务、logretention定时任务、recovery-point-checkpoint定时任务以及日志压缩的功能，还介绍了LogManager的恢复操 作和加载Log的流程。
+
+
+
+时间轮——管理延迟操作的组件 DelayedOperationPurgatory组件
+    Question:JDK本身提供的java.util.Timer或是DelayQueue轻松实现定时任务的功能，为什么Kafka还要专门开发 DelayedOperationPurgatory组件呢
+    Answer:  在高性能的框架中，为了将定时任务的存取操作以及取消操作的时 间复杂度降为O(1)，一般会使用其他方式实现定时任务组件，例如，使用时间轮的方式。这种做法还是比 较多见的，例如，ZooKeeper中使用“时间桶”的方式处理Session过期，Netty也提供了HashedWheelTimer这种 时间轮的实现，Quartz框架中也有时间轮的身影。
+
+    1.时间轮的相关概念以及在Kafka中的TimingWheel、SystemTimer的实现。
+    2. DelayedOperation接口，它是对TimeTask的扩展，实现了有条件的延迟操作。3.DelayedOperationPurgatory在 SystemTimer的基础上实现了对DelayedOperation的管理。
+    4.DelayedProduce和DelayedFetch的相 关处理流程及这两个类的具体实现
+
+
+
+副本机制
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+Protocol
+    https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol
+
+Source:  源码梳理;    原理图;    设计的核心思路;     设计与实现的打通;
+
+Application: 不同语言平台下的客户端(生成者 消费者)     server端的运维;   各类参数的配置;
+
+
+-------------------------------------------------------------------------------------------------------------------
+关于producer:
+    3: 生成端java版的实现组件与原理
+    2: 生成端被应用时提供的核心api
+    1 : 生成端和服务端的交互的协议
+
+Producer:
+	对应线程资源  内存资源  网络资源是如何使用的
+	ProducerConfig中定义的生产者配置;   初始化时如何使用配置初始各个组件的
+	支持序列化方案的自定义
+-------------------------------------------------------------------------------------------------------------------
+ProducerInterceptors设计作用
+Metadata/Cluster在端的一方中封装集群的信息   集群信息的刷新
+	Node、TopicPartition、PartitionInfo
+
+NetworkClient 初始化
+
+Sender对象
+	在ioThread中的处理思路
+	如何close
+
+RecordAccumulator
+
+-------------------------------------------------------------------------------------------------------------------
+KSelector使用NIO异 步非阻塞模式实现网络I/O操作，KSelector使用一个单独的线程可以管理多条网络连接上的连接、读、写等 操作。
+	策略模式:TransportLayer根据网络协议的 不同，提供不同的子类，而对KafkaChannel提供统一的接口
+
+
+ConsumerNetworkClient下的RequestFutureCompletionHandler作用
+	RequestFuture下的适配器模式  责任链模式
+
+-------------------------------------------------------------------------------------------------------------------
+
+

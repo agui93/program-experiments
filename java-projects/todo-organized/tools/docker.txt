@@ -1,0 +1,14 @@
+
+————————————————————
+K8s
+Docker
+————————————————————
+
+Docker构建镜像使用代理
+	https://blog.anguiao.com/archives/use-proxy-when-building-docker-image.html
+	https://www.simpleapples.com/2019/04/18/building-docker-image-behind-proxy/
+	https://blog.anguiao.com/archives/use-proxy-when-building-docker-image.html
+————————————————————————————————————————
+docker命令
+	 --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
+————————————————————————————————————————

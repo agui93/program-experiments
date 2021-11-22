@@ -1,0 +1,89 @@
+JDBC
+    https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html
+    https://www.oracle.com/technetwork/java/index-140429.html
+    https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/
+    https://www.tutorialspoint.com/jdbc/jdbc-db-connections.htm
+    https://www.javatpoint.com/java-jdbc
+    Java_Transaction_Design_Strategies.pdf
+
+
+java端JDBC框架
+    Spring-JDBC:
+        Spring技术内幕_深入解析Spring架构与设计原理第2版.pdf
+        https://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/spring-data-tier.html
+
+数据库连接池
+    HikariCP
+        https://github.com/brettwooldridge/HikariCP
+    Druid
+        https://github.com/alibaba/druid
+    HikariCP源码分析
+        https://www.fsby.fun/2020/07/30/HikariCP-source-code-0/
+        https://www.fsby.fun/tags/Hikari/
+        https://www.fsby.fun/2020/07/30/HikariCP-source-code-0/
+        http://www.iocoder.cn/HikariCP/good-collection/?vip
+        https://zhuanlan.zhihu.com/p/107748071
+        http://www.iocoder.cn/HikariCP/good-collection/?vip
+        https://zhuanlan.zhihu.com/p/107748071
+        https://www.fsby.fun/tags/Hikari/
+        https://github.com/brettwooldridge/HikariCP/wiki/Bad-Behavior:-Handling-Database-Down
+    对比HikariCP 与 Druid
+        https://cnhkblog.top/2018/06/02/HikariCp%E4%B8%8EDruid%E7%9A%84%E4%BA%A4%E9%94%8B/
+
+
+
+
+SPRING + JDBC + HikariCP 集成
+SPRING + JDBC + Druid 集成
+
+
+
+
+
+
+https://segmentfault.com/a/1190000013341344
+
+
+
+
+
+https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/jdbc_42.html
+https://www.javatpoint.com/java-jdbc
+https://www.geeksforgeeks.org/establishing-jdbc-connection-in-java/
+https://www.tutorialspoint.com/jdbc/index.htm
+
+
+https://www.oracle.com/technetwork/java/index-140429.html
+https://www.oracle.com/technetwork/java/index-141229.html#
+https://docs.oracle.com/javase/tutorial/jdbc/basics/connecting.html
+
+
+Spring-JDBC
+        https://blog.csdn.net/wybqq/article/details/71774273
+        https://github.com/brettwooldridge/HikariCP
+        https://stackoverflow.com/questions/5684473/how-to-call-a-custom-rollback-method-in-spring-transaction-management
+
+
+
+
+        1. 事务传播机制
+        2. 事务隔离机制
+        3. 只读
+        4. 事务超时
+        5. 回滚规则
+
+        https://segmentfault.com/a/1190000013341344
+          https://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/jdbc.html https://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/transaction.html
+        https://stackoverflow.com/questions/22221741/spring-global-transaction-vs-local-transaction
+        https://www.tutorialspoint.com/spring/spring_transaction_management.htm
+        https://docs.oracle.com/cd/A97335_02/apps.102/a83725/trans1.htm
+
+
+
+
+        基于下面二者进行原生的sql执行和事务处理
+            jdk中的java.sql.connection
+            mysql的driver:com.mysql.jdbc.Driver  https://www.cnblogs.com/intsmaze/p/5244709.html
+
+        基于spring-jdbc进行sql执行和事务处理
+            内部是如何基于原生的进行再封装

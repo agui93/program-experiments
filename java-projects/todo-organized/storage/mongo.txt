@@ -1,0 +1,99 @@
+mongo reactive driver样例:
+    http://mongodb.github.io/mongo-java-driver-reactivestreams/1.2/getting-started/quick-tour/      ;;;;;  https://github.com/mongodb/mongo-java-driver-reactivestreams;;;;;;;
+
+mongo驱动对比
+    https://github.com/spring-projects/spring-data-mongodb
+    https://github.com/mongodb/mongo-java-driver
+    http://mongodb.github.io/mongo-java-driver/3.2/driver/
+    https://api.mongodb.com/java/3.2/
+    驱动的关键入口com.mongodb.async.client.MongoClients和com.mongodb.async.client.MongoClientSettings
+
+
+
+——————————————————————————————————————————————————————
+MongoDB是一个可扩展、开源、表结构自由、用 C++语言编写且面向文档的数据库， 旨在为Web应用程序提供高性能、高可用性且易扩展的数据存储解决方案。
+
+文档数据模型(BSON)   对比 关系型数据库的表结构
+水平扩展的方案
+高可用的设计
+
+mongod进程  mongo进程  mongos进程
+mongos进程是一个在分片中用到的进程。所有应用程序端的查询操作都会先由它分析 ，然后将查询定位到具体某一个分片上，它的作用与mcmgod类似，客户端的mongo 与它连接。
+
+
+journal的设计
+
+
+分页的两种方案
+
+
+
+索引
+	db.collection.ensurelndex(keys, options)
+	索引的数据结构也是B+树
+	搞清楚哪些字段上需要建立索引、索引以什么样 的方式建立
+	单字段索引
+		默认为所有集合都创建了一个_id字段的单字段索引,这个索引是唯一 的 ，不能被删除，_id字段作为一个集合的主键，值是唯一的
+	针对.explain()的输出解读
+		"cursor": "BtreeCursor name表不此查询用到了索引;
+		isMultiKey表示查询是否用到了多键复合索引;
+		n 反映了查询选择器匹配的文档数量;
+		nscannedObjects表不查询过程中扫描的总的文档数;
+		nscanned表不在数据库操作中扫描的 文档或索引条目的总数量;
+		nscannedObjectsAUPlans表不反映扫描文档总数在所有查询计 划中;
+		nscannedAllPlans表示在所有查询计划中扫描的文档或索引条目的总数量;
+		scanAndOrder表示MongoDB从游标取回数据时，是否对数据排序;
+		nYields表不产生的读 锁数;
+		millis表示查询所需的时间，单位是毫秒。
+	多个字段的复合索引，复合索引支持匹配多个字段的查询
+	数组的多键索引
+
+
+查询优化
+	查询优化的目的就是找出慢的查询语句，分析慢的原因，然后优化此查询语句。
+	1.定位到慢查询，  监视功能及慢查询的阈值   db.setProfilingLevel(level,[ slowms])
+	2.检查执行计划     可以通过explain分析   或者通过索引解决   或者通过调整执行计划
+
+插入 修改 删除
+	_id的自动生成
+	修改的multi
+
+mongo的锁
+	锁粒度 和 锁类型
+
+
+Journaling日志功能
+	保证了数据库服务器在意外断电、自然灾害等情况下数据 的完整性
+	MongoDB也有log 日志，它只是简单记录了数据库在服务器上的启动信息，慢查询记录，数据库异常信息 ，客户端与数据库服务器连接、断开等信息。
+	MongoDB的复制集功能通过冗余数据 保护数据的安全，但Journaling更是通过日志的方式保证数据库的一致性，两者的关注点 不一样
+	private view和 shared view 及工作原理
+
+
+聚集分析
+	管道模式进行聚集 aggregate
+	MapReduce模式聚集 mapReduce
+	简单聚集函数
+
+
+复制集
+	复制集实现了数据库的冗余备份、故障转移，这两大功能应该是所有数据库管理人员追 求的目标;
+	分片实现了数据的分布式存储、负载均衡
+	在生产环 境中一个复制集最少应该包含三个节点，其中有一个必须是主节点  	自 动故障转移是怎么实现的?复制集又是怎样实现数据同步的呢?
+	MongoDB就是通过oplog.rs来实现复制集间数据同步的。oplog.rs大小是固定的,secondary 节点因为宕机，长时间不能恢复的情况。
+	自动故障转移，心跳监控，读操作期间发生primary宕机了，写操作期间发生primary宕机了
+	写关注和读参考
+
+
+分片集群
+	分片机制，实现了海量数 据的分布式存储与高效的读写分离。复制集中的每个成员是一个nxmgod实例，但在分片 部署上，每一个片可能就是一个复制集。
+	分片的使用会使数据库系统变得复杂。什么时候使用分片 也是需要考虑的问题
+	对 于大数据的处理，要时刻监控MongoDB的磁盘I/O性能、可用内存的大小，在数据库内 存使用率达到一定程度时就要考虑分片了，通过分片使整个数据库分布在各个片上，每个 片拥有数据库的一部分数据，从而降低内存使用率，提高读写性能。
+	分布部署结构: 一个具体的分片部署架构是什么?
+	分片工作机制: 如何使一个集合分片? 如何选择分片用到的片键?平衡器如何使chunks块在片中迁移?分片的读写情况怎么 样?
+		使集合分片:
+
+gridfs
+
+监控
+——————————————————————————————————————————————————————
+

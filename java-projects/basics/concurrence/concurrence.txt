@@ -1,0 +1,274 @@
+并发篇纲要
+
+——————————————————————————————————————————————————————
+原理机制: CAS  VOLATILE  JMM   UNSAFE
+
+Executors整理
+
+Lock框架整理 AQS
+
+常用工具整理()
+
+——————————————————————————————————————————————————————
+线程池的作用
+	降低资源消耗
+	提高响应速度
+	便于管理
+线程池实现原理抽象
+ThreadPoolExecutor执行流程和源码梳理
+	尽可能地避免获取全局锁（那将会是一个严重的可伸缩瓶颈）
+	基本的阻塞队列
+		ArrayBlockingQueue
+		LinkedBlockingQueue
+		SynchronousQueue
+		PriorityBlockingQueue
+线程池的使用
+	如何合理地配置线程池
+	创建的api和参数
+	提交任务execute submit的区别
+	关闭线程池;shutdown和shutdownNow的区别;当任务是不可中断
+	线程池的监控 及 cpu负载监控
+Executor框架的主要成员：ThreadPoolExecutor、ScheduledThreadPoolExecutor、 Future接口、Runnable接口、Callable接口和Executors
+	Executor框架的使用示意图
+	业务：Runnable接口或Callable接口封装的
+	异步计算的结果：包括接口Future和实现Future接口的FutureTask类；get() cancel()方法
+	任务的执行：ExecutorService接口的实现ThreadPoolExecutor和ScheduledThreadPoolExecutor
+	Executors可以创建3种类型的 ThreadPoolExecutor：
+		SingleThreadExecutors:适用于需要保证顺序地执行各个任务；并且在任意时间点，不会有多 个线程是活动的应用场景
+		FixedThreadPool:适用于为了满足资源管理的需求，而需要限制当前线程数量的应用场 景，它适用于负载比较重的服务器
+		CachedThreadPool:是大小无界的线程池，适用于执行很多的短期异步任务的小程序，或者 是负载较轻的服务器
+	Executors可以创建2种ScheduledThreadPoolExecutor
+		ScheduledThreadPoolExecutor适用于需要多个后台线程执行周期任务，同时为了满足资源 管理的需求而需要限制后台线程的数量的应用场景。
+		SingleThreadScheduledExecutor适用于需要单个后台线程执行周期任务，同时需要保证顺 序地执行各个任务的应用场景。
+
+
+
+常见的阻塞队列	ArrayBlockingQueue,LinkedBlockingQueue,SynchronousQueue,PriorityBlockingQueue,DelayQueue
+ScheduledThreadPoolExecutor与Timer区别
+
+基于AQS实现的同步器包括：ReentrantLock、Semaphore、ReentrantReadWriteLock、 CountDownLatch和FutureTask
+
+
+CountDownLatch、CyclicBarrier和 Semaphore工具类提供了一种并发流程控制的手段，Exchanger工具类则提供了在线程间交换数 据的一种手段
+
+
+Atomic包里的类基本都是使用Unsafe实现的包装类
+
+——————————————————————————————————————————————————————
+
+
+多线程:JMM   hb规则梳理   AQS   Unsafe:CAS   LockSupport  线程中断
+	Disruptor的多线程  Netty中的多线程
+	开发技巧: JDK工具的内存填充   Disruptor中的内存填充
+
+
+待总结:JMM和hb规则   队列同步器AQS(LockSupport  Unsafe.CAS )    Executor框架
+	Unsafe:cas   Disruptor的多线程  Netty中的多线程
+	JMM和hb规则
+			https://agui93.github.io/documents/notes/agui_self_analyze/java_jmm
+			https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.4.5
+			http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
+
+	Disruptor: https://agui93.github.io/documents/notes/agui_self_analyze/java_lmax_disruptor
+ 	AQS https://agui93.github.io/documents/notes/agui_self_analyze/java_analyze_AbstractQueuedSynchronizer
+	UNSAFE	https://agui93.github.io/documents/notes/agui_self_analyze/java_unsafe
+
+——————————————————————————————————————————————————————
+待总结:Disruptor
+	图	https://agui93.github.io/documents/everyday_tech_record#2019-07-17
+	Unsafe	https://agui93.github.io/documents/notes/agui_self_analyze/java_unsafe
+
+
+
+——————————————————————————————————————————————————————
+
+线程池 executor框架
+jdk中常用的线程工具(ConcurrentHashMap ConcurrentLinkedQueue 阻塞队列 原子操作类 CountDownLatch CyclicBarrier Semaphore Exchanger)
+
+——————————————————————————————————————————————————————
+-------------------------------------------------------------------------------------------------------------------
+The JSR-133 Cookbook for Compiler Writers
+http://gee.cs.oswego.edu/dl/jmm/cookbook.html
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+## 2019-07-16 待整理
+
+//a Store/Store barrier between this write and any previous store.   <br/>
+UNSAFE.putOrderedLong(this, VALUE_OFFSET, value);   <br/>
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6275329   <br/>
+https://stackoverflow.com/questions/1468007/atomicinteger-lazyset-vs-set/14020946
+
+
+//Store/Store barrier between this write and any previous write and a Store/Load barrier between this write and any subsequent volatile read.    <br/>
+UNSAFE.putLongVolatile(this, VALUE_OFFSET, value);
+
+
+Unsafe.putLong    <br/>
+区别是什么???   <br/>
+https://stackoverflow.com/questions/1468007/atomicinteger-lazyset-vs-set/14020946   <br/>
+https://stackoverflow.com/questions/48615456/what-is-difference-between-getxxxvolatile-vs-getxxx-in-java-unsafe   <br/>
+http://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html#conclusion   <br/>
+https://www.cnblogs.com/mickole/articles/3757278.html   <br/>
+https://stackoverflow.com/questions/30600621/java-unsafe-storefence-documentation-wrong   <br/>
+https://www.jianshu.com/p/2ab5e3d7e510   <br/>
+http://gee.cs.oswego.edu/dl/jmm/cookbook.html   <br/>
+
+
+
+
+为了保证内存可见性，Java编译器在生成指令序列的适当位置会插入内存屏障指令来禁 止特定类型的处理器重排序。JMM把内存屏障指令分为4类
+
+LoadLoad Barriers:     Load1; LoadLoad; Load2   <br/>	确保Load1的读取指令，执行先于，load2及load2后续的读取指令   <br/>
+LoadStore Barries:	    Load1; LoadStore; Store2   <br/>	确保Load1的读取指令，执行先于，Store2及Store2后续的存储指令   <br/>
+StoreStore Barries:     Store1; StoreStore; Store2   <br/>	确保Store1的存储指令，执行先于，Store2及Store2后续的存储指令   <br/>
+StoreLoad Barries:     Store1; StoreLoad; Load2   <br/>	确保Store1的存储指令，执行先于，load2及load2后续的读取指令   <br/>
+
+StoreLoad Barriers是一个“全能型”的屏障，它同时具有其他3个屏障的效果。现代的多处 理器大多支持该屏障（其他类型的屏障不一定被所有处理器支持）。执行该屏障开销会很昂 贵，因为当前处理器通常要把写缓冲区中的数据全部刷新到内存中（Buffer Fully Flush）。
+
+
+
+volatile写的内存语义如下。 当写一个volatile变量时，JMM会把该线程对应的本地内存中的共享变量值刷新到主内 存。   <br/>
+volatile读的内存语义如下。 当读一个volatile变量时，JMM会把该线程对应的本地内存置为无效。线程接下来将从主 内存中读取共享变量。
+
+在每个volatile写操作的前面插入一个StoreStore屏障。    <br/>
+在每个volatile写操作的后面插入一个StoreLoad屏障。    <br/>
+在每个volatile读操作的后面插入一个LoadLoad屏障。    <br/>
+在每个volatile读操作的后面插入一个LoadStore屏障。   <br/>
+
+
+https://stackoverflow.com/questions/15360598/what-does-a-loadload-barrier-really-do
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+## 2019-07-08
+
+阅读JDK-ThreadPoolExecutor注释:
+
+- Thread pools address two different problems; 解决的场景
+- newCachedThreadPool vs newFixedThreadPool vs newSingleThreadExecutor;常用工具
+- Core and maximum pool sizes; 讨论coreSize maxSize queue与创建线程、运行线程的关系
+- On-demand construction; prestartCoreThread、prestartAllCoreThreads与提交任务时创建运行线程的区别
+- Creating new threads; 默认或自定义的线程工厂类,the thread's name, thread group, priority, daemon status
+- Keep-alive times;  大于coreSize小于maxSize的线程idle时间到限制情形;小于coreSize的线程idle时间到限制情形;
+- Queuing; Direct handoffs(SynchronousQueue);  Unbounded queues(LinkedBlockingQueue); Bounded queues(ArrayBlockingQueue)   关于maxSize与queue类型和queue的限制数量的平衡，及不同平衡下cpu使用率与吞吐量的关系，不同平衡方式的适用场景
+- Rejected tasks;  AbortPolicy,CallerRunsPolicy,DiscardPolicy,DiscardOldestPolicy
+- Hook methods;扩展beforeExecute,afterExecute;扩展方法中抛出异常的场景
+- Queue maintenance;
+- Finalization;  不在使用pool,且未shutdown的场景时，如何处理
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+## 2019-07-10
+
+读ArrayBlockingQueue LinkedBlockingQueue SynchronousQueue实现,<br/>
+看注释时查询到的资料jdk中集合的简介: <br/>
+https://docs.oracle.com/javase/8/docs/technotes/guides/collections/index.html <br/>
+https://docs.oracle.com/javase/tutorial/index.html <br/>
+
+**ArrayBlockingQueue**
+
+```
+	//ArrayBlockingQueue:通过生成消费的模式,使用lock + notEmpty + notFull同步
+
+	Object[] items;  //The queued items
+	int takeIndex;   //items index for next take, poll, peek or remove
+	int putIndex;    //items index for next put, offer, or add
+	int count;       //Number of elements in the queue
+	final ReentrantLock lock;      //Main lock guarding all access
+	private final Condition notEmpty;      //Condition for waiting takes
+	private final Condition notFull; 	//Condition for waiting puts
+```
+
+**LinkedBlockingQueue** 实现核心是:<br/>
+count == capacity时插入数据，不需要等待的方法插入失败,需要等待的方法通过notFull等待，插入数据后如果count < capacity,notFull发出signal通知.  <br/>
+count == 0时获取数据,不需要等待的方法返回null,需要等待的方法通过notEmpty等待，获取数据后如果count>0,notEmpty发出signal通知.   <br/>
+
+```
+ //Linked list node class
+static class Node<E> {
+    E item;
+    /**
+     * One of:
+     * - the real successor Node
+     * - this Node, meaning the successor is head.next
+     * - null, meaning there is no successor (this is the last node)
+     */
+    Node<E> next;
+    Node(E x) { item = x; }
+}
+
+
+private final int capacity;/** The capacity bound, or Integer.MAX_VALUE if none */
+private final AtomicInteger count = new AtomicInteger();/** Current number of elements */
+
+transient Node<E> head; //Head of linked list.Invariant: head.item == null
+private transient Node<E> last;//Tail of linked list. Invariant: last.next == null
+
+private final ReentrantLock takeLock = new ReentrantLock();    /** Lock held by take, poll, etc */
+private final Condition notEmpty = takeLock.newCondition();    /** Wait queue for waiting takes */
+
+private final ReentrantLock putLock = new ReentrantLock();    /** Lock held by put, offer, etc */
+private final Condition notFull = putLock.newCondition();    /** Wait queue for waiting puts */
+```
+
+-------------------------------------------------------------------------------------------------------------------
+
+## 2019-07-11
+读SynchronousQueue源码中关于TransferQueue的实现
+
+参考: http://www.cs.rochester.edu/research/synchronization/pseudocode/duals.html <br/>
+参考: http://www.cs.rochester.edu/u/scott/papers/2004_DISC_dual_DS.pdf <br/>
+参考: https://juejin.im/post/5ae754c7f265da0ba76f8534
+
+-------------------------------------------------------------------------------------------------------------------
+## 2019-07-12
+
+sun.misc.Unsafe类
+参考:http://www.docjar.com/docs/api/sun/misc/Unsafe.html <br/>
+参考:http://mishadoff.com/blog/java-magic-part-4-sun-dot-misc-dot-unsafe/ <br/>
+
+模拟的是Disruptor中的RingBuffer中的unsfe操作
+
+```
+//获取数组的转换因子，也就是数组中元素的地址增量
+final int scale = unsafe.arrayIndexScale(Object[].class);
+int REF_ELEMENT_SHIFT;
+if (4 == scale) {
+    REF_ELEMENT_SHIFT = 2;
+} else if (8 == scale) {
+    REF_ELEMENT_SHIFT = 3;
+} else {
+    System.out.println("error scale");
+    return;
+}
+int BUFFER_PAD = 128 / scale;
+
+int bufferSize = 2 * 2 * 2 * 2;
+int indexMask = bufferSize - 1;
+
+
+//实际数组的大小 = BUFFER_PAD + bufferSize + BUFFER_PAD;在有效元素的前后各有BUFFER_PAD个元素空位，用于做缓存行填充
+Object[] entries = new Object[bufferSize + 2 * BUFFER_PAD];
+
+
+//赋值时跳过了BUFFER_PAD个元素
+for (int i = 0; i < bufferSize; i++) {
+    entries[BUFFER_PAD + i] = new Element("name" + i, 200 + i);
+}
+
+
+//获取数组中真正保存元素数据的开始位置; BUFFER_PAD << REF_ELEMENT_SHIFT 实际上是BUFFER_PAD * scale的等价高效计算方式
+int REF_ARRAY_BASE = unsafe.arrayBaseOffset(Object[].class) + (BUFFER_PAD << REF_ELEMENT_SHIFT);
+
+//获取数组中的元素
+for (int i = 0; i < bufferSize; i++) {
+    System.out.println(unsafe.getObject(entries, REF_ARRAY_BASE + ((i & indexMask) << REF_ELEMENT_SHIFT)));
+}
+
+```
+-------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,79 @@
+性能测试体系  && 压测工具  &&  微基准测试
+
+
+收集和展示工具
+    grafana telegraf influxdb
+    ElasticSearch Kibana
+    Zabbix监控 https://www.zhihu.com/question/19973178
+    Grafana监控
+    JMX—memory cpu io
+    Application Performance Management
+
+
+
+
+### 性能测试体系
+http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/pdf/pts-performance-system-cn-zh-2016-06-08.pdf
+
+
+### 压测工具: Gatling Jmeter工具;  监控的配套工具;;;;https://zhuanlan.zhihu.com/p/30511486
+
+
+
+
+### 微基准测试
+
+JMH
+    http://openjdk.java.net/projects/code-tools/jmh/
+    Java   Micro  Benchmarking
+    https://www.slideshare.net/ConstantineNosovsky/nosovsky-java-microbenchmarking
+    应用案例 HikariCP-benchmark
+    https://github.com/brettwooldridge/HikariCP-benchmark
+
+——————————————————————————————————————————————————————————
+Diagnostic Tools
+    https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/toc.html
+Java HotSpot VM Command-Line Options
+    https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts001.html
+Java Gc tutorials
+    http://www.herongyang.com/Java-GC/
+JVM tutorials
+    http://www.herongyang.com/JVM/
+
+https://docs.oracle.com/javase/tutorial/essential/environment/index.html
+https://docs.oracle.com/javase/tutorial/essential/environment/paths.html
+——————————————————————————————————————————————————————————
+
+
+——————————————————————————————————————————————————————————
+
+
+
+监控(memory cpu thread  network  io)
+Os:memory
+Jvm:heap and non-heap memory
+	https://stackify.com/jvm-metrics/
+		provide information regarding JVM memory status
+		show you how many times the GC runs per minute and how long each run lasts on average
+观察维度:内存变化(堆与非堆) cpu负载变化  gc变化
+不同场景下根据数据历史，对比是否正常
+
+
+监控1台机器的系统资源，判断是否健康，判断资源是否到达警戒线
+监控1批机器的系统资源，判断是否健康，判断资源是否到达警戒线
+
+压测1台机器的系统资源，判断是否健康，判断资源是否到达警戒线
+压测1批机器的系统资源，判断是否健康，判断资源是否到达警戒线
+
+监控1台机器上的特定应用的资源瓶颈
+监控1批机器上的特定应用的资源瓶颈
+
+监控1台机器上的1批特定应用的资源瓶颈
+监控1批机器上的1批特定应用的资源瓶颈
+
+http://karunsubramanian.com/java/4-things-you-need-to-know-about-cpu-utilization-of-your-java-application/
+——————————————————————————————————————————————————————————
+
+
+
+

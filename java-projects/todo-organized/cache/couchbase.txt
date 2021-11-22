@@ -1,0 +1,16 @@
+缓存系统 Couchbase
+
+对比方案 https://www.couchbase.com/mongodb-redis ;
+架构概况  https://couchbase.drift.click/underthehood；；
+性能  https://www.couchbase.com/benchmarks；；
+SDK文档 https://docs.couchbase.com/java-sdk/2.7/start-using-sdk.html
+其他对比 https://rdc.hundsun.com/portal/article/736.html
+其他对比  https://blog.csdn.net/slx_2011/article/details/38337679
+Stackoverflow    https://stackoverflow.com/tags/couchbase/info
+
+
+
+
+
+
+

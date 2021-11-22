@@ -1,0 +1,62 @@
+--------------------------------------------------------------------
+org.apache.commons.lang3
+--------------------------------------------------------------------
+Hession:
+    http://hessian.caucho.com/
+--------------------------------------------------------------------
+Mongo mysql redis zookeeper kafka客户端
+--------------------------------------------------------------------
+分类slf4j  logback  log4j2 jdk  jcl   log4j
+	spring中的log用的是org.apache.commons.logging
+slf4j-api，logback结合使用
+http://www.logback.cn/
+https://segmentfault.com/a/1190000008315137#articleHeader9
+https://segmentfault.com/a/1190000008315137
+https://blog.csdn.net/johnson_moon/article/details/77532583
+https://cloud.tencent.com/developer/article/1329362
+
+
+配置:logback.xml   alps-logger.xml	RootLogger	RuntimeLoggerConfigure	LoggerFactory
+--------------------------------------------------------------------
+
+SSO  Session  Cookie
+https://cdn2.auth0.com/blog/definitive-guide-to-single-sign-on.pdf
+
+https://user-gold-cdn.xitu.io/2018/3/2/161e2761ff41b501?imageView2/0/w/1280/h/960/format/webp/ignore-error/1
+https://yq.aliyun.com/articles/636281
+https://www.cnblogs.com/EzrealLiu/p/5559255.html
+https://blog.csdn.net/qq_31183297/article/details/79419222
+https://juejin.im/post/5a982eb8f265da239f06cba3
+https://img-blog.csdn.net/20180302091422572?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzExODMyOTc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
+https://juejin.im/post/5aa400d36fb9a028d566ba2e
+https://zhuanlan.zhihu.com/p/58666986
+https://www.infoq.cn/article/cookie-security/
+https://stackoverflow.com/questions/35663357/how-does-sso-single-sign-on-work
+
+https://mihin.org/wp-content/uploads/2016/09/MiHIN-UCIG-Single-Sign-On-PUBLISHED-v13-11-05-15.pdf
+https://www.cse.wustl.edu/~jain/cse571-07/ftp/websso.pdf
+https://www.owasp.org/images/a/ac/OWASP-Single-Sign-On-Vijay.pdf
+
+
+https://www.jianshu.com/p/704dc0c8e094
+https://www.rowkey.me/blog/2016/08/27/server-basic-tech-stack/
+https://yq.aliyun.com/articles/42566?spm=a2c4e.11154873.tagmain.115.62977c60ctRyQZ
+
+https://www.cnblogs.com/shanyou/archive/2009/08/30/1556659.html
+https://www.jianshu.com/p/704dc0c8e094
+https://yq.aliyun.com/articles/637297?spm=a2c4e.11154873.tagmain.30.62977c60ctRyQZ
+
+
+https://searchsecurity.techtarget.com/definition/single-sign-on
+
+--------------------------------------------------------------------
+Cookie
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+https://flaviocopes.com/cookies/
+https://www.owasp.org/images/a/a0/OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson.pdf
+http://www.massey.ac.nz/~nhreyes/MASSEY/159339/Lectures/Lecture%2011%20-%20PHP%20-%20Part%205%20-%20CookiesSessions.pdf
+https://www.blackhat.com/docs/us-16/materials/us-16-Sivakorn-HTTP-Cookie-Hijacking-In-The-Wild-Security-And-Privacy-Implications.pdf
+https://thoughtbot.com/blog/lucky-cookies
+https://en.wikipedia.org/wiki/HTTP_cookie
+
+-------------------------------------------------------------------------------------------------------------------

@@ -1,2 +1,0 @@
-mybatis实现
-Spring + mybatis

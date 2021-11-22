@@ -1,0 +1,21 @@
+设计模式 && UML
+
+
+设计模式(23种设计模式的解释)
+http://c.biancheng.net/design_pattern/
+两大类:  1.分析源码   2.代码开发;  —> 尤其是中大型框架,作用极大
+设计模式:典型开发场景的规律总结
+
+
+
+
+UML画图工具:   —> 尤其是中大型框架,作用极大
+PlantUML插件
+https://www.jianshu.com/p/6c4071eac339
+IDEA 使用UML类图插件
+https://blog.csdn.net/zj420964597/article/details/87856758
+https://blog.csdn.net/hy_coming/article/details/80741717
+
+
+
+设计模式   https://www.geeksforgeeks.org/software-design-patterns/

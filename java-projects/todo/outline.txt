@@ -1,25 +1,16 @@
-
-http://www.herongyang.com/JVM/
-http://www.herongyang.com/Java-GC/
-http://www.herongyang.com/Java-Tools/
-http://www.herongyang.com/Java/
-http://www.herongyang.com/JDK/
-http://www.herongyang.com/MySQL/
-http://www.herongyang.com/Linux/
-
 技术栈
-	Algs(BST  RedBlack   B  B+  跳跃表   hash)
+	算法(BST  RedBlack   B  B+  跳跃表   hash)
 	JavaBase(DataStructure   Thread    NIO    JVM     反射    动态代理    泛型)
 	设计模式
 	负载均衡(Nginx)
 	分布式服务方面(Zookeeper   Dubbo  SpringBoot SpringCloud Alps ))
-	Spring方面(MVC、Spring boot 、 Spring Cloud): IOC  AOP 反射 动态代理
+	Spring方面(MVC、Spring boot 、 Spring Cloud): IOC  AOP 反射 动态代理
 	web容器(tomcat jetty)
 	框架对象管理(spring spring mvc)
-	中间件消息(kafka  )
+	中间件消息(kafka )
 	中间件缓存(redis   couchbase  Java端的框架Lettuce)
 	中间件数据库(mongo  mysql   Java端的框架Mongo-async  Mybatis Spring-Jdbc)
-	中间件网络(Netty hession序列化)
+	中间件网络(Netty hessian序列化)
 	搜索(ES)
 	数据流计算(flink)
 	性能监控(常用指标   grafana    zabbix  )
@@ -44,7 +35,6 @@ http://www.herongyang.com/Linux/
 	Nginx
 	Unix编程
 	(Mybatis  Memcached Tomcat  MongoDriver   Lettuce   Spring-Jdbc)
-
 
 
 
@@ -123,4 +113,10 @@ Linux From Scratch
 http://www.herongyang.com/site_map.html
 -------------------------------------------------------------------------------------------------------------------
 
-
+http://www.herongyang.com/JVM/
+http://www.herongyang.com/Java-GC/
+http://www.herongyang.com/Java-Tools/
+http://www.herongyang.com/Java/
+http://www.herongyang.com/JDK/
+http://www.herongyang.com/MySQL/
+http://www.herongyang.com/Linux/

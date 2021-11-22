@@ -1,0 +1,173 @@
+网络通信框架(base of java)
+
+
+
+Netty   Book
+
+
+
+netty and nio梳理  and 序列化常用方案以及原理;
+
+----》 DougLea的Reactor纲要
+
+---》netty的reactor对应 https://blog.csdn.net/u011857851/article/details/103962025；
+
+---> reacor模式解释对比  https://www.cnblogs.com/doit8791/p/7461479.html ;;
+
+--->reactor论文 reactor-siemens.pdf
+
+
+
+
+
+Netty 编解码器
+LineBasedFrameDecoder
+DelimiterBasedFrameDecoder
+FixedLengthFrameDecoder
+
+
+
+典型的应用场景 : IM聊天模块
+https://zhuanlan.zhihu.com/p/85758575
+https://www.jianshu.com/p/8f4d754647a2
+https://segmentfault.com/a/1190000023231612
+https://www.cnblogs.com/crazymakercircle/p/9912267.html
+
+
+
+
+即时通讯
+https://zhuanlan.zhihu.com/p/85758575
+https://github.com/52im/IM
+
+https://www.cnblogs.com/crazymakercircle/p/9912267.html
+
+https://github.com/lianggzone/netty-im
+https://segmentfault.com/a/1190000023231612
+
+
+
+Netty篇纲要
+
+
+#### Core Components
+Channel  Callback  Futures  EventsAndHandlers
+
+
+#### Core design
+Channel
+EventLoop
+ChannelFuture
+ChannelHandler
+ChannelPipeline
+Bootstrapping
+
+
+
+#### 编解码常用的API (如何处理拆包粘包、大小端，如何埋点基本的防御措施)
+	LineBasedFrameDecoder
+	FixedLengthFrameDecoder
+	DelimiterBasedFrameDecoder
+	LengthFieldBasedFrameDecoder
+
+
+
+#### 编解码序列化框架
+	评估序列化方案考虑的主要因素 (如何对比不同的方案)
+	JDK序列化的缺点
+	业界主流的编解码框架和编解码技术(Google-Protobuf hession hession2)
+
+
+
+#### 协议开发和鹰眼
+Netty Http协议栈在非web容器场景下的应用 WebSocket
+自定义协议栈
+
+
+
+
+EchoServer
+	初始化时序图
+
+
+线程模型:
+	Reactor模型
+	NioEventLoopGroup原理
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
+Netty
+
+任务:
+1.Executor 在当前线程 在一个其他线程 在一个线程池中 , 被执行
+2.ExecutorService 任务被提交  正在执行  等待执行
+3.ExecutorService 任务Future, 追踪->执行结果或者中断
+4.ExecutorService shutdown系列(awaitTermination)  invoke系列;     取消任务或者取消所有任务
+5.ScheduledExecutorService  任务被延迟执行 以及周期性被执行；  周期性时任务执行时间大于period时间
+
+---------------------------------------------------------------------------------------------
+
+
+ netty的架构  基本使用技巧    基础组件   编程基础:网络和buffer 线程
+
+
+IO模型
+Poll-based vs  epoll-based
+Epoll:	https://docs.oracle.com/javase/8/docs/technotes/guides/io/enhancements.html
+		https://zhuanlan.zhihu.com/p/27419141
+		https://zhuanlan.zhihu.com/p/27434028
+		https://zhuanlan.zhihu.com/p/27441342?group_id=859562548406677504
+Zero Copy
+
+
+
+网络编程基础:
+	大小端
+	Channels   :Connections to files, sockets etc that support non-blocking reads
+	Buffers    :Array-like objects that can be directly read or written by Channels
+	Selectors    :Tell which of a set of Channels have IO events
+	SelectionKeys  :Maintain IO event status and bindings
+	设计: Reactor Pattern
+		Single threaded version
+	DougLea的nio.pdf总结
+	http://mysql.taobao.org/monthly/2017/01/04/   reactor流程梳理
+	API WOLKTHROUGH
+		“ Buffer
+		" ByteBuffer (CharBuffer, LongBuffer, etc not shown.)
+		" Channel
+		" SelectableChannel
+		" SocketChannel
+		" ServerSocketChannel
+		" FileChannel
+		" Selector
+		" SelectionKey
+	zero copy:
+		零复制的概念是避免将数据在内核空间和用户空间进行拷贝。主要目的是减少不必要的拷贝，避免让CPU做大量的数据拷贝任务
+		https://www.cnblogs.com/f-ck-need-u/p/7615914.html
+		https://www.jianshu.com/p/fad3339e3448
+	https://www.w3cschool.cn/nginx/sd361pdz.html
+
+多线程编程基础:	synchronized volatile  cas unsafe解释和使用  Lock接口   并发工具类 原子类   Executors
+
+
+
+基础组件
+	ByteBuf
+		设计原理(readIndex writeIndex  简化自动空间扩展   ByteBuffer与ByteBuf的转化及复用)
+		Facade模式
+		java.nio.ByteBuffer:Heap vs Direct
+		内存分配的角度:Heap Direct,   IO通信时使用Direct,业务处理逻辑时用Heap
+		内存回收的角度:基于对象池的ByteBuf  和 普通的ByteBuf
+
+
+	Channel Unsafe
+	ChannelPipe ChannelHandler
+	EventLoop EventLoopGroup
+	Future Promise
+
+
+

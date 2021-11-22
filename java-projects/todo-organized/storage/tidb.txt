@@ -1,0 +1,123 @@
+
+### Tidb
+
+
+pdf文档
+file:///Users/agui93/Desktop/db/tidb-stable-zh-manual.pdf
+
+
+https://cloud.tencent.com/developer/article/1381487
+https://tech.meituan.com/2018/11/22/mysql-pingcap-practice.html
+https://cloud.tencent.com/developer/tag/10244?entry=article
+https://cloud.tencent.com/developer/article/1658382
+
+
+
+Tidb本身使用的参考资料
+Large-scale Incremental Processing Using Distributed Transactions and Notifications
+file:///Users/agui93/Desktop/db/Large-scale%20Incremental_Processing_Using_Distributed_Transactions_and_Notifications.pdf
+
+raft协议   In Search of an Understandable Consensus Algorithm (Extended Version)
+file:///Users/agui93/Desktop/raft.pdf
+
+
+
+--------------------------------
+TIDB 阅读
+
+
+## 简介
+https://docs.pingcap.com/zh/tidb/stable/overview
+
+
+
+## 整体结构(1~7章节)
+https://book.tidb.io/session1/chapter1/tidb-architecture.html
+
+
+
+## 浏览器模拟 +  本地mysql实例模拟对比
+https://tour.pingcap.com/
+待续 理解执行计划分析—>https://docs.pingcap.com/zh/tidb/stable/query-execution-plan
+待续 对比mysql兼容性——>https://docs.pingcap.com/zh/tidb/stable/mysql-compatibility
+
+
+
+## TiUP playground 本地测试模拟
+https://docs.pingcap.com/zh/tidb/stable/quick-start-with-tidb
+
+
+
+##  数据迁移
+待续:  https://docs.pingcap.com/zh/tidb/stable/migration-overview
+
+
+
+## 核心特性与核心应用场景
+https://docs.pingcap.com/zh/tidb/stable/overview
+五大核心特性
+	一键水平扩容或者缩容
+	金融级高可用
+	实时HTAP
+	云原生的分布式数据库
+	兼容 MySQL 5.7 协议和 MySQL 生态
+四大核心应用场景
+	对数据一致性及高可靠、系统高可用、可扩展性、容灾要求较高的金融行业属性的场景
+	对存储容量、可扩展性、并发要求较高的海量数据及高并发的 OLTP 场景
+	Real-time HTAP 场景
+	数据汇聚、二次加工处理的场景
+额外术语: RTO RPO:https://forum.huawei.com/enterprise/zh/thread-161949.html
+
+
+TiDB Dashboard 的使用: 快速了解集群的集群拓扑、配置信息、日志信息、硬件信息、操作系统信息、慢查询信息、SQL 访问信息、诊断报告信息等，帮助 DBA 通过 SQL 快速了解、分析系统的各项指标
+
+
+部署运维工具:TiUP
+性能测试报告: 如何复现测试报告(实验流程的模拟  报告数据的收集  报告数据的解读  实际线上逻辑的辅助判断)
+
+
+
+mysql的兼容 : https://docs.pingcap.com/zh/tidb/stable/mysql-compatibility
+
+
+
+
+## 整体架构
+https://docs.pingcap.com/zh/tidb/stable/tidb-architecture
+https://pingcap.com/blog-cn/tidb-internal-1/
+https://pingcap.com/blog-cn/tidb-internal-2/
+https://pingcap.com/blog-cn/tidb-internal-3/
+
+
+
+TiDB最佳实践
+https://docs.pingcap.com/zh/tidb/stable/tidb-best-practices
+
+
+
+
+## 监控指标
+https://docs.pingcap.com/zh/tidb/stable/grafana-overview-dashboard
+
+
+
+TiDB事务
+https://docs.pingcap.com/zh/tidb/stable/transaction-overview
+
+
+
+企业案例场景
+https://pingcap.com/cases-cn/
+https://pingcap.com/cases-cn/user-case-zhihu/
+
+
+
+## java客户端的开发
+## Best Practices for Developing Java Applications with TiDB
+https://docs.pingcap.com/tidb/stable/java-app-best-practices
+待续
+
+
+
+## tidb的部署
+待续

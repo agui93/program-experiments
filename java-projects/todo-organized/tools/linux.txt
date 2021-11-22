@@ -1,0 +1,79 @@
+-------------------------------------------------------------------------------------------------------------------
+Linux From Scratch
+
+https://linux.cn/lfs/LFS-BOOK-7.7-systemd/
+http://www.linuxfromscratch.org/lfs/view/stable-systemd/
+http://www.ha97.com/book/lfs-book-6.6/
+https://baike.baidu.com/item/Linux%20From%20Scratch/2594688
+http://www.linuxfromscratch.org/lfs/downloads/8.4/LFS-BOOK-8.4.pdf
+http://www.linuxfromscratch.org/lfs/downloads/8.4/LFS-BOOK-8.4-NOCHUNKS.html
+http://www.linuxfromscratch.org/lfs/downloads/8.4-systemd/LFS-BOOK-8.4-systemd-NOCHUNKS.html
+http://www.jinbuguo.com/lfs/lfs62/index.html
+https://www.cnblogs.com/spaceship9/p/6526887.html
+
+7.7中文翻译版
+https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html
+
+8.4中文翻译版
+https://lctt.github.io/LFS-BOOK/lfs-systemd/index.html
+
+8.3 中文翻译版
+https://bf.mengyan1223.wang/lfs/zh_CN/8.3/
+
+6.2的中文翻译版
+https://wizardforcel.gitbooks.io/lfs/content/
+
+Bruce Dubbs宣布推出Linux From Scratch（LFS）和Beyond Linux From Scratch（BLFS）8.4版的最新稳定版本。 LFS是一本书，提供了有关如何从头构建基本Linux系统（使用标准Linux实时系统）的逐步说明。 BLFS通过提供有关如何编译X Window System，窗口管理器和桌面环境以及各种流行的桌面和服务器包及其依赖项的进一步课程，对LFS书籍进行了扩展。
+
+
+构建LFS7.7过程的总结
+https://andyyoung01.github.io/2016/12/06/%E6%9E%84%E5%BB%BALFS7-7%E8%BF%87%E7%A8%8B%E7%9A%84%E6%80%BB%E7%BB%93/
+http://www.dohooe.com/2016/01/29/326.html
+
+http://blog.digfarmer.com/?tag=lfs
+
+https://yq.aliyun.com/articles/84583?spm=a2c4e.11153940.0.0.71f3c6acSHiDMU
+https://yq.aliyun.com/articles/430235?spm=a2c4e.11153940.0.0.71f3c6acSHiDMU
+https://yq.aliyun.com/articles/87110?spm=a2c4e.11153940.0.0.71f3c6acSHiDMU
+
+https://www.xuejiayuan.net/blog/931bc7c07c0145ce8fb2672c99237735
+http://www.adintr.com/myarticle/aslinux_p001.html
+https://blog.yangmame.org/lFS%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html
+https://www.cnblogs.com/Xjng/p/3664489.html
+
+
+-------------------------------------------------------------------------------------------------------------------
+Mac OS制作Ubuntu安装U盘
+https://segmentfault.com/a/1190000006835642
+-------------------------------------------------------------------------------------------------------------------
+Linux from scratch
+http://www.linuxfromscratch.org/lfs/
+-------------------------------------------------------------------------------------------------------------------
+linux
+https://www.cntofu.com/book/28/index.html
+https://www.cntofu.com/book/191/index.html
+https://www.cntofu.com/book/49/index.html
+https://www.cntofu.com/book/114/index.html
+https://www.cntofu.com/book/31/index.html
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
+pip install --upgrade pip
+pip install shadowsocks
+
+1.单纯的命令行启动
+/usr/bin/python /bin/ssserver -p 端口 -k 密码 -m aes-256-cfb --user nobody -d start
+2.配置文件启动    通过json文件
+3.开机时自动重启 根据rc.local进行设置
+
+https://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html
+-------------------------------------------------------------------------------------------------------------------
+shell
+    sed命令	awk命令
+-------------------------------------------------------------------------------------------------------------------
+
+

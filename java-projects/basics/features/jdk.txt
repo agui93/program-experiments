@@ -1,0 +1,27 @@
+JDK常用数据结构纲要
+
+Integer Boolean  Char Long String Double Float
+
+BigInteger     BigDecimal
+
+Set系列-(thread-safe)
+
+List系列-(thread-safe)
+
+Queue系列-(thread-safe)
+
+Map系列-(thread-safe)
+——————————————————————————————————————————————————————————
+Integer 位操作
+http://www.voidcn.com/article/p-dsruacct-bda.html
+https://juejin.im/entry/580a3074128fe1005fc88b30
+BigDecimal   Double Integer实现
+
+HashMap与IdentityHashMap区别,判断key是否相等
+HashMap vs LinkedHashMap vs IdentityHashMap
+——————————————————————————————————————————————————————————
+Java tutorial
+    https://docs.oracle.com/javase/tutorial/index.html
+
+JDK tutorials
+    http://www.herongyang.com/JDK/
