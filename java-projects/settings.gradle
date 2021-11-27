@@ -4,6 +4,7 @@ include 'basics'
 include 'basics:nio'
 include 'basics:algs'
 include 'basics:algs:algs4'
+include 'basics:algs:algs-practice'
 include 'basics:algs:algs-sword'
 
 

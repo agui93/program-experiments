@@ -1,4 +1,5 @@
 # 剑指Offer(the second)
+https://github.com/zhedahht/CodingInterviewChinese2
 
 ## 数组
 数组中的重复数字 DuplicationInArray 第3题(一)<br>
