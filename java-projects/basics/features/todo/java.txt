@@ -1,27 +1,12 @@
 —————————————————————————————————————————————
-Generics
-https://www.oracle.com/technetwork/articles/java/juneau-generics-2255374.html
-https://docs.oracle.com/javase/tutorial/java/generics/index.html
 
-
-reflection
-https://docs.oracle.com/javase/tutorial/reflect/index.html
 
 Input and Output;				File Handling;		Useful and/or Advanced Features
 https://www.geeksforgeeks.org/java/
 
 
 JAVA  (JVM JMM NIO THREAD )
-————————————————————————————————————————————————————————————
 
-java.util.ServiceLoader
-https://www.oracle.com/technetwork/articles/javase/extensible-137159.html
-https://www.logicbig.com/tutorials/core-java-tutorial/java-se-api/service-loader.html
-https://cxis.me/2017/04/17/Java%E4%B8%ADSPI%E6%9C%BA%E5%88%B6%E6%B7%B1%E5%85%A5%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/
-https://github.com/google/auto/tree/master/service
-————————————————————————————————————————————————————————————
-Packaging Programs in JAR Files
-https://docs.oracle.com/javase/tutorial/deployment/jar/index.html
 ————————————————————————————————————————————————————————————
 Trail: Custom Networking
 https://docs.oracle.com/javase/tutorial/networking/index.html
@@ -35,17 +20,12 @@ Java Naming and Directory Interface (J.N.D.I.) API
 Jini network technology and the Service Location Protocol (SLP)
 ————————————————————————————————————————————————————————————
 ### BASE
-反射 动态代理  泛型
-
-
 
 
 ### JDK中的数据结构
 
 
 ### JDK中的其他工具
-
-
 
 
 ### JVM
@@ -60,38 +40,6 @@ JSR-133
 file:///Users/agui93/Documents/developBooks/java/jls_jvm/JSR-133.pdf
 Java concurrency in practice
 file:///Users/agui93/Documents/developBooks/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Java.Concurrency.in.Practice.pdf
-
-
-
-
-
-
-
-
-
-### NIO && Reactor  && c10k
-
-
-NIO By DougLea
-file:///Users/agui93/Documents/developBooks/java/netty/nio.pdf
-
-
-Reactor 论文
-file:///Users/agui93/Documents/developBooks/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/reactor-siemens.pdf
-
-
-Reactor
-https://www.cnblogs.com/doit8791/p/7461479.html
-http://www.blogjava.net/DLevin/archive/2015/09/02/427045.html
-
-
-c10K
-http://www.kegel.com/c10k.html#benchmarking
-
-file:///Users/agui93/Documents/developBooks/java/netty/j-nio-pdf.pdf
-
-
-
 
 
 ### Java-Unsafe  —> 多线程原语   内存操作
@@ -129,8 +77,6 @@ https://juejin.im/post/6844903832833490957
 
 核心分析工具
 http://openjdk.java.net/projects/code-tools/
-
-
 
 
 -------------------------------------------------------------------------------------------------------------------
@@ -189,13 +135,7 @@ Java https://www.geeksforgeeks.org/java/
 -------------------------------------------------------------------------------------------------------------------
 ## 2019-08-05
 
-JMX <br/>
-https://docs.oracle.com/javase/tutorial/jmx/index.html <br/>
-https://docs.oracle.com/javase/8/docs/technotes/guides/management/toc.html <br/>
--Dcom.sun.management.jmxremote  <br/>
--Dcom.sun.management.jmxremote.port=portNum <br/>
--Dcom.sun.management.jmxremote.authenticate=false <br/>
--Dcom.sun.management.jmxremote.ssl=false <br/>
+
 
 
 常见的java命令选项 <br/>
@@ -226,8 +166,8 @@ https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/felog001.htm
 https://stackoverflow.com/questions/22618582/java-how-to-specify-jvm-argument-xxerrorfile-and-preserve-automatic-pid-in-fi
 
 
--XX:HeapDumpOnOutOfMemoryError  <br/>
- -XX:HeapDumpPath <br/>
+-XX:HeapDumpOnOutOfMemoryError <br/>
+-XX:HeapDumpPath <br/>
 https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/clopts001.html#CHDFDIJI
 
 
@@ -256,7 +196,7 @@ https://stackoverflow.com/questions/2411487/nullpointerexception-in-java-with-no
 
 
 
- -XX:+PrintGCDetails  <br/>
+-XX:+PrintGCDetails  <br/>
 -XX:+PrintGCDateStamps  <br/>
 https://blog.gceasy.io/2016/02/22/understand-garbage-collection-log/#more-401
 
@@ -266,59 +206,7 @@ https://blog.gceasy.io/2016/02/22/understand-garbage-collection-log/#more-401
 https://stackoverflow.com/questions/29666057/analyzing-gc-logs/29673564#29673564
 http://www.herongyang.com/Java-GC/
 -------------------------------------------------------------------------------------------------------------------
-## 2019-07-24
 
-
-
-**java==操作符**<br/>
-https://stackoverflow.com/questions/7520432/what-is-the-difference-between-and-equals-in-java
-https://stackoverflow.com/questions/1586223/how-does-the-tostring-equals-object-methods-work-differently-or-similar
-
-
-**Autoboxing and unboxing**<br/>
-https://stackoverflow.com/questions/27647407/why-do-we-use-autoboxing-and-unboxing-in-java
-https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html
-
-Converting a primitive value (an int, for example) into an object of the corresponding wrapper class (Integer) is called autoboxing. The Java compiler applies autoboxing when a primitive value is:
-
-* Passed as a parameter to a method that expects an object of the corresponding wrapper class.
-* Assigned to a variable of the corresponding wrapper class.
-
-Converting an object of a wrapper type (Integer) to its corresponding primitive (int) value is called unboxing. The Java compiler applies unboxing when an object of a wrapper class is:
-
-* Passed as a parameter to a method that expects a value of the corresponding primitive type.
-* Assigned to a variable of the corresponding primitive type.
-
-
-
-| Primitive type | Wrapper class |
-| -------------- | ------------- |
-| boolean        | Boolean       |
-| byte           | Byte          |
-| char           | Character     |
-| float          | Float         |
-| int            | Integer       |
-| long           | Long          |
-| short          | Short         |
-| double         | Double        |
-
-
--------------------------------------------------------------------------------------------------------------------
-2019-07-15
-equals 与 hashCode方法:
-https://www.geeksforgeeks.org/equals-hashcode-methods-java/
-https://www.geeksforgeeks.org/override-equalsobject-hashcode-method/
-https://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java
-
-
-
-equals vs  operator==
-https://stackoverflow.com/questions/7520432/what-is-the-difference-between-and-equals-in-java
-https://www.geeksforgeeks.org/difference-equals-method-java/
-
-
-How to print address of an object?
-https://stackoverflow.com/questions/18396927/how-to-print-the-address-of-an-object-if-you-have-redefined-tostring-method
 
 
 -------------------------------------------------------------------------------------------------------------------

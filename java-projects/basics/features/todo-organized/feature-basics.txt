@@ -1,0 +1,73 @@
+-------------------------------------------------------------------------------------
+Generics
+Reflection
+Dynamic Proxy
+ServiceLoader
+Packaging JAR
+equals与hashCode与operator==
+Autoboxing and unboxing
+JMX
+-------------------------------------------------------------------------------------
+Generics
+    https://www.oracle.com/technetwork/articles/java/juneau-generics-2255374.html
+    https://docs.oracle.com/javase/tutorial/java/generics/index.html
+-------------------------------------------------------------------------------------
+Reflection
+    https://docs.oracle.com/javase/tutorial/reflect/index.html
+-------------------------------------------------------------------------------------
+java.util.ServiceLoader
+    https://www.oracle.com/technetwork/articles/javase/extensible-137159.html
+    https://www.logicbig.com/tutorials/core-java-tutorial/java-se-api/service-loader.html
+    https://cxis.me/2017/04/17/Java%E4%B8%ADSPI%E6%9C%BA%E5%88%B6%E6%B7%B1%E5%85%A5%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/
+    https://github.com/google/auto/tree/master/service
+-------------------------------------------------------------------------------------
+Packaging Programs in JAR Files
+    https://docs.oracle.com/javase/tutorial/deployment/jar/index.html
+-------------------------------------------------------------------------------------
+==操作符
+    https://stackoverflow.com/questions/7520432/what-is-the-difference-between-and-equals-in-java
+    https://stackoverflow.com/questions/1586223/how-does-the-tostring-equals-object-methods-work-differently-or-similar
+equals与hashCode方法:
+    https://www.geeksforgeeks.org/equals-hashcode-methods-java/
+    https://www.geeksforgeeks.org/override-equalsobject-hashcode-method/
+    https://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java
+equals vs  operator==
+    https://stackoverflow.com/questions/7520432/what-is-the-difference-between-and-equals-in-java
+    https://www.geeksforgeeks.org/difference-equals-method-java/
+How to print address of an object?
+    https://stackoverflow.com/questions/18396927/how-to-print-the-address-of-an-object-if-you-have-redefined-tostring-method
+-------------------------------------------------------------------------------------
+Autoboxing and unboxing
+https://stackoverflow.com/questions/27647407/why-do-we-use-autoboxing-and-unboxing-in-java
+https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html
+
+Converting a primitive value (an int, for example) into an object of the corresponding wrapper class (Integer) is called autoboxing. The Java compiler applies autoboxing when a primitive value is:
+
+* Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+* Assigned to a variable of the corresponding wrapper class.
+
+Converting an object of a wrapper type (Integer) to its corresponding primitive (int) value is called unboxing. The Java compiler applies unboxing when an object of a wrapper class is:
+
+* Passed as a parameter to a method that expects a value of the corresponding primitive type.
+* Assigned to a variable of the corresponding primitive type.
+
+
+| Primitive type | Wrapper class |
+| -------------- | ------------- |
+| boolean        | Boolean       |
+| byte           | Byte          |
+| char           | Character     |
+| float          | Float         |
+| int            | Integer       |
+| long           | Long          |
+| short          | Short         |
+| double         | Double        |
+-------------------------------------------------------------------------------------
+JMX <br/>
+    https://docs.oracle.com/javase/tutorial/jmx/index.html <br/>
+    https://docs.oracle.com/javase/8/docs/technotes/guides/management/toc.html <br/>
+    -Dcom.sun.management.jmxremote  <br/>
+    -Dcom.sun.management.jmxremote.port=portNum <br/>
+    -Dcom.sun.management.jmxremote.authenticate=false <br/>
+    -Dcom.sun.management.jmxremote.ssl=false <br/>
+-------------------------------------------------------------------------------------

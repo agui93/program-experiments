@@ -1,0 +1,21 @@
+### NIO && Reactor  && c10k
+
+
+NIO By DougLea
+file:///Users/agui93/Documents/developBooks/java/netty/nio.pdf
+
+
+Reactor 论文
+file:///Users/agui93/Documents/developBooks/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/reactor-siemens.pdf
+
+
+Reactor
+https://www.cnblogs.com/doit8791/p/7461479.html
+http://www.blogjava.net/DLevin/archive/2015/09/02/427045.html
+
+
+c10K
+http://www.kegel.com/c10k.html#benchmarking
+
+file:///Users/agui93/Documents/developBooks/java/netty/j-nio-pdf.pdf
+
