@@ -16,6 +16,7 @@ http://www.blogjava.net/DLevin/archive/2015/09/02/427045.html
 
 c10K
 http://www.kegel.com/c10k.html#benchmarking
-
 file:///Users/agui93/Documents/developBooks/java/netty/j-nio-pdf.pdf
 
+Trail: Custom Networking
+https://docs.oracle.com/javase/tutorial/networking/index.html
