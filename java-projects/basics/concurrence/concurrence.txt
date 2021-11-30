@@ -1,13 +1,17 @@
-并发篇纲要
 
-——————————————————————————————————————————————————————
-原理机制: CAS  VOLATILE  JMM   UNSAFE
+-------------------------------------------------------------------------------------
+原理机制
+     CAS  VOLATILE  JMM   UNSAFE
+API
+    Executors系列
+    Lock框架整理 AQS
+    Queue系列
+    		ArrayBlockingQueue
+    		LinkedBlockingQueue
+    		SynchronousQueue
+    		PriorityBlockingQueue
+-------------------------------------------------------------------------------------
 
-Executors整理
-
-Lock框架整理 AQS
-
-常用工具整理()
 
 ——————————————————————————————————————————————————————
 线程池的作用
@@ -43,19 +47,22 @@ Executor框架的主要成员：ThreadPoolExecutor、ScheduledThreadPoolExecutor
 
 
 
-常见的阻塞队列	ArrayBlockingQueue,LinkedBlockingQueue,SynchronousQueue,PriorityBlockingQueue,DelayQueue
+常见的阻塞队列
+ArrayBlockingQueue,
+LinkedBlockingQueue,
+SynchronousQueue,
+PriorityBlockingQueue,DelayQueue
 ScheduledThreadPoolExecutor与Timer区别
 
 基于AQS实现的同步器包括：ReentrantLock、Semaphore、ReentrantReadWriteLock、 CountDownLatch和FutureTask
 
 
-CountDownLatch、CyclicBarrier和 Semaphore工具类提供了一种并发流程控制的手段，Exchanger工具类则提供了在线程间交换数 据的一种手段
+CountDownLatch、CyclicBarrier和 Semaphore工具类提供了一种并发流程控制的手段，
+Exchanger工具类则提供了在线程间交换数 据的一种手段
 
 
 Atomic包里的类基本都是使用Unsafe实现的包装类
-
 ——————————————————————————————————————————————————————
-
 
 多线程:JMM   hb规则梳理   AQS   Unsafe:CAS   LockSupport  线程中断
 	Disruptor的多线程  Netty中的多线程
@@ -225,50 +232,6 @@ private final Condition notFull = putLock.newCondition();    /** Wait queue for 
 参考: http://www.cs.rochester.edu/u/scott/papers/2004_DISC_dual_DS.pdf <br/>
 参考: https://juejin.im/post/5ae754c7f265da0ba76f8534
 
--------------------------------------------------------------------------------------------------------------------
-## 2019-07-12
-
-sun.misc.Unsafe类
-参考:http://www.docjar.com/docs/api/sun/misc/Unsafe.html <br/>
-参考:http://mishadoff.com/blog/java-magic-part-4-sun-dot-misc-dot-unsafe/ <br/>
-
-模拟的是Disruptor中的RingBuffer中的unsfe操作
-
-```
-//获取数组的转换因子，也就是数组中元素的地址增量
-final int scale = unsafe.arrayIndexScale(Object[].class);
-int REF_ELEMENT_SHIFT;
-if (4 == scale) {
-    REF_ELEMENT_SHIFT = 2;
-} else if (8 == scale) {
-    REF_ELEMENT_SHIFT = 3;
-} else {
-    System.out.println("error scale");
-    return;
-}
-int BUFFER_PAD = 128 / scale;
-
-int bufferSize = 2 * 2 * 2 * 2;
-int indexMask = bufferSize - 1;
 
 
-//实际数组的大小 = BUFFER_PAD + bufferSize + BUFFER_PAD;在有效元素的前后各有BUFFER_PAD个元素空位，用于做缓存行填充
-Object[] entries = new Object[bufferSize + 2 * BUFFER_PAD];
-
-
-//赋值时跳过了BUFFER_PAD个元素
-for (int i = 0; i < bufferSize; i++) {
-    entries[BUFFER_PAD + i] = new Element("name" + i, 200 + i);
-}
-
-
-//获取数组中真正保存元素数据的开始位置; BUFFER_PAD << REF_ELEMENT_SHIFT 实际上是BUFFER_PAD * scale的等价高效计算方式
-int REF_ARRAY_BASE = unsafe.arrayBaseOffset(Object[].class) + (BUFFER_PAD << REF_ELEMENT_SHIFT);
-
-//获取数组中的元素
-for (int i = 0; i < bufferSize; i++) {
-    System.out.println(unsafe.getObject(entries, REF_ARRAY_BASE + ((i & indexMask) << REF_ELEMENT_SHIFT)));
-}
-
-```
 -------------------------------------------------------------------------------------------------------------------

@@ -2,6 +2,7 @@ rootProject.name = 'java-projects'
 
 include 'basics'
 include 'basics:nio'
+include 'basics:concurrence'
 include 'basics:algs'
 include 'basics:algs:algs4'
 include 'basics:algs:algs-practice'
