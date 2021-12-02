@@ -4,7 +4,7 @@ Java Features
 设计模式 && 重构
 Spring系列
 Web容器系列
-负载均衡(Nginx)
+负载均衡(Nginx HAProxy LVS)
 分布式(Zookeeper SpringBoot SpringCloud Dubbo Tidb)
 中间件消息(kafka)
 中间件缓存(redis couchbase Memcached)
