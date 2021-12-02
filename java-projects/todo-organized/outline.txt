@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------------------------------------------
+算法 && DataStructure
+Java Features
+设计模式 && 重构
+Spring系列
+Web容器系列
+负载均衡(Nginx)
+分布式(Zookeeper SpringBoot SpringCloud Dubbo Tidb)
+中间件消息(kafka)
+中间件缓存(redis couchbase Memcached)
+中间件数据库(mongo  mysql   Java端的框架Mongo-async  Mybatis Spring-Jdbc)
+中间件网络(网络协议 Netty 序列化 [工具wireshark + 网络运维 + 流量监控])
+搜索(ES)
+大数据(flink hive hbase jstorm spark hadoop)
+性能监控(监控指标   grafana  in  zabbix)
+性能测试
+代码版本管理(git  svn)
+项目管理(gradle maven)
+Linux系统(shell   unix环境高级编程和网络编程 c编程)
+微服务(docker kubernetes)
+大型网站的整体技术概貌贯通
+Go
+Vue && html && css && js && react && angular
+加密和解密
+数学(微积分 概率论  线性代数    机器学习  深度学习  视频识别)
+linux内核 汇编 编译原理 自动机 c++ 区块链;
+-------------------------------------------------------------------------------------------------------------------
+
+
+

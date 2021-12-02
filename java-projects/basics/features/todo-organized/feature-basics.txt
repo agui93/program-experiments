@@ -2,11 +2,12 @@
 Generics
 Reflection
 Dynamic Proxy
+NIO
+Concurrency
 ServiceLoader
 Packaging JAR
 equals与hashCode与operator==
 Autoboxing and unboxing
-Unsafe && Concurrency
 JMX
 JDK Data Structure
 GC
@@ -18,11 +19,16 @@ Security
 JOL
 Clone
 JNDI
-JVM
+JVM && Hotspot
 -------------------------------------------------------------------------------------
 Tutorials
     https://www.geeksforgeeks.org/java/
     https://docs.oracle.com/javase/tutorial/index.html
+    http://www.herongyang.com/JDK/
+    http://www.herongyang.com/JVM/
+    http://www.herongyang.com/Java-GC/
+    http://www.herongyang.com/Java-Tools/
+    http://www.herongyang.com/Java/
     http://www.herongyang.com/JDK/
 -------------------------------------------------------------------------------------
 Generics
