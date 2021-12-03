@@ -1,7 +1,3 @@
-获取软件
-wget http://nginx.org/download/nginx-1.15.12.tar.gz
-
-
 构建镜像
 docker build -t agui-centos-nginx:v1 -f Dockerfile .
 
