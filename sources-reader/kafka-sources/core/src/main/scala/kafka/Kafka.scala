@@ -5,8 +5,8 @@
  * The ASF licenses this file to You under the Apache License, Version 2.0
  * (the "License"); you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
- * 
- *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,6 +26,7 @@ import org.apache.kafka.common.utils.Utils
 
 import scala.collection.JavaConverters._
 
+
 object Kafka extends Logging {
 
   def getPropsFromArgs(args: Array[String]): Properties = {
@@ -40,10 +41,10 @@ object Kafka extends Logging {
 
     val props = Utils.loadProps(args(0))
 
-    if(args.length > 1) {
+    if (args.length > 1) {
       val options = optionParser.parse(args.slice(1, args.length): _*)
 
-      if(options.nonOptionArguments().size() > 0) {
+      if (options.nonOptionArguments().size() > 0) {
         CommandLineUtils.printUsageAndDie(optionParser, "Found non argument parameters: " + options.nonOptionArguments().toArray.mkString(","))
       }
 
@@ -52,19 +53,24 @@ object Kafka extends Logging {
     props
   }
 
+  //server端入口
   def main(args: Array[String]): Unit = {
     try {
+      //解析参数
       val serverProps = getPropsFromArgs(args)
       val kafkaServerStartable = KafkaServerStartable.fromProps(serverProps)
 
       // attach shutdown handler to catch control-c
       Runtime.getRuntime().addShutdownHook(new Thread() {
         override def run() = {
+          //关闭server后的回调,通过jvm shutdown hook实现
           kafkaServerStartable.shutdown
         }
       })
 
+      //启动
       kafkaServerStartable.startup
+      //阻塞,直到kafkaServerStartable.shutdown执行完毕
       kafkaServerStartable.awaitShutdown
     }
     catch {

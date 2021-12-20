@@ -6,7 +6,7 @@
  * (the "License"); you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
  *
- *    http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -46,28 +46,37 @@ import scala.util.control.{ControlThrowable, NonFatal}
 
 /**
  * An NIO socket server. The threading model is
- *   1 Acceptor thread that handles new connections
- *   Acceptor has N Processor threads that each have their own selector and read requests from sockets
- *   M Handler threads that handle requests and produce responses back to the processor threads for writing.
+ * 1 Acceptor thread that handles new connections
+ * Acceptor has N Processor threads that each have their own selector and read requests from sockets
+ * M Handler threads that handle requests and produce responses back to the processor threads for writing.
  */
 class SocketServer(val config: KafkaConfig, val metrics: Metrics, val time: Time, val credentialProvider: CredentialProvider) extends Logging with KafkaMetricsGroup {
 
-  //一般的服务器都有多块网卡，可以配置多个IP，Kafka可以同时监听多个端口。Endpoint类中封装了需要监听的host、port及使用的网络协议。
-  //每个Endpoint都会创建一个对应的Acceptor对象。
+  //一般的服务器都有多块网卡，可以配置多个IP，Kafka可以同时监听多个端口。Endpoint类中封装了需要监听的host、port及使用的网络协议。每个Endpoint都会创建一个对应的Acceptor对象。
   private val endpoints = config.listeners.map(l => l.listenerName -> l).toMap
+  //Processor线程的个数
   private val numProcessorThreads = config.numNetworkThreads
+  //在RequestChannel的requestQueue中缓存的最大请求个数
   private val maxQueuedRequests = config.queuedMaxRequests
+  //Processor线程的总个数
   private val totalProcessorThreads = numProcessorThreads * endpoints.size
 
+  //每个IP上能创建的最大连接数
   private val maxConnectionsPerIp = config.maxConnectionsPerIp
+  //具体指定某IP上最大的连接数，这里指定的最大连接数会覆盖上面maxConnectionsPerIp字段的值
   private val maxConnectionsPerIpOverrides = config.maxConnectionsPerIpOverrides
 
   this.logIdent = "[Socket Server on Broker " + config.brokerId + "], "
 
+  //Processor线程与Handler线程之间交换数据的队列,其中有totalProcessorThreads个ResponseQueue队列
   val requestChannel = new RequestChannel(totalProcessorThreads, maxQueuedRequests)
+  //Processor线程的集合。此集合中包含所有Endpoint对应的Processors线程,和Acceptor有对应关系
   private val processors = new Array[Processor](totalProcessorThreads)
 
+  //Acceptor对象集合，每个Endpoint对应一个Acceptor对象
   private[network] val acceptors = mutable.Map[EndPoint, Acceptor]()
+
+  //在ConnectionQuotas中，提供了控制每个IP上的最大连接数的功能。
   private var connectionQuotas: ConnectionQuotas = _
 
   private val allMetricNames = (0 until totalProcessorThreads).map { i =>
@@ -78,6 +87,7 @@ class SocketServer(val config: KafkaConfig, val metrics: Metrics, val time: Time
 
   /**
    * Start the socket server
+   * 初始化
    */
   def startup() {
     this.synchronized {
@@ -315,7 +325,7 @@ private[kafka] class Acceptor(val endPoint: EndPoint,
    */
   private def openServerSocket(host: String, port: Int): ServerSocketChannel = {
     val socketAddress =
-      if(host == null || host.trim.isEmpty)
+      if (host == null || host.trim.isEmpty)
         new InetSocketAddress(port)
       else
         new InetSocketAddress(host, port)
@@ -349,9 +359,9 @@ private[kafka] class Acceptor(val endPoint: EndPoint,
         socketChannel.socket().setSendBufferSize(sendBufferSize)
 
       debug("Accepted connection from %s on %s and assigned it to processor %d, sendBufferSize [actual|requested]: [%d|%d] recvBufferSize [actual|requested]: [%d|%d]"
-            .format(socketChannel.socket.getRemoteSocketAddress, socketChannel.socket.getLocalSocketAddress, processor.id,
-                  socketChannel.socket.getSendBufferSize, sendBufferSize,
-                  socketChannel.socket.getReceiveBufferSize, recvBufferSize))
+        .format(socketChannel.socket.getRemoteSocketAddress, socketChannel.socket.getLocalSocketAddress, processor.id,
+          socketChannel.socket.getSendBufferSize, sendBufferSize,
+          socketChannel.socket.getReceiveBufferSize, recvBufferSize))
 
       processor.accept(socketChannel)
     } catch {
@@ -463,7 +473,7 @@ private[kafka] class Processor(val id: Int,
             trace("Socket server received empty response to send, registering for read: " + curr)
             val channelId = curr.request.connectionId
             if (selector.channel(channelId) != null || selector.closingChannel(channelId) != null)
-                selector.unmute(channelId)
+              selector.unmute(channelId)
           case RequestChannel.SendAction =>
             sendResponse(curr)
           case RequestChannel.CloseConnectionAction =>
@@ -495,7 +505,7 @@ private[kafka] class Processor(val id: Int,
   private def poll() {
     try selector.poll(300)
     catch {
-      case e @ (_: IllegalStateException | _: IOException) =>
+      case e@(_: IllegalStateException | _: IOException) =>
         error(s"Closing processor $id due to illegal state or IO exception")
         swallow(closeAll())
         shutdownComplete()
@@ -518,7 +528,7 @@ private[kafka] class Processor(val id: Int,
         requestChannel.sendRequest(req)
         selector.mute(receive.source)
       } catch {
-        case e @ (_: InvalidRequestException | _: SchemaException) =>
+        case e@(_: InvalidRequestException | _: SchemaException) =>
           // note that even though we got an exception, we can assume that receive.source is valid. Issues with constructing a valid receive object were handled earlier
           error(s"Closing socket for ${receive.source} because of error", e)
           close(selector, receive.source)
