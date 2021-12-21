@@ -25,11 +25,12 @@ import java.util.concurrent.atomic.AtomicLong
 
 import org.apache.kafka.common.utils.Time
 
-class Replica(val brokerId: Int,
+class Replica(val brokerId: Int, //标识该副本所在的Broker的id
               val partition: Partition,
               time: Time = Time.SYSTEM,
               initialHighWatermarkValue: Long = 0L,
-              val log: Option[Log] = None) extends Logging {
+              val log: Option[Log] = None //本地副本对应的Log对象，远程副本的此字段为空
+             ) extends Logging {
   // the high watermark offset value, in non-leader replicas only its message offsets are kept
   @volatile private[this] var highWatermarkMetadata = new LogOffsetMetadata(initialHighWatermarkValue)
   // the log end offset value, kept in all replicas;
