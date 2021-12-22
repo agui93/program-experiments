@@ -455,12 +455,14 @@ class PartitionStateMachine(controller: KafkaController) extends Logging {
             val deletedTopics = controllerContext.allTopics -- currentChildren
             controllerContext.allTopics = currentChildren
 
+            // 获取新增Topic的分区信息以及AR集合信息
             val addedPartitionReplicaAssignment = zkUtils.getReplicaAssignmentForTopics(newTopics.toSeq)
             controllerContext.partitionReplicaAssignment = controllerContext.partitionReplicaAssignment.filter(p =>
               !deletedTopics.contains(p._1.topic))
             controllerContext.partitionReplicaAssignment.++=(addedPartitionReplicaAssignment)
             info("New topics: [%s], deleted topics: [%s], new partition replica assignment [%s]".format(newTopics,
               deletedTopics, addedPartitionReplicaAssignment))
+            // 调用onNewTopicCreation()方法处理新增Topic
             if (newTopics.nonEmpty)
               controller.onNewTopicCreation(newTopics, addedPartitionReplicaAssignment.keySet)
           } catch {

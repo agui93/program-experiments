@@ -44,6 +44,7 @@ import java.util.concurrent.locks.ReentrantLock
 import kafka.server._
 import kafka.common.TopicAndPartition
 
+
 class ControllerContext(val zkUtils: ZkUtils) {
   //维护了Controller Leader与集群中其他Broker之间的网络连接，是管理整个集群的基础
   var controllerChannelManager: ControllerChannelManager = null
