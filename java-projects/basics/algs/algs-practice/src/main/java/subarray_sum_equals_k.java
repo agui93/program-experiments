@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * leetcode-560. 和为 K 的子数组
@@ -7,13 +9,28 @@
  * @since 2021/12/19
  */
 public class subarray_sum_equals_k {
+
+
     public int subarraySum(int[] nums, int k) {
         if (nums.length == 0) {
             return 0;
         }
 
+        Map<Integer, Integer> preNums = new HashMap<>();
+        preNums.put(0, 1);
 
-        return 0;
+        int res = 0;
+        int num0_i = 0, num0_j;
+        for (int num : nums) {
+            num0_i = num0_i + num;
+            num0_j = num0_i - k;
+            if (preNums.containsKey(num0_j)) {
+                res = res + preNums.get(num0_j);
+            }
+            preNums.put(num0_i, preNums.getOrDefault(num0_i, 0) + 1);
+        }
+
+        return res;
     }
 
 
@@ -26,4 +43,5 @@ public class subarray_sum_equals_k {
         int[] c_nums = {-1, -1, 1};
         System.out.println(obj.subarraySum(c_nums, 0) == 1);
     }
+
 }
